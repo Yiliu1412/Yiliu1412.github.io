@@ -1,0 +1,1228 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Gokou_Ruri.png">
+  <link rel="icon" href="/img/Gokou_Ruri.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="逸流Mercurio">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="你可以将余生都用来学习Python和编程的纷繁难懂之处，但这样你什么项目都完不成。不要企图编写完美无缺的代码；先编写行之有效的代码，再决定是对其做进一步改进，还是转而去编写新代码。————Eric Matthes   Python之禅 12345678910111213141516171819202122&gt;&gt;&gt; import thisThe Zen of Python, by">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Python】自学整理">
+<meta property="og:url" content="http://yiliu1412.github.io/2023/01/11/pythonLearn/index.html">
+<meta property="og:site_name" content="逸流的博客">
+<meta property="og:description" content="你可以将余生都用来学习Python和编程的纷繁难懂之处，但这样你什么项目都完不成。不要企图编写完美无缺的代码；先编写行之有效的代码，再决定是对其做进一步改进，还是转而去编写新代码。————Eric Matthes   Python之禅 12345678910111213141516171819202122&gt;&gt;&gt; import thisThe Zen of Python, by">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yiliu1412.github.io/img/%E6%98%9F%E7%A9%BA.jpg">
+<meta property="article:published_time" content="2023-01-11T15:55:12.000Z">
+<meta property="article:modified_time" content="2023-02-19T17:11:04.468Z">
+<meta property="article:author" content="逸流Mercurio">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="大学">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yiliu1412.github.io/img/%E6%98%9F%E7%A9%BA.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>【Python】自学整理 - 逸流的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"yiliu1412.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":50,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>逸流的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/%E6%98%9F%E7%A9%BA.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="【Python】自学整理"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-01-11 23:55" pubdate>
+          2023年1月11日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          45k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          94 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【Python】自学整理</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2023年2月20日 凌晨
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>你可以将余生都用来学习Python和编程的纷繁难懂之处，但这样你什么项目都完不成。不要企图编写完美无缺的代码；先编写行之有效的代码，再决定是对其做进一步改进，还是转而去编写新代码。<br>————Eric Matthes</p>
+</blockquote>
+<hr>
+<p>Python之禅</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs applescript">&gt;&gt;&gt; import this<br>The Zen <span class="hljs-keyword">of</span> Python, <span class="hljs-keyword">by</span> Tim Peters<br><br>Beautiful <span class="hljs-keyword">is</span> better than ugly.<br>Explicit <span class="hljs-keyword">is</span> better than implicit.<br>Simple <span class="hljs-keyword">is</span> better than complex.<br>Complex <span class="hljs-keyword">is</span> better than complicated.<br>Flat <span class="hljs-keyword">is</span> better than nested.<br>Sparse <span class="hljs-keyword">is</span> better than dense.<br>Readability counts.<br>Special cases aren&#x27;t special enough <span class="hljs-keyword">to</span> break <span class="hljs-keyword">the</span> rules.<br>Although practicality beats purity.<br>Errors should never pass silently.<br>Unless explicitly silenced.<br>In <span class="hljs-keyword">the</span> face <span class="hljs-keyword">of</span> ambiguity, refuse <span class="hljs-keyword">the</span> temptation <span class="hljs-keyword">to</span> guess.<br>There should be one<span class="hljs-comment">-- and preferably only one --obvious way to do it.</span><br>Although <span class="hljs-keyword">that</span> way may <span class="hljs-keyword">not</span> be obvious <span class="hljs-keyword">at</span> <span class="hljs-keyword">first</span> unless you&#x27;re Dutch.<br>Now <span class="hljs-keyword">is</span> better than never.<br>Although never <span class="hljs-keyword">is</span> often better than *right* now.<br>If <span class="hljs-keyword">the</span> implementation <span class="hljs-keyword">is</span> hard <span class="hljs-keyword">to</span> explain, <span class="hljs-keyword">it</span>&#x27;s a bad idea.<br>If <span class="hljs-keyword">the</span> implementation <span class="hljs-keyword">is</span> easy <span class="hljs-keyword">to</span> explain, <span class="hljs-keyword">it</span> may be a good idea.<br>Namespaces are one honking great idea <span class="hljs-comment">-- let&#x27;s do more of those!</span><br></code></pre></td></tr></table></figure>
+
+<p>Let’s start with————<code>print(&quot;Hello,world!&quot;)</code></p>
+<hr>
+<h1 id="第一部分-基础知识"><a href="#第一部分-基础知识" class="headerlink" title="第一部分 基础知识"></a>第一部分 基础知识</h1><h2 id="第一章-起步"><a href="#第一章-起步" class="headerlink" title="第一章 起步"></a>第一章 起步</h2><h3 id="安装及配置环境-略"><a href="#安装及配置环境-略" class="headerlink" title="安装及配置环境_略"></a>安装及配置环境_略</h3><p><code>vscode is good</code></p>
+<p>访问浏览Python.org ，以浏览<del>天书</del></p>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/">https://docs.python.org/zh-cn/3/</a></p>
+<h2 id="第二章-变量和简单数据类型"><a href="#第二章-变量和简单数据类型" class="headerlink" title="第二章 变量和简单数据类型"></a>第二章 变量和简单数据类型</h2><h3 id="变量的命名与使用"><a href="#变量的命名与使用" class="headerlink" title="变量的命名与使用"></a>变量的命名与使用</h3><p>变量在程序中可以随时修改其值，而Python将始终记录变量的最新值。</p>
+<p>有关变量的规则：</p>
+<ul>
+<li>变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头，但不能以数字打头，例如，可将变量命名为 <code>message_1</code>，但不能将其命名为 <code>1_message</code>。</li>
+<li>变量名不能包含空格，但可使用下划线来分隔其中的单词。例如，变量名 <code>greeting_message</code>可行，但变量名 <code>greeting message</code>会引发错误。</li>
+<li>不要将Python关键字和函数名用作变量名，即不要使用Python保留用于特殊用途的单词如print (请参见附录A.4)。</li>
+<li>变量名应既简短又具有描述性。例如，<code>name</code>比 <code>n</code>好，<code>student_name</code>比 <code>s_n</code>好，<code>name_length</code>比 <code>length_of_persons_name</code>好。</li>
+<li>慎用小写字母1和大写字母O，因为它们可能被人错看成数字1和0。</li>
+</ul>
+<p>使用变量时避免命名错误</p>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>在Python中，用引号括起的都是字符串，其中的引号可以是单引号，也可以是双引号，如下所示：</p>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vhdl"><span class="hljs-string">&quot;This is a string.&quot;</span><br><span class="hljs-symbol">&#x27;This</span> <span class="hljs-keyword">is</span> a <span class="hljs-built_in">string</span>.&#x27;<br></code></pre></td></tr></table></figure>
+
+<p>这种灵活性能让你能够在字符串中包含 <code>&quot; &quot;</code>和 <code>&#39; &#39;</code>:</p>
+<figure class="highlight scilab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scilab"><span class="hljs-string">&quot;I told my friend,&#x27;</span>C++ is one of the best language!<span class="hljs-string">&#x27;&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="使用方法修改字符串大小写"><a href="#使用方法修改字符串大小写" class="headerlink" title="使用方法修改字符串大小写"></a>使用方法修改字符串大小写</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus">name = <span class="hljs-string">&quot;ada lovelace&quot;</span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(name.title()</span></span>)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(name.upper()</span></span>)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(name.lower()</span></span>)<br></code></pre></td></tr></table></figure>
+
+<p>输出依次为:</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">Ada Lovelace</span><br><span class="hljs-attribute">ADA LOVELACE</span><br><span class="hljs-attribute">ada lovelace</span><br></code></pre></td></tr></table></figure>
+
+<p>在print()语句中，方法 <code>title()</code>出现在这个变量的后面。 方法Method是Python可对数据执行的操作。在name.title()中， name后面的句点 <code>.</code>让Python对变量name执行方法 <code>title()</code>指定的操作。每个方法后面都跟着一对括号，这是因为方法通常需要额外的信息来完成其工作。这种信息是在括号内提供的。函数 <code>title()</code>不需要额外的信息，因此它后面的括号是空的。</p>
+<p>存储数据时，方法lower()很有用。很多时候，你无法依靠用户来提供正确的大小写，因此需要将字符串先转换为小写，再存储它们。以后需要显示这些信息时，再将其转换为最合适的大小写方式。</p>
+<h4 id="合并、拼接字符串"><a href="#合并、拼接字符串" class="headerlink" title="合并、拼接字符串"></a>合并、拼接字符串</h4><p>Python使用加号 <code>+</code>来合并字符串,这种合并字符串的方法称为拼接。通过拼接，可使用存储在变量中的信息来创建完整的消息,例如：</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs makefile">first_name = <span class="hljs-string">&quot;ada&quot;</span><br>last_name = <span class="hljs-string">&quot;lovelace&quot;</span><br>full_name = first_name + <span class="hljs-string">&quot; &quot;</span> + last_name<br>message = <span class="hljs-string">&quot;Hello, &quot;</span> + full_name.title() + <span class="hljs-string">&quot;!&quot;</span><br>print(message)<br></code></pre></td></tr></table></figure>
+
+<h4 id="使用制表符或换行符来添加空白"><a href="#使用制表符或换行符来添加空白" class="headerlink" title="使用制表符或换行符来添加空白"></a>使用制表符或换行符来添加空白</h4><p>空白泛指任何非打印字符，如空格、制表符 <code>\t</code>和换行符 <code>\n</code>。</p>
+<p>反斜杠 <code>\</code>用于转义。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-operator">&gt;&gt;&gt;</span> <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Languages:<span class="hljs-subst">\n</span><span class="hljs-subst">\t</span>Python<span class="hljs-subst">\n</span><span class="hljs-subst">\t</span>C<span class="hljs-subst">\n</span><span class="hljs-subst">\t</span>JavaScript&quot;</span>)<br><span class="hljs-type">Languages</span>:<br>    <span class="hljs-type">Python</span><br>    <span class="hljs-type">C</span><br>    <span class="hljs-type">JavaScript</span><br></code></pre></td></tr></table></figure>
+
+<p>如果不希望前置 <code>\</code>的字符转义成特殊字符，可以使用 原始字符串，在引号前添加 <code>r</code> 即可：<br><img src="/../img/mk-2023-01-13-20-36-30.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="删除空白"><a href="#删除空白" class="headerlink" title="删除空白"></a>删除空白</h4><p>对变量调用方法 <code>rstrip()</code>后，多余的空格将被删除。然而，这种删除只是暂时的，接下来再次访问变量值时仍然有空格，要永久删除这个字符串中的空白，必须将删除操作的结果存回到变量中。分别使用方法 <code>lstrip()</code>和 <code>strip()</code>可以删除变量左端（开头）和右端（末尾）的空格，例：</p>
+<figure class="highlight python-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python-repl"><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">favorite_language = <span class="hljs-string">&#x27; python &#x27;</span></span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">favorite_language.rstrip()</span><br>&#x27; python&#x27;<br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">favorite_language.lstrip()</span><br>&#x27;python &#x27;<br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">favorite_language.strip()</span><br>&#x27;python&#x27;<br></code></pre></td></tr></table></figure>
+
+<h4 id="避免语法错误"><a href="#避免语法错误" class="headerlink" title="避免语法错误"></a>避免语法错误</h4><p>语法错误（SyntaxError: invalid syntax）是一种时不时会遇到的错误。程序中包含非法的Python代码时，就会导致语法错误。<br>例如，在用单引号括起的字符串中，如果包含撇号，就将导致错误。这是因为这会导致Python将第一个单引号和撇号之间的内容视为一个字符串，进而将余下的文本视为Python代码，从而引发错误。</p>
+<h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><h4 id="整数（int）"><a href="#整数（int）" class="headerlink" title="整数（int）"></a>整数（int）</h4><p>运算符 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 的用法和其他大部分语言一样；括号 <code>( )</code> 用来分组;用 <code>**</code>运算符计算乘方;等号 <code>=</code>用于给变量赋值,赋值后，下一个交互提示符的位置不显示任何结果。</p>
+<p>注：<code>**</code> 比 <code>-</code> 的优先级更高, 所以 <code>-3**2</code> 会被解释成 <code>-(3**2)</code> ，因此，结果是 -9。要避免这个问题，并且得到 9, 可以用 <code>(-3)**2</code>。</p>
+<h4 id="浮点数（float"><a href="#浮点数（float" class="headerlink" title="浮点数（float)"></a>浮点数（float)</h4><p>Python 全面支持浮点数；混合类型运算数的运算会把整数转换为浮点数；交互模式下，上次输出的表达式会赋给变量 <code>_</code>。把 Python 当作计算器时，用该变量实现下一步计算更简单，例如：</p>
+<p>如果变量未定义（即，未赋值），使用该变量会提示错误：<code>NameError: name &#39;n&#39; is not defined</code>。</p>
+<p>交互模式下，上次输出的表达式会赋给变量 _。把 Python 当作计算器时，用该变量实现下一步计算更简单，例如：<br><img src="/../img/mk-2023-01-12-19-05-50.png" srcset="/img/loading.gif" lazyload></p>
+<p>但需要注意的是，结果包含的小数位数可能是不确定的：</p>
+<figure class="highlight python-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python-repl"><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python"><span class="hljs-number">0.2</span> + <span class="hljs-number">0.1</span></span><br>0.30000000000000004<br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python"><span class="hljs-number">3</span> * <span class="hljs-number">0.1</span></span><br>0.30000000000000004<br></code></pre></td></tr></table></figure>
+
+<p>所有语言都存在这种问题，没有什么可担心的。 Python会尽力找到一种方式，以尽可能精确地表示结果，但鉴于计算机内部表示数字的方式，这在有些情况下很难。就现在而言，暂时忽略多余的小数位数即可；在第二部分的项目中，你将学习在需要时处理多余小数位的方式。</p>
+<h4 id="函数str-的使用"><a href="#函数str-的使用" class="headerlink" title="函数str()的使用"></a>函数str()的使用</h4><p>函数str()让Python将非字符串值表示为字符串。</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>在Python中，注释用井号 <code>#</code>标识,井号后面的内容都会被Python解释器忽略。<br>编写注释的主要目的是阐述代码要做什么，以及是如何做的。在开发项目期间，你对各个部分如何协同工作了如指掌，但过段时间后，有些细节你可能不记得了。当然，你总是可以通过研究代码来确定各个部分的工作原理，但通过编写注释，以清晰的自然语言对解决方案进行概述，可节省很多时间。要成为专业程序员或与其他程序员合作，就必须编写有意义的注释。当前，大多数软件都是合作编写的，编写者可能是同一家公司的多名员工，也可能是众多致力于同一个开源项目的人员。<br>训练有素的程序员都希望代码中包含注释，因此你最好从现在开始就在程序中添加描述性注释。作为新手，最值得养成的习惯之一是，<strong>在代码中编写清晰、简洁的注释</strong>。如果不确定是否要编写注释，就问问自己，找到合理的解决方案前，是否考虑了多个解决方案。如果答案是肯定的，就编写注释对你的解决方案进行说明吧。相比回过头去再添加注释，删除多余的注释要容易得多。</p>
+<blockquote>
+<p>最喜欢的事情：别人写注释<br>最讨厌的事情：<del>自己写注释</del></p>
+</blockquote>
+<h2 id="第三章-列表"><a href="#第三章-列表" class="headerlink" title="第三章 列表"></a>第三章 列表</h2><h3 id="列表是什么"><a href="#列表是什么" class="headerlink" title="列表是什么"></a>列表是什么</h3><p>在Python中，用方括号（ []）来表示列表，并用逗号来分隔其中的元素。下面是一个简单的列表示例：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">&gt;&gt;&gt;bicycles = <span class="hljs-selector-attr">[<span class="hljs-string">&#x27;trek&#x27;</span>, <span class="hljs-string">&#x27;cannondale&#x27;</span>, <span class="hljs-string">&#x27;redline&#x27;</span>, <span class="hljs-string">&#x27;specialized&#x27;</span>]</span><br>&gt;&gt;&gt;<span class="hljs-built_in">print</span>(bicycles)<br><span class="hljs-selector-attr">[<span class="hljs-string">&#x27;trek&#x27;</span>, <span class="hljs-string">&#x27;cannondale&#x27;</span>, <span class="hljs-string">&#x27;redline&#x27;</span>, <span class="hljs-string">&#x27;specialized&#x27;</span>]</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="访问列表元素"><a href="#访问列表元素" class="headerlink" title="访问列表元素"></a>访问列表元素</h4><p>列表是有序集合，因此要访问列表的任何元素，只需将该元素的位置或索引告诉Python即可。要访问列表元素，可指出列表的名称，再指出元素的索引，并将其放在方括号内。当你请求获取列表元素时，Python只返回该元素，而不包括方括号和引号。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">&gt;</span><span class="language-bash">&gt;&gt;bicycles = [<span class="hljs-string">&#x27;trek&#x27;</span>, <span class="hljs-string">&#x27;cannondale&#x27;</span>, <span class="hljs-string">&#x27;redline&#x27;</span>, <span class="hljs-string">&#x27;specialized&#x27;</span>]</span><br><span class="hljs-meta prompt_">&gt;</span><span class="language-bash">&gt;&gt;<span class="hljs-built_in">print</span>(bicycles[0])</span><br>trek<br></code></pre></td></tr></table></figure>
+
+<h4 id="索引从0开始"><a href="#索引从0开始" class="headerlink" title="索引从0开始"></a>索引从0开始</h4><p>在Python中，第一个列表元素的索引为0，而不是1。在大多数编程语言中都是如此，这与列表操作的底层实现相关。<br>Python为访问最后一个列表元素提供了一种特殊语法。通过将索引指定为-1，可让Python返回最后一个列表元素这种语法很有用，因为你经常需要在不知道列表长度的情况下访问最后的元素。这种约定也适用于其他负数索引，例如，索引-2返回倒数第二个列表元素，索引-3返回倒数第三个列表元素，以此类推。</p>
+<h3 id="修改、添加和删除元素"><a href="#修改、添加和删除元素" class="headerlink" title="修改、添加和删除元素"></a>修改、添加和删除元素</h3><p>你创建的大多数列表都将是<em>动态</em>的，这意味着列表创建后，将随着程序的运行增删元素。</p>
+<h4 id="修改列表元素"><a href="#修改列表元素" class="headerlink" title="修改列表元素"></a>修改列表元素</h4><p>修改列表元素的语法与访问列表元素的语法类似。要修改列表元素，可指定列表名和要修改<br>的元素的索引，再指定该元素的新值。<br>例如，依旧是上述列表 <code>bicycles = [&#39;trek&#39;, &#39;cannondale&#39;, &#39;redline&#39;, &#39;specialized&#39;]</code>，修改第一个元素的值的操作如下：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus">&gt;&gt;&gt;bicycles = <span class="hljs-selector-attr">[<span class="hljs-string">&#x27;trek&#x27;</span>, <span class="hljs-string">&#x27;cannondale&#x27;</span>, <span class="hljs-string">&#x27;redline&#x27;</span>, <span class="hljs-string">&#x27;specialized&#x27;</span>]</span><br>&gt;&gt;&gt;bicycles<span class="hljs-selector-attr">[0]</span> = <span class="hljs-string">&#x27;unknown&#x27;</span><br>&gt;&gt;&gt;<span class="hljs-built_in">print</span>(bicycles)<br><span class="hljs-selector-attr">[<span class="hljs-string">&#x27;unknown&#x27;</span>, <span class="hljs-string">&#x27;cannondale&#x27;</span>, <span class="hljs-string">&#x27;redline&#x27;</span>, <span class="hljs-string">&#x27;specialized&#x27;</span>]</span><br></code></pre></td></tr></table></figure>
+
+<p>你可以修改任何列表元素的值，而不仅仅是第一个元素的值。</p>
+<h4 id="在列表中添加元素"><a href="#在列表中添加元素" class="headerlink" title="在列表中添加元素"></a>在列表中添加元素</h4><h5 id="在列表末尾添加元素"><a href="#在列表末尾添加元素" class="headerlink" title="在列表末尾添加元素"></a>在列表末尾添加元素</h5><p>在列表中添加新元素时，最简单的方式是将元素附加到列表末尾。使用方法 <code>append()</code>给列表附加元素时，它将添加到列表末尾。例：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus">motorcycles = <span class="hljs-selector-attr">[<span class="hljs-string">&#x27;honda&#x27;</span>, <span class="hljs-string">&#x27;yamaha&#x27;</span>, <span class="hljs-string">&#x27;suzuki&#x27;</span>]</span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(motorcycles)</span></span><br>motorcycles<span class="hljs-selector-class">.append</span>(<span class="hljs-string">&#x27;ducati&#x27;</span>)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(motorcycles)</span></span><br></code></pre></td></tr></table></figure>
+
+<p>输出结果为：</p>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs scheme">[<span class="hljs-symbol">&#x27;honda</span>&#x27;, <span class="hljs-symbol">&#x27;yamaha</span>&#x27;, <span class="hljs-symbol">&#x27;suzuki</span>&#x27;]<br>[<span class="hljs-symbol">&#x27;honda</span>&#x27;, <span class="hljs-symbol">&#x27;yamaha</span>&#x27;, <span class="hljs-symbol">&#x27;suzuki</span>&#x27;, <span class="hljs-symbol">&#x27;ducati</span>&#x27;]<br></code></pre></td></tr></table></figure>
+
+<p>方法 <code>append()</code>让动态地创建列表易如反掌，例如，你可以先创建一个空列表，再使用一系列的 <code>append()</code>语句添加元素。这种创建列表的方式极其常见，因为经常要等程序运行后，你才知道用户要在程序中存储哪些数据。为控制用户，可首先创建一个空列表，用于存储用户将要输入的值，然后将用户提供的每个新值附加到列表中。</p>
+<h5 id="在列表中插入元素"><a href="#在列表中插入元素" class="headerlink" title="在列表中插入元素"></a>在列表中插入元素</h5><p>使用方法 <code>insert()</code>可在列表的任何位置添加新元素。为此，你需要指定新元素的索引和值。</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arcade">列表名.<span class="hljs-built_in">insert</span>(元素位置 , 新元素值)<br></code></pre></td></tr></table></figure>
+
+<p>插入到该位置后，该位置及其之后的所有元素往后移一位。</p>
+<h4 id="从列表中删除元素"><a href="#从列表中删除元素" class="headerlink" title="从列表中删除元素"></a>从列表中删除元素</h4><h5 id="使用del语句删除元素"><a href="#使用del语句删除元素" class="headerlink" title="使用del语句删除元素"></a>使用del语句删除元素</h5><p>使用del可删除任何位置处的列表元素，条件是知道其索引。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">del</span> 列表名<span class="hljs-selector-attr">[元素索引]</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="使用方法pop-删除元素"><a href="#使用方法pop-删除元素" class="headerlink" title="使用方法pop()删除元素"></a>使用方法pop()删除元素</h4><p>方法 <code>pop()</code>可删除列表末尾的元素，并让你能够接着使用它。术语弹出（pop）源自这样的类比：列表就像一个栈，而删除列表末尾的元素相当于弹出栈顶元素。<br>下面从列表motorcycles中弹出一款摩托车：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stylus">motorcycles = <span class="hljs-selector-attr">[<span class="hljs-string">&#x27;honda&#x27;</span>, <span class="hljs-string">&#x27;yamaha&#x27;</span>, <span class="hljs-string">&#x27;suzuki&#x27;</span>]</span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(motorcycles)</span></span><br>popped_motorcycle = motorcycles<span class="hljs-selector-class">.pop</span>()<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(motorcycles)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(popped_motorcycle)</span></span><br></code></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-attr">[<span class="hljs-string">&#x27;honda&#x27;</span>, <span class="hljs-string">&#x27;yamaha&#x27;</span>, <span class="hljs-string">&#x27;suzuki&#x27;</span>]</span><br><span class="hljs-selector-attr">[<span class="hljs-string">&#x27;honda&#x27;</span>, <span class="hljs-string">&#x27;yamaha&#x27;</span>]</span><br>suzuki<br></code></pre></td></tr></table></figure>
+
+<h4 id="弹出列表中任何位置处的元素"><a href="#弹出列表中任何位置处的元素" class="headerlink" title="弹出列表中任何位置处的元素"></a>弹出列表中任何位置处的元素</h4><p>实际上，你可以使用pop()来删除列表中任何位置的元素，只需在括号中指定要删除的元素的索引即可。</p>
+<p><em>p.s:如果你不确定该使用del语句还是pop()方法，下面是一个简单的判断标准：如果你要从列表中删除一个元素，且不再以任何方式使用它，就使用del语句；如果你要在删除元素后还能继续使用它，就使用方法pop()。</em></p>
+<h4 id="根据值删除元素"><a href="#根据值删除元素" class="headerlink" title="根据值删除元素"></a>根据值删除元素</h4><p>如果你只知道要删除的元素的值，可使用方法 <code>remove()</code>。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">列表名.<span class="hljs-built_in">remove</span>(元素值)<br></code></pre></td></tr></table></figure>
+
+<p><em>注意：方法remove()只删除第一个指定的值。如果要删除的值可能在列表中出现多次，就需要使用循环来判断是否删除了所有这样的值。</em></p>
+<h3 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h3><h4 id="使用方法sort-对列表进行永久性排序"><a href="#使用方法sort-对列表进行永久性排序" class="headerlink" title="使用方法sort()对列表进行永久性排序"></a>使用方法sort()对列表进行永久性排序</h4><p>Python方法 <code>sort()</code>让你能够较为轻松地对列表进行排序。<br>例：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">cars = <span class="hljs-selector-attr">[<span class="hljs-string">&#x27;bmw&#x27;</span>, <span class="hljs-string">&#x27;audi&#x27;</span>, <span class="hljs-string">&#x27;toyota&#x27;</span>, <span class="hljs-string">&#x27;subaru&#x27;</span>]</span><br>cars<span class="hljs-selector-class">.sort</span>()<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(cars)</span></span><br></code></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scheme">[<span class="hljs-symbol">&#x27;audi</span>&#x27;, <span class="hljs-symbol">&#x27;bmw</span>&#x27;, <span class="hljs-symbol">&#x27;subaru</span>&#x27;, <span class="hljs-symbol">&#x27;toyota</span>&#x27;]<br></code></pre></td></tr></table></figure>
+
+<p><code>sort(*, key=None, reverse=False)</code>此方法会对列表进行<strong>原地排序</strong>，只使用 &lt; 来进行各项间比较。异常不会被屏蔽————如果有任何比较操作失败，整个排序操作将失败（而列表可能会处于被部分修改的状态）。<br><code>reverse</code>为一个布尔值。如果设为 <code>True</code>，则每个列表元素将按反向顺序比较进行排序，例：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros">cars = [<span class="hljs-string">&#x27;bmw&#x27;</span>, <span class="hljs-string">&#x27;audi&#x27;</span>, <span class="hljs-string">&#x27;toyota&#x27;</span>, <span class="hljs-string">&#x27;subaru&#x27;</span>]<br>cars.sort(<span class="hljs-attribute">reverse</span>=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(cars)<br></code></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scheme">[<span class="hljs-symbol">&#x27;toyota</span>&#x27;, <span class="hljs-symbol">&#x27;subaru</span>&#x27;, <span class="hljs-symbol">&#x27;bmw</span>&#x27;, <span class="hljs-symbol">&#x27;audi</span>&#x27;]<br></code></pre></td></tr></table></figure>
+
+<h4 id="使用函数-sorted-对列表进行临时排序"><a href="#使用函数-sorted-对列表进行临时排序" class="headerlink" title="使用函数 sorted()对列表进行临时排序"></a>使用函数 sorted()对列表进行临时排序</h4><p>要保留列表元素原来的排列顺序，同时以特定的顺序呈现它们，可使用函数 <code>sorted()</code>。函数 <code>sorted()</code>让你能够按特定顺序显示列表元素，同时不影响它们在列表中的原始排列顺序。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">sorted</span><span class="hljs-params">(列表名)</span></span><br></code></pre></td></tr></table></figure>
+
+<p><em>p.s:在并非所有的值都是小写时，按字母顺序排列列表要复杂些。决定排列顺序时，有多种解读大写字母的方式，要指定准确的排列顺序，可能比我们这里所做的要复杂。然而，大多数排序方式都基于本节介绍的知识。</em></p>
+<h4 id="倒着打印列表"><a href="#倒着打印列表" class="headerlink" title="倒着打印列表"></a>倒着打印列表</h4><p>要反转列表元素的排列顺序，可使用方法reverse()。注意， reverse()不是指按与字母顺序相反的顺序排列列表元素，而只是反转列表元素的排列顺序。方法reverse()永久性地修改列表元素的排列顺序，但可随时恢复到原来的排列顺序，为此只需对列表再次调用reverse()即可。</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">列表名.<span class="hljs-keyword">reverse</span>()<br></code></pre></td></tr></table></figure>
+
+<h4 id="确定列表长度"><a href="#确定列表长度" class="headerlink" title="确定列表长度"></a>确定列表长度</h4><p>使用函数len()可快速获悉列表的长度。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">len</span><span class="hljs-params">(列表名)</span></span><br></code></pre></td></tr></table></figure>
+
+<p><em>Python计算列表元素数时从1开始，因此确定列表长度时，应该不会遇到差一错误。</em></p>
+<h3 id="使用列表时避免索引错误"><a href="#使用列表时避免索引错误" class="headerlink" title="使用列表时避免索引错误"></a>使用列表时避免索引错误</h3><p>索引错误 <code>IndexError: list index out of range</code>。索引错误意味着Python无法理解你指定的索引。每当需要访问最后一个列表元素时，都可使用索引-1。这在绝大多数情况下都行之有效，仅当列表为空时，这种访问最后一个元素的方式才会导致错误。</p>
+<p><em>发生索引错误却找不到解决办法时，请尝试将列表或其长度打印出来。列表可能与你以为的截然不同，在程序对其进行了动态处理时尤其如此。通过查看列表或其包含的元素数，可帮助你找出这种逻辑错误。</em></p>
+<h2 id="第四章-操作列表"><a href="#第四章-操作列表" class="headerlink" title="第四章 操作列表"></a>第四章 操作列表</h2><h3 id="遍历列表"><a href="#遍历列表" class="headerlink" title="遍历列表"></a>遍历列表</h3><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">for 变量名 in 列表名</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-comment"># 缩进后书写语句</span><br></code></pre></td></tr></table></figure>
+
+<p>刚开始使用循环时请牢记，对列表中的每个元素，都将执行循环指定的步骤，而不管列表包含多少个元素。在for循环后面，没有缩进的代码都只执行一次，而不会重复执行。</p>
+<h4 id="使用列表时常出现的错误"><a href="#使用列表时常出现的错误" class="headerlink" title="使用列表时常出现的错误"></a>使用列表时常出现的错误</h4><p>Python根据缩进来判断代码行与前一个代码行的关系。Python通过使用缩进让代码更易读；简单地说，它要求你使用缩进让代码整洁而结构清晰。在较长的Python程序中，你将看到缩进程度各不相同的代码块，这让你对程序的组织结构有大致的认识。</p>
+<h5 id="忘记缩进"><a href="#忘记缩进" class="headerlink" title="忘记缩进"></a>忘记缩进</h5><p><code>IndentationError: expected an indented block</code>通常，将紧跟在for语句后面的代码行缩进，可消除这种缩进错误。</p>
+<h5 id="忘记缩进额外的代码行"><a href="#忘记缩进额外的代码行" class="headerlink" title="忘记缩进额外的代码行"></a>忘记缩进额外的代码行</h5><p>这是一个逻辑错误。从语法上看，这些Python代码是合法的，但由于存在逻辑错误，结果并不符合预期。</p>
+<h5 id="不必要的缩进"><a href="#不必要的缩进" class="headerlink" title="不必要的缩进"></a>不必要的缩进</h5><p><code>IndentationError: unexpected indent</code>为避免意外缩进错误，请只缩进需要缩进的代码。</p>
+<h5 id="遗漏了冒号"><a href="#遗漏了冒号" class="headerlink" title="遗漏了冒号"></a>遗漏了冒号</h5><h3 id="创建数值列表"><a href="#创建数值列表" class="headerlink" title="创建数值列表"></a>创建数值列表</h3><h4 id="使用函数range-创建数字列表"><a href="#使用函数range-创建数字列表" class="headerlink" title="使用函数range()创建数字列表"></a>使用函数range()创建数字列表</h4><p>Python函数 <code>range()</code>让你能够轻松地生成一系列的数字。<br>要打印数字1~5，需要使用range(1,6)：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">6</span>):<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(value)</span></span><br></code></pre></td></tr></table></figure>
+
+<p>这样，输出将从1开始，到5结束：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs">1<br>2<br>3<br>4<br>5<br></code></pre></td></tr></table></figure>
+
+<p>数range()让Python从你指定的第一个值开始数，并在到达你指定的第二个值后停止。</p>
+<p>要创建数字列表，可使用函数list()将range()的结果直接转换为列表。</p>
+<p>使用函数range()时，还可指定步长。例如，下面的代码打印1~10内的偶数：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">even_numbers<span class="hljs-selector-class">.py</span><br>even_numbers = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>,<span class="hljs-number">11</span>,<span class="hljs-number">2</span>))<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(even_numbers)</span></span><br></code></pre></td></tr></table></figure>
+
+<p>在这个示例中，函数range()从2开始数，然后不断地加2，直到达到或超过终值（11），因此输出如下：</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs accesslog"><span class="hljs-string">[2, 4, 6, 8, 10]</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="对数字列表执行简单的统计计算"><a href="#对数字列表执行简单的统计计算" class="headerlink" title="对数字列表执行简单的统计计算"></a>对数字列表执行简单的统计计算</h4><p>有几个专门用于处理数字列表的Python函数。例如，你可以轻松地找出数字列表的最大值、最小值和总和：</p>
+<figure class="highlight python-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python-repl"><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">digits = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>]</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python"><span class="hljs-built_in">min</span>(digits)</span><br>0<br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python"><span class="hljs-built_in">max</span>(digits)</span><br>9<br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python"><span class="hljs-built_in">sum</span>(digits)</span><br>45<br></code></pre></td></tr></table></figure>
+
+<h4 id="列表解析"><a href="#列表解析" class="headerlink" title="列表解析"></a>列表解析</h4><p>列表解析将for循环和创建新元素的代码合并成一行，并自动附加新元素。<br>例：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">squares = <span class="hljs-selector-attr">[value**2 for value in range(1,11)]</span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(squares)</span></span><br></code></pre></td></tr></table></figure>
+
+<p>要使用这种语法，首先指定一个描述性的列表名，如squares；然后，指定一个左方括号，并定义一个表达式，用于生成你要存储到列表中的值。在这个示例中，表达式为 <code>value**2</code>，它计算平方值。接下来，编写一个for循环，用于给表达式提供值，再加上右方括号。在这个示例中，for循环为 <code>for value in range(1,11)</code>，它将值1~10提供给表达式 <code>value**2</code>。请注意，这里的for<br>语句末尾没有冒号。</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs accesslog"><span class="hljs-string">[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="使用列表的一部分"><a href="#使用列表的一部分" class="headerlink" title="使用列表的一部分"></a>使用列表的一部分</h3><p>你可以处理列表的部分元素——Python称之为切片。</p>
+<h4 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h4><p>要创建切片，可指定要使用的第一个元素和最后一个元素的索引。与</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf">列表名[索引<span class="hljs-comment">;索引]</span><br></code></pre></td></tr></table></figure>
+
+<p>你可以生成列表的任何子集，需要注意的是，<strong>函数range()一样， Python在到达你指定的第二个索引前面的元素后停止</strong>。<br>如果你没有指定第一个索引， Python将自动从列表开头开始 <code>列表名[;索引]</code>；要让切片终止于列表末尾，也可使用类似的语法 <code>列表名[索引;]</code>,无论列表多长，这种语法都能够让你输出从特定位置到列表末尾的所有元素。<br>负数索引返回离列表末尾相应距离的元素，因此你可以输出列表末尾的任何切片。例如，如果你要输出列表最后三个元素，可使用切片 <code>列表名[-3:]</code>。</p>
+<h5 id="遍历切片"><a href="#遍历切片" class="headerlink" title="遍历切片"></a>遍历切片</h5><p>如果要遍历列表的部分元素，可在for循环中使用切片，例如：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">for</span> player in players[:<span class="hljs-number">3</span>]:<br></code></pre></td></tr></table></figure>
+
+<h5 id="复制列表"><a href="#复制列表" class="headerlink" title="复制列表"></a>复制列表</h5><p>要复制列表，可创建一个包含整个列表的切片，方法是同时省略起始索引和终止索引 <code>[:]</code>。这让Python创建一个始于第一个元素，终止于最后一个元素的切片，即复制整个列表。</p>
+<h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><p>Python将不能修改的值称为不可变的，而不可变的列表被称为元组。</p>
+<h4 id="定义元组"><a href="#定义元组" class="headerlink" title="定义元组"></a>定义元组</h4><p>元组看起来犹如列表，但使用圆括号而不是方括号来标识。定义元组后，就可以使用索引来访问其元素，就像访问列表元素一样。<br>例如，如果有一个大小不应改变的矩形，可将其长度和宽度存储在一个元组中，从而确保它们是不能修改的：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">dimensions = (<span class="hljs-number">200</span>, <span class="hljs-number">50</span>)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(dimensions[<span class="hljs-number">0</span>])</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(dimensions[<span class="hljs-number">1</span>])</span></span><br></code></pre></td></tr></table></figure>
+
+<p>我们首先定义了元组dimensions，为此我们使用了圆括号而不是方括号。接下来，我<br>们分别打印该元组的各个元素：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs">200<br>50<br></code></pre></td></tr></table></figure>
+
+<p>下面来尝试修改元组dimensions中的一个元素:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">dimensions</span> = (<span class="hljs-number">200</span>, <span class="hljs-number">50</span>)<br><span class="hljs-attribute">dimensions</span>[<span class="hljs-number">0</span>] = <span class="hljs-number">250</span><br></code></pre></td></tr></table></figure>
+
+<p>代码试图修改第一个元素的值，导致Python返回类型错误消息。由于试图修改元组的<br>操作是被禁止的，因此Python指出不能给元组的元素赋值：</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vbnet">Traceback (most recent <span class="hljs-keyword">call</span> last):<br>File <span class="hljs-string">&quot;dimensions.py&quot;</span>, line <span class="hljs-number">3</span>, <span class="hljs-keyword">in</span> &lt;<span class="hljs-keyword">module</span>&gt;<br>dimensions[<span class="hljs-number">0</span>] = <span class="hljs-number">250</span><br><span class="hljs-symbol">TypeError:</span> <span class="hljs-comment">&#x27;tuple&#x27; object does not support item assignment</span><br></code></pre></td></tr></table></figure>
+
+<p>代码试图修改矩形的尺寸时， Python报告错误。</p>
+<h4 id="遍历元组中的所有值"><a href="#遍历元组中的所有值" class="headerlink" title="遍历元组中的所有值"></a>遍历元组中的所有值</h4><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">for 变量名 in 元组名</span><span class="hljs-punctuation">:</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="修改元组变量"><a href="#修改元组变量" class="headerlink" title="修改元组变量"></a>修改元组变量</h4><p>虽然不能修改元组的元素，但可以给存储元组的变量赋值。因此，如果要修改前述矩形的尺寸，可重新定义整个元组。这次， Python不会报告任何错误，因为给元组变量赋值是合法的：</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs maxima"><span class="hljs-built_in">dimensions</span> = (<span class="hljs-number">200</span>, <span class="hljs-number">50</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Original dimensions:&quot;</span>)<br><span class="hljs-keyword">for</span> <span class="hljs-built_in">dimension</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">dimensions</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">dimension</span>)<br><br><span class="hljs-built_in">dimensions</span> = (<span class="hljs-number">400</span>, <span class="hljs-number">100</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nModified dimensions:&quot;</span>)<br><span class="hljs-keyword">for</span> <span class="hljs-built_in">dimension</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">dimensions</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">dimension</span>)<br></code></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-keyword">Original </span><span class="hljs-keyword">dimensions:</span><br><span class="hljs-keyword"></span><span class="hljs-number">200</span><br><span class="hljs-number">50</span><br><br>Modified <span class="hljs-keyword">dimensions:</span><br><span class="hljs-keyword"></span><span class="hljs-number">400</span><br><span class="hljs-number">100</span><br></code></pre></td></tr></table></figure>
+
+<p>相比于列表，元组是更简单的数据结构。如果需要存储的一组值在程序的整个生命周期内都不变，可使用元组。</p>
+<h3 id="设置代码格式"><a href="#设置代码格式" class="headerlink" title="设置代码格式"></a>设置代码格式</h3><p>随着你编写的程序越来越长，有必要了解一些代码格式设置约定。请花时间让你的代码尽可能易于阅读；让代码易于阅读有助于你掌握程序是做什么的，也可以帮助他人理解你编写的代码。为确保所有人编写的代码的结构都大致一致， Python程序员都遵循一些格式设置约定。学会编写整洁的Python后，就能明白他人编写的Python代码的整体结构——只要他们和你遵循相同的指南。要成为专业程序员，应从现在开始就遵循这些指南，以养成良好的习惯。</p>
+<h4 id="格式设置指南"><a href="#格式设置指南" class="headerlink" title="格式设置指南"></a>格式设置指南</h4><p>若要提出Python语言修改建议，需要编写Python改进提案（ Python Enhancement Proposal，PEP）。 PEP 8是最古老的PEP之一，它向Python程序员提供了代码格式设置指南。 PEP 8的篇幅很<br>长，但大都与复杂的编码结构相关。Python格式设置指南的编写者深知，代码被阅读的次数比编写的次数多。代码编写出来后，调试时你需要阅读它；给程序添加新功能时，需要花很长的时间阅读代码；与其他程序员分享代码时，这些程序员也将阅读它们。如果一定要在让代码易于编写和易于阅读之间做出选择， Python程序员几乎总是会选择后者。下面的指南可帮助你从一开始就编写出清晰的代码。</p>
+<h5 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h5><p>PEP 8建议每级缩进都使用四个空格，这既可提高可读性，又留下了足够的多级缩进空间。在字处理文档中，大家常常使用制表符而不是空格来缩进。对于字处理文档来说，这样做的效果很好，但混合使用制表符和空格会让Python解释器感到迷惑。每款文本编辑器都提供了一种设置，可将输入的制表符转换为指定数量的空格。你在编写代码时应该使用制表符键，但一定要对编辑器进行设置，使其在文档中插入空格而不是制表符。在程序中混合使用制表符和空格可能导致极难解决的问题。如果你混合使用了制表符和空格，可将文件中所有的制表符转换为空格，大多数编辑器都提供了这样的功能。</p>
+<h5 id="行长"><a href="#行长" class="headerlink" title="行长"></a>行长</h5><p>很多Python程序员都建议每行不超过80字符。最初制定这样的指南时，在大多数计算机中，终端窗口每行只能容纳79字符；当前，计算机屏幕每行可容纳的字符数多得多，为何还要使用79字符的标准行长呢？这里有别的原因。专业程序员通常会在同一个屏幕上打开多个文件，使用标准行长可以让他们在屏幕上并排打开两三个文件时能同时看到各个文件的完整行。 PEP 8还建议注释的行长都不超过72字符，因为有些工具为大型项目自动生成文档时，会在每行注释开头添加格式化字符。PEP 8中有关行长的指南并非不可逾越的红线，有些小组将最大行长设置为99字符。在学习期间，你不用过多地考虑代码的行长，但别忘了，协作编写程序时，大家几乎都遵守PEP 8指南。在大多数编辑器中，都可设置一个视觉标志——通常是一条竖线，让你知道不能越过的界线在什么地方。</p>
+<h5 id="空行"><a href="#空行" class="headerlink" title="空行"></a>空行</h5><p>要将程序的不同部分分开，可使用空行。你应该使用空行来组织程序文件，但也不能滥用；只要按本书的示例展示的那样做，就能掌握其中的平衡。例如，如果你有5行创建列表的代码，还有3行处理该列表的代码，那么用一个空行将这两部分隔开是合适的。然而，你不应使用三四个空行将它们隔开。空行不会影响代码的运行，但会影响代码的可读性。 Python解释器根据水平缩进情况来解读代码，但不关心垂直间距。</p>
+<h4 id="其他格式设置指南"><a href="#其他格式设置指南" class="headerlink" title="其他格式设置指南"></a>其他格式设置指南</h4><p>PEP 8还有很多其他的格式设置建议，但这些指南针对的程序大都比目前为止本书提到的程序复杂。等介绍更复杂的Python结构时，我们再来分享相关的PEP 8指南。请访问 <a href="">https://python.org/dev/peps/pep-0008/</a>，阅读 PEP 8 格式设置指南。当前，这些指南适用的不多，但可以大致浏览一下.</p>
+<h2 id="第五章-if语句"><a href="#第五章-if语句" class="headerlink" title="第五章 if语句"></a>第五章 if语句</h2><h3 id="条件测试"><a href="#条件测试" class="headerlink" title="条件测试"></a>条件测试</h3><p>每条if语句的核心都是一个值为True或False的表达式，这种表达式被称为条件测试。 Python根据条件测试的值为True还是False来决定是否执行if语句中的代码。如果条件测试的值为 <code>True</code>，Python就执行紧跟在if语句后面的代码；如果为 <code>False</code>， Python就忽略这些代码。</p>
+<h4 id="检查是否相等"><a href="#检查是否相等" class="headerlink" title="检查是否相等"></a>检查是否相等</h4><p>大多数条件测试都将一个变量的当前值同特定值进行比较。最简单的条件测试检查变量的值是否与特定值相等： <code>变量A == 变量B</code><br>在Python中检查是否相等时区分大小写，例如，两个大小写不同的值会被视为不相等。</p>
+<h4 id="检查是否不相等"><a href="#检查是否不相等" class="headerlink" title="检查是否不相等"></a>检查是否不相等</h4><p>要判断两个值是否不等，可结合使用惊叹号和等号 <code>!=</code>，其中的惊叹号表示不，在很多编程语言中都如此。</p>
+<h4 id="比较数字"><a href="#比较数字" class="headerlink" title="比较数字"></a>比较数字</h4><p>条件语句中可包含各种数学比较，如等于 <code>==</code>、不等于 <code>!=</code>、小于 <code>&lt;</code>、小于等于 <code>&lt;=</code>、大于 <code>&gt;</code>、大于等于 <code>&gt;=</code>。</p>
+<h4 id="检查多个条件"><a href="#检查多个条件" class="headerlink" title="检查多个条件"></a>检查多个条件</h4><h5 id="使用and检查多个条件"><a href="#使用and检查多个条件" class="headerlink" title="使用and检查多个条件"></a>使用and检查多个条件</h5><p>要检查是否两个条件都为True，可使用关键字and将两个条件测试合而为一；如果每个测试都通过了，整个表达式就为True；如果至少有一个测试没有通过，整个表达式就为False。</p>
+<h5 id="使用or检查多个条件"><a href="#使用or检查多个条件" class="headerlink" title="使用or检查多个条件"></a>使用or检查多个条件</h5><p>关键字or也能够让你检查多个条件，但只要至少有一个条件满足，就能通过整个测试。仅当两个测试都没有通过时，使用or的表达式才为False。</p>
+<h4 id="检查特定值是否包含在列表中"><a href="#检查特定值是否包含在列表中" class="headerlink" title="检查特定值是否包含在列表中"></a>检查特定值是否包含在列表中</h4><p>要判断特定的值是否已包含在列表中，可使用关键字 <code>in</code>。条件表达式为 <code>元素 in 列表</code>。<br>关键字 <code>in</code>让Python检查列表中是否包含特定元素。这让你能够在创建一个列表后，轻松地检查其中是否包含特定的值。</p>
+<p>有些时候，确定特定的值未包含在列表中很重要；在这种情况下，可使用关键字 <code>not in</code>，条件表达式与in类似。</p>
+<h4 id="布尔表达式"><a href="#布尔表达式" class="headerlink" title="布尔表达式"></a>布尔表达式</h4><p>随着对编程的了解越来越深入，将遇到术语布尔表达式，它不过是条件测试的别名。与条件表达式一样，布尔表达式的结果要么为True，要么为False。布尔值通常用于记录条件，如游戏是否正在运行，或用户是否可以编辑网站的特定内容：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">game_active</span> = <span class="hljs-literal">True</span><br><span class="hljs-attr">can_edit</span> = <span class="hljs-literal">False</span><br></code></pre></td></tr></table></figure>
+
+<p>在跟踪程序状态或程序中重要的条件方面，布尔值提供了一种高效的方式。</p>
+<h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><p>理解条件测试后，就可以开始编写if语句了。<br>最简单的if语句只有一个测试和一个操作：</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs autoit"><span class="hljs-keyword">if</span> conditional_test:<br>    <span class="hljs-keyword">do</span> something<br>    <span class="hljs-meta"># 注意这里的缩进</span><br></code></pre></td></tr></table></figure>
+
+<p>在第1行中，可包含任何条件测试，而在紧跟在测试后面的缩进代码块中，可执行任何操作。如果条件测试的结果为True， Python就会执行紧跟在if语句后面的代码；否则Python将忽略这些代码。在紧跟在if语句后面的代码块中，可根据需要包含任意数量的代码行。</p>
+<h4 id="if-else语句"><a href="#if-else语句" class="headerlink" title="if-else语句"></a>if-else语句</h4><p>经常需要在条件测试通过了时执行一个操作，并在没有通过时执行另一个操作；在这种情况下，可使用Python提供的if-else语句。 if-else语句块类似于简单的if语句，但其中的else语句让你能够指定条件测试未通过时要执行的操作。</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><span class="hljs-keyword">if</span> conditional_test:<br>    <span class="hljs-keyword">do</span> something<br><span class="hljs-keyword">else</span>：<br>    <span class="hljs-keyword">do</span> something_else<br></code></pre></td></tr></table></figure>
+
+<h4 id="if-elif-else结构"><a href="#if-elif-else结构" class="headerlink" title="if-elif-else结构"></a>if-elif-else结构</h4><p>经常需要检查超过两个的情形，为此可使用Python提供的if-elif-else结构。 Python只执行if-elif-else结构中的一个代码块，它依次检查每个条件测试，直到遇到通过了的条件测试。测试通过后， Python将执行紧跟在它后面的代码，并跳过余下的测试。<br>在现实世界中，很多情况下需要考虑的情形都超过两个。例如，来看一个根据年龄段收费的游乐场：</p>
+<ul>
+<li>4岁以下免费；</li>
+<li>4~18岁收费5美元；</li>
+<li>18岁（含）以上收费10美元。<br>如果只使用一条if语句，如何确定门票价格呢？下面的代码确定一个人所属的年龄段，并打印一条包含门票价格的消息：</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">age</span> = <span class="hljs-number">12</span><br><span class="hljs-attribute">if</span> age &lt; <span class="hljs-number">4</span>:<br>    <span class="hljs-attribute">price</span> = <span class="hljs-number">0</span><br><span class="hljs-attribute">elif</span> age &lt; <span class="hljs-number">18</span>:<br>    <span class="hljs-attribute">price</span> = <span class="hljs-number">5</span><br><span class="hljs-attribute">else</span>:<br>    <span class="hljs-attribute">price</span> = <span class="hljs-number">10</span><br><br><span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;Your admission cost is $&quot;</span> + str(price) + <span class="hljs-string">&quot;.&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>可根据需要使用任意数量的elif代码块。<br>Python并不要求if-elif结构后面必须有else代码块。在有些情况下， else代码块很有用；而在其他一些情况下，使用一条elif语句来处理特定的情形更清晰。<br><strong>else是一条包罗万象的语句，只要不满足任何if或elif中的条件测试，其中的代码就会执行，这可能会引入无效甚至恶意的数据。如果知道最终要测试的条件，应考虑使用一个elif代码块来代替else代码块。这样，你就可以肯定，仅当满足相应的条件时，你的代码才会执行。</strong></p>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>if-elif-else结构功能强大，但仅适合用于只有一个条件满足的情况：遇到通过了的测试后，Python就跳过余下的测试。这种行为很好，效率很高，让你能够测试一个特定的条件。<br>总之，如果你只想执行一个代码块，就使用if-elif-else结构；如果要运行多个代码块，就使用一系列独立的if语句。</p>
+<h3 id="使用if语句处理列表"><a href="#使用if语句处理列表" class="headerlink" title="使用if语句处理列表"></a>使用if语句处理列表</h3><p>通过结合使用if语句和列表，可完成一些有趣的任务：对列表中特定的值做特殊处理；高效地管理不断变化的情形。</p>
+<h4 id="检查特殊元素"><a href="#检查特殊元素" class="headerlink" title="检查特殊元素"></a>检查特殊元素</h4><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><span class="hljs-keyword">for</span> 变量名 <span class="hljs-keyword">in</span> 列表名:<br>    <span class="hljs-keyword">if</span> 特殊元素 == 列表元素：<br>        <span class="hljs-keyword">do</span> something <br></code></pre></td></tr></table></figure>
+
+<h4 id="确定列表不是空的"><a href="#确定列表不是空的" class="headerlink" title="确定列表不是空的"></a>确定列表不是空的</h4><p>到目前为止，对于处理的每个列表都做了一个简单的假设，即假设它们都至少包含一个元素。我们马上就要让用户来提供存储在列表中的信息，因此不能再假设循环运行时列表不是空的。有鉴于此，在运行for循环前确定列表是否为空很重要。<br>在if语句中将列表名用在条件表达式中时， Python将在列表至少包含一个元素时返回True，并在列表为空时返回False。</p>
+<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">if 列表名</span><span class="hljs-punctuation">:</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="第六章-字典"><a href="#第六章-字典" class="headerlink" title="第六章 字典"></a>第六章 字典</h2><h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><p>在Python中， 字典是一系列键—值对(key-value)。每个键都与一个值相关联，你可以使用键来访问与之相关联的值。与键相关联的值可以是数字、字符串、列表乃至字典。事实上，可将任何Python对象用作字典中的值。</p>
+<h4 id="定义字典"><a href="#定义字典" class="headerlink" title="定义字典"></a>定义字典</h4><p>在Python中，字典用放在花括号{}中的一系列键—值对表示，如示例所示：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">alien_0</span> = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;points&#x27;</span>: <span class="hljs-number">5</span>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>键—值对是两个相关联的值。指定键时， Python将返回与之相关联的值。键和值之间用冒号分隔，而键—值对之间用逗号分隔。在字典中，你想存储多少个键—值对都可以。</p>
+<h4 id="访问字典中的值"><a href="#访问字典中的值" class="headerlink" title="访问字典中的值"></a>访问字典中的值</h4><p>要获取与键相关联的值，可依次指定字典名和放在方括号内的键 <code>字典名[键名]</code>，如示例所示：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">alien_0<span class="hljs-selector-attr">[<span class="hljs-string">&#x27;color&#x27;</span>]</span><br></code></pre></td></tr></table></figure>
+
+<p>这将返回字典alien_0中与键’color’相关联的值。</p>
+<h4 id="添加key-value对"><a href="#添加key-value对" class="headerlink" title="添加key-value对"></a>添加key-value对</h4><p>字典是一种动态结构，可随时在其中添加键—值对。要添加键—值对，可依次指定字典名、用方括号括起的键和相关联的值，格式为 <code>字典名[新的键] = 值</code>。<br><strong>注意，键—值对的排列顺序与添加顺序不同。 Python不关心键—值对的添加顺序，而只关心键和值之间的关联关系。</strong></p>
+<h4 id="先创建一个空字典"><a href="#先创建一个空字典" class="headerlink" title="先创建一个空字典"></a>先创建一个空字典</h4><p>有时候，在空字典中添加键—值对是为了方便，而有时候必须这样做。为此，可先使用一对空的花括号定义一个字典，再分行添加各个键—值对。<br>例如，下例演示了如何以这种方式创建字典 <code>alien_0</code>：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs stylus">alien_0 = &#123;&#125;<br><br>alien_0<span class="hljs-selector-attr">[<span class="hljs-string">&#x27;color&#x27;</span>]</span> = <span class="hljs-string">&#x27;green&#x27;</span><br>alien_0<span class="hljs-selector-attr">[<span class="hljs-string">&#x27;points&#x27;</span>]</span> = <span class="hljs-number">5</span><br><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(alien_0)</span></span><br></code></pre></td></tr></table></figure>
+
+<p>输出结果为：</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">&#123;&#x27;color&#x27;: &#x27;green&#x27;, &#x27;points&#x27;: <span class="hljs-number">5</span>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>使用字典来存储用户提供的数据或在编写能自动生成大量键—值对的代码时，通常都需要先定义一个空字典。</p>
+<h4 id="修改字典中的值"><a href="#修改字典中的值" class="headerlink" title="修改字典中的值"></a>修改字典中的值</h4><p>要修改字典中的值，可依次指定字典名、用方括号括起的键以及与该键相关联的新值，类似于创建新的键-值对。</p>
+<h4 id="删除key-value对"><a href="#删除key-value对" class="headerlink" title="删除key-value对"></a>删除key-value对</h4><p>对于字典中不再需要的信息，可使用del语句将相应的键—值对彻底删除。使用 <code>del</code>语句时，必须指定字典名和要删除的键。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">del</span> 字典名<span class="hljs-selector-attr">[<span class="hljs-string">&#x27;键名&#x27;</span>]</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>删除的键—值对永远消失了。</strong></p>
+<p>确定需要使用多行来定义字典时，在输入左花括号后按回车键，再在下一行缩进四个空格，指定第一个键—值对，并在它后面加上一个逗号。此后你再次按回车键时，文本编辑器将自动缩进后续键—值对，且缩进量与第一个键—值对相同。</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">favorite_languages</span> = &#123;<br>    <span class="hljs-string">&#x27;jen&#x27;</span>: <span class="hljs-string">&#x27;python&#x27;</span>,<br>    <span class="hljs-string">&#x27;sarah&#x27;</span>: <span class="hljs-string">&#x27;c&#x27;</span>,<br>    <span class="hljs-string">&#x27;edward&#x27;</span>: <span class="hljs-string">&#x27;ruby&#x27;</span>,<br>    <span class="hljs-string">&#x27;phil&#x27;</span>: <span class="hljs-string">&#x27;python&#x27;</span>,<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<p>定义好字典后，在最后一个键—值对的下一行添加一个右花括号，并缩进四个空格，使其与字典中的键对齐。另外一种不错的做法是在最后一个键—值对后面也加上逗号，为以后在下一行添加键—值对做好准备。<br>对于较长的列表和字典，大多数编辑器都有以类似方式设置其格式的功能。对于较长的字典，还有其他一些可行的格式设置方式，因此在你的编辑器或其他源代码中，你可能会看到稍微不同的格式设置方式。</p>
+<h3 id="遍历字典"><a href="#遍历字典" class="headerlink" title="遍历字典"></a>遍历字典</h3><p>一个Python字典可能只包含几个键—值对，也可能包含数百万个键—值对。鉴于字典可能包含大量的数据， Python支持对字典遍历。字典可用于以各种方式存储信息，因此有多种遍历字典的方式：可遍历字典的所有键—值对、键或值。</p>
+<h4 id="遍历所有key-value对"><a href="#遍历所有key-value对" class="headerlink" title="遍历所有key-value对"></a>遍历所有key-value对</h4><p>要编写用于遍历字典的for循环，可声明两个变量，用于存储键—值对中的键和值。对于这两个变量，可使用任何名称，一般来说，会使用与字典储存元素相关的描述性名称作为变量名，给阅读代码带来便利。<br>可以使用方法 <code>items()</code>，它返回一个键—值对列表。接下来，for循环依次将每个键—值对存储到指定的两个变量中。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">for key , value in 字典名<span class="hljs-string">.items</span><span class="hljs-params">()</span>:<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意，即便遍历字典时，键—值对的返回顺序也与存储顺序不同。 Python不关心键—值对的存储顺序，而只跟踪键和值之间的关联关系。</strong></p>
+<h4 id="遍历字典中的所有键"><a href="#遍历字典中的所有键" class="headerlink" title="遍历字典中的所有键"></a>遍历字典中的所有键</h4><p>在不需要使用字典中的值时，方法 <code>keys()</code>很有用。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">for 变量名 in 字典名<span class="hljs-string">.keys</span><span class="hljs-params">()</span>:<br></code></pre></td></tr></table></figure>
+
+<p>遍历字典时，会默认遍历所有的键，因此，如果将上述代码中的 <code>for name in favorite_languages.keys():</code>替换为 <code>for name in favorite_languages:</code>，输出将不变。<br>如果显式地使用方法 <code>keys()</code>可让代码更容易理解，你可以选择这样做，但如果你愿意，也可省略它。在这种循环中，可使用当前键来访问与之相关联的值。</p>
+<p>我们像前面一样遍历字典中的名字，但在名字为指定朋友的名字时，打印一条消息，指出其喜欢的语言：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs stylus">favorite_languages = &#123;<br>    <span class="hljs-string">&#x27;jen&#x27;</span>: <span class="hljs-string">&#x27;python&#x27;</span>,<br>    <span class="hljs-string">&#x27;sarah&#x27;</span>: <span class="hljs-string">&#x27;c&#x27;</span>,<br>    <span class="hljs-string">&#x27;edward&#x27;</span>: <span class="hljs-string">&#x27;ruby&#x27;</span>,<br>    <span class="hljs-string">&#x27;phil&#x27;</span>: <span class="hljs-string">&#x27;python&#x27;</span>,<br>    &#125;<br><br>friends = <span class="hljs-selector-attr">[<span class="hljs-string">&#x27;phil&#x27;</span>, <span class="hljs-string">&#x27;sarah&#x27;</span>]</span><br><span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> favorite_languages<span class="hljs-selector-class">.keys</span>():<br>    <span class="hljs-built_in">print</span>(name<span class="hljs-selector-class">.title</span>())<br>    <span class="hljs-keyword">if</span> name <span class="hljs-keyword">in</span> friends:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot; Hi &quot;</span> + name<span class="hljs-selector-class">.title</span>() +<br>            <span class="hljs-string">&quot;, I see your favorite language is &quot;</span> +<br>            favorite_languages<span class="hljs-selector-attr">[name]</span><span class="hljs-selector-class">.title</span>() + <span class="hljs-string">&quot;!&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>我们创建了一个列表，其中包含我们要通过打印消息，指出其喜欢的语言的朋友。在循环中，我们打印每个人的名字，并检查当前的名字是否在列表friends中。如果在列<br>表中，就打印一句特殊的问候语，其中包含这位朋友喜欢的语言。为访问喜欢的语言，我们使用了字典名，并将变量name的当前值作为键。每个人的名字都会被打印，但只对朋友打印特殊消息：</p>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs ceylon">Edward<br>Phil<br>Hi Phil, I <span class="hljs-meta">see</span> your favorite language <span class="hljs-keyword">is</span> Python!<br>Sarah<br>Hi Sarah, I <span class="hljs-meta">see</span> your favorite language <span class="hljs-keyword">is</span> C!<br>Jen<br></code></pre></td></tr></table></figure>
+
+<p><strong>方法 <code>keys()</code>并非只能用于遍历；实际上，它返回一个列表，其中包含字典中的所有键。</strong></p>
+<h4 id="按顺序遍历字典中的所有键"><a href="#按顺序遍历字典中的所有键" class="headerlink" title="按顺序遍历字典中的所有键"></a>按顺序遍历字典中的所有键</h4><p>字典总是明确地记录键和值之间的关联关系，但获取字典的元素时，获取顺序是不可预测的。这不是问题，因为通常你想要的只是获取与键相关联的正确的值。<br>要以特定的顺序返回元素，一种办法是在for循环中对返回的键进行排序。为此，可使用函数 <code>sorted()</code>来获得按特定顺序排列的键列表的副本：</p>
+<figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-variable">for</span> 变量名 <span class="hljs-variable"><span class="hljs-keyword">in</span></span> <span class="hljs-function"><span class="hljs-title">sorted</span>(字典名.keys())</span><br></code></pre></td></tr></table></figure>
+
+<p>这条for语句类似于其他for语句，但对方法 <code>dictionary.keys()</code>的结果调用了函数sorted()。这让Python列出字典中的所有键，并在遍历前对这个列表进行排序。</p>
+<h4 id="遍历字典中的所有值"><a href="#遍历字典中的所有值" class="headerlink" title="遍历字典中的所有值"></a>遍历字典中的所有值</h4><p>如果你感兴趣的主要是字典包含的值，可使用方法 <code>values()</code>，它返回一个值列表，而不包含任何键。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">for 变量名 in 字典名<span class="hljs-string">.values</span><span class="hljs-params">()</span>:<br></code></pre></td></tr></table></figure>
+
+<p>这条for语句提取字典中的每个值，并将它们依次存储到变量中。<br>这种做法提取字典中所有的值，而没有考虑是否重复。涉及的值很少时，这也许不是问题，但如果被调查者很多，最终的列表可能包含大量的重复项。为剔除重复项，可使用集合 <code>set</code>。集合类似于列表，但每个元素都必须是独一无二的</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">for</span> 变量名 <span class="hljs-keyword">in</span> <span class="hljs-keyword">set</span>(字典名.<span class="hljs-keyword">values</span>()):<br></code></pre></td></tr></table></figure>
+
+<p>通过对包含重复元素的列表调用 <code>set()</code>，可让Python找出列表中独一无二的元素，并使用这些元素来创建一个集合。</p>
+<h3 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h3><p>有时候，需要将一系列字典存储在列表中，或将列表作为值存储在字典中，这称为嵌套。你可以在列表中嵌套字典、在字典中嵌套列表甚至在字典中嵌套字典。</p>
+<h4 id="字典列表"><a href="#字典列表" class="headerlink" title="字典列表"></a>字典列表</h4><p>在下面的示例中，我们使用range()生成了30个外星人：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-meta"># 创建一个用于存储外星人的空列表</span><br>aliens = []<br><span class="hljs-meta"># 创建30个绿色的外星人</span><br><span class="hljs-function"><span class="hljs-keyword">for</span> alien_number <span class="hljs-keyword">in</span> <span class="hljs-title">range</span>(<span class="hljs-params"><span class="hljs-number">30</span></span>):</span><br><span class="hljs-function">    new_alien</span> = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;points&#x27;</span>: <span class="hljs-number">5</span>, <span class="hljs-string">&#x27;speed&#x27;</span>: <span class="hljs-string">&#x27;slow&#x27;</span>&#125;<br>    aliens.append(new_alien)<br></code></pre></td></tr></table></figure>
+
+<p>在这个示例中，首先创建了一个空列表，用于存储接下来将创建的所有外星人。range()返回一系列数字，其唯一的用途是告诉Python我们要重复这个循环多少次。每次执行这个循环时，都创建一个外星人，并将其附加到列表aliens末尾。</p>
+<p>经常需要在列表中包含大量的字典，而其中每个字典都包含特定对象的众多信息。在这个列表中，所有字典的结构都相同，因此你可以遍历这个列表，并以相同的方式处理其中的每个字典。</p>
+<h4 id="在字典中储存列表"><a href="#在字典中储存列表" class="headerlink" title="在字典中储存列表"></a>在字典中储存列表</h4><p>有时候，需要将列表存储在字典中，而不是将字典存储在列表中。<br>每当需要在字典中将一个键关联到多个值时，都可以在字典中嵌套一个列表，例：</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs prolog">favorite_languages = &#123;<br>    <span class="hljs-string">&#x27;jen&#x27;</span>: [<span class="hljs-string">&#x27;python&#x27;</span>, <span class="hljs-string">&#x27;ruby&#x27;</span>],<br>    <span class="hljs-string">&#x27;sarah&#x27;</span>: [<span class="hljs-string">&#x27;c&#x27;</span>],<br>    <span class="hljs-string">&#x27;edward&#x27;</span>: [<span class="hljs-string">&#x27;ruby&#x27;</span>, <span class="hljs-string">&#x27;go&#x27;</span>],<br>    <span class="hljs-string">&#x27;phil&#x27;</span>: [<span class="hljs-string">&#x27;python&#x27;</span>, <span class="hljs-string">&#x27;haskell&#x27;</span>],<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<p><em>列表和字典的嵌套层级不应太多。</em></p>
+<h4 id="在字典中存储字典"><a href="#在字典中存储字典" class="headerlink" title="在字典中存储字典"></a>在字典中存储字典</h4><p>可在字典中嵌套字典，但这样做时，代码可能很快复杂起来。例如，如果有多个网站用户，每个都有独特的用户名，可在字典中将用户名作为键，然后将每位用户的信息存储在一个字典中，并将该字典作为与用户名相关联的值。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># many_users.py</span><span class="hljs-built_in"></span><br><span class="hljs-built_in">users </span>= &#123;<br>    <span class="hljs-string">&#x27;aeinstein&#x27;</span>: &#123;<br>        <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;albert&#x27;</span>,<br>        <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;einstein&#x27;</span>,<br>        <span class="hljs-string">&#x27;location&#x27;</span>: <span class="hljs-string">&#x27;princeton&#x27;</span>,<br>        &#125;,<br>    <span class="hljs-string">&#x27;mcurie&#x27;</span>: &#123;<br>        <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;marie&#x27;</span>,<br>        <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;curie&#x27;</span>,<br>        <span class="hljs-string">&#x27;location&#x27;</span>: <span class="hljs-string">&#x27;paris&#x27;</span>,<br>        &#125;,<br>    &#125;<br><br><span class="hljs-keyword">for</span> username, user_info <span class="hljs-keyword">in</span> users.items():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nUsername: &quot;</span> + username)<br>    full_name = user_info[<span class="hljs-string">&#x27;first&#x27;</span>] + <span class="hljs-string">&quot; &quot;</span> + user_info[<span class="hljs-string">&#x27;last&#x27;</span>]<br>    location = user_info[<span class="hljs-string">&#x27;location&#x27;</span>]<br><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\tFull name: &quot;</span> + full_name.title())<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\tLocation: &quot;</span> + location.title())<br></code></pre></td></tr></table></figure>
+
+<p>我们首先定义了一个名为users的字典，其中包含两个键：用户名’aeinstein’和’mcurie’；与每个键相关联的值都是一个字典，其中包含用户的名、姓和居住地。在处，我们遍历字典users，让Python依次将每个键存储在变量username中，并依次将与当前键相关联的字典存储在变量user_info中。在主循环内部，我们将用户名打印出来。<br>接下来开始访问内部的字典。变量user_info包含用户信息字典，而该字典包含三个键’first’、 ‘last’和’location’；对于每位用户，我们都使用这些键来生成整洁的姓名和居住地，然后打印有关用户的简要信息：</p>
+<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">Username</span><span class="hljs-punctuation">:</span> <span class="hljs-string">aeinstein</span><br><span class="hljs-attribute">Full name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Albert Einstein</span><br><span class="hljs-attribute">Location</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Princeton</span><br><span class="hljs-attribute">Username</span><span class="hljs-punctuation">:</span> <span class="hljs-string">mcurie</span><br><span class="hljs-attribute">Full name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Marie Curie</span><br><span class="hljs-attribute">Location</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Paris</span><br></code></pre></td></tr></table></figure>
+
+<p><em>请注意，表示每位用户的字典的结构都相同，</em>虽然Python并没有这样的要求，但这使得嵌套的字典处理起来更容易。倘若表示每位用户的字典都包含不同的键， for循环内部的代码将更复杂。</p>
+<h2 id="第七章-用户输入和while循环"><a href="#第七章-用户输入和while循环" class="headerlink" title="第七章 用户输入和while循环"></a>第七章 用户输入和while循环</h2><p>大多数程序都旨在解决最终用户的问题，为此通常需要从用户那里获取一些信息。</p>
+<h3 id="函数input-的工作原理"><a href="#函数input-的工作原理" class="headerlink" title="函数input()的工作原理"></a>函数input()的工作原理</h3><p>函数 <code>input()</code>让程序暂停运行，等待用户输入一些文本。获取用户输入后， Python将其<strong>存储在一个变量中</strong>，以方便你使用。函数 <code>input()</code>接受一个参数：即要向用户显示的提示或说明，让用户知道该如何做。程序等待用户输入，并在用户按回车键后继续运行。</p>
+<figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs isbl">变量名 = <span class="hljs-function"><span class="hljs-title">input</span>(变量名)</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="编写清晰的程序"><a href="#编写清晰的程序" class="headerlink" title="编写清晰的程序"></a>编写清晰的程序</h4><p>每当你使用函数input()时，都应指定清晰而易于明白的提示，准确地指出你希望用户提供什么样的信息——指出用户该输入任何信息的提示都行。通过在提示末尾包含一个空格，可将提示与用户输入分开，让用户清楚地知道其输入始于何处。</p>
+<p>有时候，提示可能超过一行，例如，你可能需要指出获取特定输入的原因。在这种情况下，可将提示存储在一个变量中，再将该变量传递给函数input()。这样，即便提示超过一行， input()语句也非常清晰。</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs makefile"><span class="hljs-comment"># greeter.py</span><br>prompt = <span class="hljs-string">&quot;If you tell us who you are, we can personalize the messages you see.&quot;</span><br>prompt += <span class="hljs-string">&quot;\nWhat is your first name? &quot;</span><br><br>name = input(prompt)<br>print(<span class="hljs-string">&quot;\nHello, &quot;</span> + name + <span class="hljs-string">&quot;!&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h4 id="使用int-来获取数值输入"><a href="#使用int-来获取数值输入" class="headerlink" title="使用int()来获取数值输入"></a>使用int()来获取数值输入</h4><p>使用函数input()时， Python将用户输入解读为字符串。请看下面让用户输入其年龄的解释器会话：</p>
+<figure class="highlight python-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python-repl"><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">age = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;How old are you? &quot;</span>)</span><br>How old are you? 21<br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">age</span><br>&#x27;21&#x27;<br></code></pre></td></tr></table></figure>
+
+<p>用户输入的数值被以字符串表示。离谱想让Python将输入视为数值，可使用函数int()，函数int()将数字的字符串表示转换为数值表示。</p>
+<h4 id="求模运算符"><a href="#求模运算符" class="headerlink" title="求模运算符%"></a>求模运算符%</h4><p>处理数值信息时， 求模运算符（ %）是一个很有用的工具，它将两个数相除并返回余数。求模运算符不会指出一个数是另一个数的多少倍，而只指出余数是多少。如果一个数可被另一个数整除，余数就为0，因此求模运算符将返回0。你可利用这一点来判断一个数是奇数还是偶数：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs vim"># even_or_odd.<span class="hljs-keyword">py</span><br><span class="hljs-keyword">number</span> = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;Enter a number, and I&#x27;ll tell you if it&#x27;s even or odd: &quot;</span>)<br><span class="hljs-keyword">number</span> = <span class="hljs-keyword">int</span>(<span class="hljs-keyword">number</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-keyword">number</span> % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:<br>    <span class="hljs-keyword">print</span>(<span class="hljs-string">&quot;\nThe number &quot;</span> + str(<span class="hljs-keyword">number</span>) + <span class="hljs-string">&quot; is even.&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-keyword">print</span>(<span class="hljs-string">&quot;\nThe number &quot;</span> + str(<span class="hljs-keyword">number</span>) + <span class="hljs-string">&quot; is odd.&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><p>while 语句用于在表达式保持为真的情况下重复地执行:</p>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ceylon"><span class="hljs-keyword">while</span><span class="hljs-number">_</span>stmt ::=  <span class="hljs-string">&quot;while&quot;</span> assignment<span class="hljs-number">_</span>expression <span class="hljs-string">&quot;:&quot;</span> suite<br>                [<span class="hljs-string">&quot;else&quot;</span> <span class="hljs-string">&quot;:&quot;</span> suite]<br></code></pre></td></tr></table></figure>
+
+<p>这将重复地检验表达式，并且如果其值为真就执行第一个子句体；如果表达式值为假（这可能在第一次检验时就发生）则如果 else 子句体存在就会被执行并终止循环。</p>
+<h4 id="让用户选择何时退出"><a href="#让用户选择何时退出" class="headerlink" title="让用户选择何时退出"></a>让用户选择何时退出</h4><p>例：</p>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs sas">prompt = <span class="hljs-string">&quot;\nTell me something, and I will repeat it back to you:&quot;</span><br>prompt += <span class="hljs-string">&quot;\nEnter &#x27;quit&#x27; to end the program. &quot;</span><br><br><span class="hljs-keyword">message</span> = <span class="hljs-string">&quot;&quot;</span><br><br><span class="hljs-keyword">while</span> <span class="hljs-keyword">message</span> != <span class="hljs-string">&#x27;quit&#x27;</span>:<br>    <span class="hljs-keyword">message</span> = <span class="hljs-meta">input</span>(prompt)<br><br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">message</span> != <span class="hljs-string">&#x27;quit&#x27;</span>:<br>        pr<span class="hljs-meta">int</span>(<span class="hljs-keyword">message</span>)<br></code></pre></td></tr></table></figure>
+
+<p>等到用户终于输入’quit’后， Python停止执行while循环，而整个程序也到此结束。</p>
+<h4 id="使用标志"><a href="#使用标志" class="headerlink" title="使用标志"></a>使用标志</h4><p>在前一个示例中，我们让程序在满足指定条件时就执行特定的任务。但在更复杂的程序中，很多不同的事件都会导致程序停止运行；在这种情况下，该怎么办呢？例如，在游戏中，多种事件都可能导致游戏结束，如玩家一艘飞船都没有了或要保护的城市都被摧毁了。导致程序结束的事件有很多时，如果在一条while语句中检查所有这些条件，将既复杂又困难。<br>在要求很多条件都满足才继续运行的程序中，可定义一个变量，用于判断整个程序是否处于活动状态。这个变量被称为标志，充当了程序的交通信号灯。你可让程序在标志为True时继续运行，并在任何事件导致标志的值为False时让程序停止运行。这样，在while语句中就只需检查一个条件——标志的当前值是否为True，并将所有测试（是否发生了应将标志设置为False的事件）都放在其他地方，从而让程序变得更为整洁。<br>下面来在前一节的程序中添加一个标志。我们把这个标志命名为active（可给它指定任何名称），它将用于判断程序是否应继续运行：</p>
+<figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-variable">prompt</span> = <span class="hljs-string">&quot;\nTell me something, and I will repeat it back to you:&quot;</span><br><span class="hljs-variable">prompt</span> += <span class="hljs-string">&quot;\nEnter &#x27;quit&#x27; to end the program. &quot;</span><br><span class="hljs-variable">active</span> = <span class="hljs-variable"><span class="hljs-literal">True</span></span><br><span class="hljs-variable"><span class="hljs-keyword">while</span></span> <span class="hljs-variable">active</span>:<br>    <span class="hljs-variable">message</span> = <span class="hljs-function"><span class="hljs-title">input</span>(<span class="hljs-variable">prompt</span>)</span><br><br>    <span class="hljs-variable"><span class="hljs-keyword">if</span></span> <span class="hljs-variable">message</span> == <span class="hljs-string">&#x27;quit&#x27;</span>:<br>        <span class="hljs-variable">active</span> = <span class="hljs-variable"><span class="hljs-literal">False</span></span><br>    <span class="hljs-variable"><span class="hljs-keyword">else</span></span>:<br>    <span class="hljs-function"><span class="hljs-title">print</span>(<span class="hljs-variable">message</span>)</span><br></code></pre></td></tr></table></figure>
+
+<p>而在这个程序中，我们使用了一个标志来指出程序是否处于活动状态，这样如果要添加测试（如elif语句）以检查是否发生了其他导致active变为False的事件，将很容易。在复杂的程序中，如很多事件都会导致程序停止运行的游戏中，标志很有用：在其中的任何一个事件导致活动标志变成False时，主游戏循环将退出，此时可显示一条游戏结束消息，并让用户选择是否要重新玩。</p>
+<h4 id="使用break退出循环"><a href="#使用break退出循环" class="headerlink" title="使用break退出循环"></a>使用break退出循环</h4><p>要立即退出while循环，不再运行循环中余下的代码，也不管条件测试的结果如何，可使用break语句。 break语句用于控制程序流程，可使用它来控制哪些代码行将执行，哪些代码行不执行，从而让程序按你的要求执行你要执行的代码。</p>
+<p><em>在任何Python循环中都可使用break语句。例如，可使用break语句来退出遍历列表或字典的for循环。</em></p>
+<h4 id="在循环中使用continue"><a href="#在循环中使用continue" class="headerlink" title="在循环中使用continue"></a>在循环中使用continue</h4><p>要返回到循环开头，并根据条件测试结果决定是否继续执行循环，可使用continue语句，它不像break语句那样不再执行余下的代码并退出整个循环。<br>例如，来看一个从1数到10，但只打印其中偶数的循环：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># counting.py</span><br><span class="hljs-attribute">current_number</span> = <span class="hljs-number">0</span><br><span class="hljs-attribute">while</span> current_number &lt; <span class="hljs-number">10</span>:<br>    <span class="hljs-attribute">current_number</span> += <span class="hljs-number">1</span><br>    <span class="hljs-attribute">if</span> current_number % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:<br>        <span class="hljs-attribute">continue</span><br>    <span class="hljs-attribute">print</span>(current_number)<br></code></pre></td></tr></table></figure>
+
+<h4 id="避免无限循环"><a href="#避免无限循环" class="headerlink" title="避免无限循环"></a>避免无限循环</h4><p>每个while循环都必须有停止运行的途径，这样才不会没完没了地执行下去。每个程序员都会偶尔因不小心而编写出无限循环，在循环的退出条件比较微妙时尤其如此。<br>如果程序陷入无限循环，可按Ctrl + C，也可关闭显示程序输出的终端窗口。要避免编写无限循环，务必对每个while循环进行测试，确保它按预期那样结束。如果你希望程序在用户输入特定值时结束，可运行程序并输入这样的值；如果在这种情况下程序没有结束，请检查程序处理这个值的方式，确认程序至少有一个这样的地方能让循环条件为False或让break语句得以执行。</p>
+<h3 id="使用while循环来处理列表和字典"><a href="#使用while循环来处理列表和字典" class="headerlink" title="使用while循环来处理列表和字典"></a>使用while循环来处理列表和字典</h3><p>到目前为止，我们每次都只处理了一项用户信息：获取用户的输入，再将输入打印出来或作出应答；循环再次运行时，我们获悉另一个输入值并作出响应。然而，要记录大量的用户和信息，需要在while循环中使用列表和字典。<br>for循环是一种遍历列表的有效方式，但在for循环中不应修改列表，否则将导致Python难以跟踪其中的元素。要在遍历列表的同时对其进行修改，可使用while循环。通过将while循环同列表和字典结合起来使用，可收集、存储并组织大量输入，供以后查看和显示。</p>
+<h4 id="在列表之间移动元素"><a href="#在列表之间移动元素" class="headerlink" title="在列表之间移动元素"></a>在列表之间移动元素</h4><p>假设有一个列表，其中包含新注册但还未验证的网站用户；验证这些用户后，如何将他们移到另一个已验证用户列表中呢？一种办法是使用一个while循环，在验证用户的同时将其从未验证用户列表中提取出来，再将其加入到另一个已验证用户列表中。代码可能类似于下面这样：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs routeros">confirmed_users.py<br><span class="hljs-comment"># 首先，创建一个待验证用户列表和一个用于存储已验证用户的空列表</span><br>unconfirmed_users = [<span class="hljs-string">&#x27;alice&#x27;</span>, <span class="hljs-string">&#x27;brian&#x27;</span>, <span class="hljs-string">&#x27;candace&#x27;</span>]<br>confirmed_users = []<br><br><span class="hljs-comment"># 验证每个用户，直到没有未验证用户为止，将每个经过验证的列表都移到已验证用户列表中</span><br><span class="hljs-keyword">while</span> unconfirmed_users:<br>    current_user = unconfirmed_users.pop()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Verifying user: &quot;</span> + current_user.title())<br>    confirmed_users.append(current_user)<br><br><span class="hljs-comment"># 显示所有已验证的用户</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nThe following users have been confirmed:&quot;</span>)<br><span class="hljs-keyword">for</span> confirmed_user <span class="hljs-keyword">in</span> confirmed_users:<br>    <span class="hljs-built_in">print</span>(confirmed_user.title())<br></code></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">Verifying user</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Candace</span><br><span class="hljs-attribute">Verifying user</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Brian</span><br><span class="hljs-attribute">Verifying user</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Alice</span><br><br><span class="hljs-attribute">The following users have been confirmed</span><span class="hljs-punctuation">:</span><br>Candace<br>Brian<br>Alice<br></code></pre></td></tr></table></figure>
+
+<h4 id="删除包含特定值的所有列表元素"><a href="#删除包含特定值的所有列表元素" class="headerlink" title="删除包含特定值的所有列表元素"></a>删除包含特定值的所有列表元素</h4><p>我们使用函数remove()来删除列表中的特定值，这之所以可行，是因为要删除的值在列表中只出现了一次。如果要删除列表中所有包含特定值的元素，可不断运行一个while循环，直到列表中不再包含特定值。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stylus">pets = <span class="hljs-selector-attr">[<span class="hljs-string">&#x27;dog&#x27;</span>, <span class="hljs-string">&#x27;cat&#x27;</span>, <span class="hljs-string">&#x27;dog&#x27;</span>, <span class="hljs-string">&#x27;goldfish&#x27;</span>, <span class="hljs-string">&#x27;cat&#x27;</span>, <span class="hljs-string">&#x27;rabbit&#x27;</span>, <span class="hljs-string">&#x27;cat&#x27;</span>]</span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(pets)</span></span><br>while <span class="hljs-string">&#x27;cat&#x27;</span> <span class="hljs-keyword">in</span> pets:<br>    pets<span class="hljs-selector-class">.remove</span>(<span class="hljs-string">&#x27;cat&#x27;</span>)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(pets)</span></span><br></code></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs scheme">[<span class="hljs-symbol">&#x27;dog</span>&#x27;, <span class="hljs-symbol">&#x27;cat</span>&#x27;, <span class="hljs-symbol">&#x27;dog</span>&#x27;, <span class="hljs-symbol">&#x27;goldfish</span>&#x27;, <span class="hljs-symbol">&#x27;cat</span>&#x27;, <span class="hljs-symbol">&#x27;rabbit</span>&#x27;, <span class="hljs-symbol">&#x27;cat</span>&#x27;]<br>[<span class="hljs-symbol">&#x27;dog</span>&#x27;, <span class="hljs-symbol">&#x27;dog</span>&#x27;, <span class="hljs-symbol">&#x27;goldfish</span>&#x27;, <span class="hljs-symbol">&#x27;rabbit</span>&#x27;]<br></code></pre></td></tr></table></figure>
+
+<h4 id="使用用户输入来填充字典"><a href="#使用用户输入来填充字典" class="headerlink" title="使用用户输入来填充字典"></a>使用用户输入来填充字典</h4><p>可使用while循环提示用户输入任意数量的信息。下面来创建一个调查程序，其中的循环每次执行时都提示输入被调查者的名字和回答。我们将收集的数据存储在一个字典中，以便将回答同被调查者关联起来：</p>
+<figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs hsp">responses = &#123;&#125;<br><br><span class="hljs-meta"># 设置一个标志，指出调查是否继续</span><br>polling_active = True<br><br><span class="hljs-keyword">while</span> polling_active:<br><span class="hljs-meta"># 提示输入被调查者的名字和回答</span><br>    name = <span class="hljs-keyword">input</span>(<span class="hljs-string">&quot;\nWhat is your name? &quot;</span>)<br>    response = <span class="hljs-keyword">input</span>(<span class="hljs-string">&quot;Which mountain would you like to climb someday? &quot;</span>)<br><br><span class="hljs-meta"># 将答卷存储在字典中</span><br>    responses[name] = response<br><span class="hljs-meta"># 看看是否还有人要参与调查</span><br>    <span class="hljs-keyword">repeat</span> = <span class="hljs-keyword">input</span>(<span class="hljs-string">&quot;Would you like to let another person respond? (yes/ no) &quot;</span>)<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">repeat</span> == <span class="hljs-string">&#x27;no&#x27;</span>:<br>    polling_active = False<br><br><span class="hljs-meta"># 调查结束，显示结果</span><br><span class="hljs-keyword">print</span>(<span class="hljs-string">&quot;\n--- Poll Results ---&quot;</span>)<br><span class="hljs-keyword">for</span> name, response in responses.items():<br>    <span class="hljs-keyword">print</span>(name + <span class="hljs-string">&quot; would like to climb &quot;</span> + response + <span class="hljs-string">&quot;.&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>如果你运行这个程序，并输入一些名字和回答，输出将类似于下面这样：</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs vbnet">What <span class="hljs-built_in">is</span> your name? Eric<br>Which mountain would you <span class="hljs-built_in">like</span> <span class="hljs-keyword">to</span> climb someday? Denali<br>Would you <span class="hljs-built_in">like</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">let</span> another person respond? (yes/ no) yes<br>What <span class="hljs-built_in">is</span> your name? Lynn<br>Which mountain would you <span class="hljs-built_in">like</span> <span class="hljs-keyword">to</span> climb someday? Devil<span class="hljs-comment">&#x27;s Thumb</span><br>Would you <span class="hljs-built_in">like</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">let</span> another person respond? (yes/ no) no<br>--- Poll Results ---<br>Lynn would <span class="hljs-built_in">like</span> <span class="hljs-keyword">to</span> climb Devil<span class="hljs-comment">&#x27;s Thumb.</span><br>Eric would <span class="hljs-built_in">like</span> <span class="hljs-keyword">to</span> climb Denali.<br></code></pre></td></tr></table></figure>
+
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数是带名字的代码块，用于完成具体的工作。要执行函数定义的特定任务，可调用该函数。需要在程序中多次执行同一项任务时，无需反复编写完成该任务的代码，而只需调用执行该任务的函数，让Python运行其中的代码。</p>
+<h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><p>下面是一个打印问候语的简单函数，名为greet_user()：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">greet_user</span>():<br>    <span class="hljs-string">&quot;&quot;&quot;显示简单的问候语&quot;&quot;&quot;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello!&quot;</span>)<br><br>greet_user()<br></code></pre></td></tr></table></figure>
+
+<p>这个示例演示了最简单的函数结构。 Ø处的代码行使用关键字def来告诉Python你要定义一个函数。这是函数定义，向Python指出了函数名，还可能在括号内指出函数为完成其任务需要什么样的信息。在这里，函数名为greet_user()，它不需要任何信息就能完成其工作，因此括号是空的（<strong>即便如此，括号也必不可少</strong>）。最后，定义以冒号结尾。<br>紧跟在def greet_user():后面的所有缩进行构成了函数体。 此处的文本是被称为文档字符串（ docstring）的注释，描述了函数是做什么的。文档字符串用三引号 <code>&quot;&quot;&quot;  &quot;&quot;&quot;</code>括起， Python使用它们来生成有关程序中函数的文档。<br>函数调用让Python执行函数的代码。要调用函数，可依次指定函数名以及用括号括起的必要信息</p>
+<h4 id="向函数传递信息"><a href="#向函数传递信息" class="headerlink" title="向函数传递信息"></a>向函数传递信息</h4><p>可在函数定义def greet_user()的括号内添加username。通过在这里添加username，<br>就可让函数接受你给username指定的任何值。现在，这个函数要求你调用它时给username指定一个值。调用greet_user()时，可将一个名字传递给它，如下所示：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">greet_user</span>(<span class="hljs-params">username</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;显示简单的问候语&quot;&quot;&quot;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, &quot;</span> + username.title() + <span class="hljs-string">&quot;!&quot;</span>)<br><br>greet_user(<span class="hljs-string">&#x27;elysia&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>你可以根据需要调用函数greet_user()任意次，调用时无论传入什么样的名字，都会生成相应的输出。</p>
+<h4 id="形参与实参"><a href="#形参与实参" class="headerlink" title="形参与实参"></a>形参与实参</h4><p>在函数greet_user()的定义中，变量username是一个形参——函数完成其工作所需的一项信息。在代码greet_user(‘jesse’)中，值’elysia’是一个实参。实参是调用函数时传递给函数的信息。</p>
+<h3 id="传递实参"><a href="#传递实参" class="headerlink" title="传递实参"></a>传递实参</h3><p>鉴于函数定义中可能包含多个形参，因此函数调用中也可能包含多个实参。向函数传递实参的方式很多，可使用位置实参，这要求实参的顺序与形参的顺序相同；也可使用关键字实参，其中每个实参都由变量名和值组成；还可使用列表和字典。</p>
+<h4 id="位置实参"><a href="#位置实参" class="headerlink" title="位置实参"></a>位置实参</h4><p>调用函数时， Python必须将函数调用中的每个实参都关联到函数定义中的一个形参。 为此，最简单的关联方式是基于实参的顺序。这种关联方式被称为位置实参。<br>为明白其中的工作原理，来看一个显示宠物信息的函数。这个函数指出一个宠物属于哪种动物以及它叫什么名字，示例如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">describe_pet</span>(<span class="hljs-params">animal_type, pet_name</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;显示宠物的信息&quot;&quot;&quot;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nI have a &quot;</span> + animal_type + <span class="hljs-string">&quot;.&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My &quot;</span> + animal_type + <span class="hljs-string">&quot;&#x27;s name is &quot;</span> + pet_name.title() + <span class="hljs-string">&quot;.&quot;</span>)<br><br>describe_pet(<span class="hljs-string">&#x27;hamster&#x27;</span>, <span class="hljs-string">&#x27;harry&#x27;</span>)<br>describe_pet(<span class="hljs-string">&#x27;dog&#x27;</span>, <span class="hljs-string">&#x27;willie&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">I have a hamster.<br>My hamste<span class="hljs-string">r&#x27;s name is Harry.</span><br><span class="hljs-string"></span><br><span class="hljs-string">I have a dog.</span><br><span class="hljs-string">My dog&#x27;</span>s name <span class="hljs-keyword">is</span> Willie.<br></code></pre></td></tr></table></figure>
+
+<h5 id="调用函数多次"><a href="#调用函数多次" class="headerlink" title="调用函数多次"></a>调用函数多次</h5><p>调用函数多次是一种效率极高的工作方式。在函数中，可根据需要使用任意数量的位置实参， Python将按顺序将函数调用中的实参关联到函数定义中相应的形参。</p>
+<h5 id="位置实参的顺序很重要"><a href="#位置实参的顺序很重要" class="headerlink" title="位置实参的顺序很重要"></a>位置实参的顺序很重要</h5><p>请确认函数调用中实参的顺序与函数定义中形参的顺序一致。</p>
+<h4 id="关键字实参"><a href="#关键字实参" class="headerlink" title="关键字实参"></a>关键字实参</h4><p>关键字实参是传递给函数的名称—值对。你直接在实参中将名称和值关联起来了，因此向函数传递实参时不会混淆。关键字实参让你无需考虑函数调用中的实参顺序，还清楚地指出了函数调用中各个值的用途。<br>下面来重新编写pets.py，在其中使用关键字实参来调用describe_pet()：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">describe_pet</span>(<span class="hljs-params">animal_type, pet_name</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;显示宠物的信息&quot;&quot;&quot;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nI have a &quot;</span> + animal_type + <span class="hljs-string">&quot;.&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My &quot;</span> + animal_type + <span class="hljs-string">&quot;&#x27;s name is &quot;</span> + pet_name.title() + <span class="hljs-string">&quot;.&quot;</span>)<br>describe_pet(animal_type=<span class="hljs-string">&#x27;hamster&#x27;</span>, pet_name=<span class="hljs-string">&#x27;harry&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>函数describe_pet()还是原来那样，但调用这个函数时，我们向Python明确地指出了各个实参对应的形参。看到这个函数调用时， Python知道应该将实参’hamster’和’harry’分别存储在形参animal_type和pet_name中。输出正确无误，它指出我们有一只名为Harry的仓鼠。<br>关键字实参的顺序无关紧要，因为Python知道各个值该存储到哪个形参中。<em>使用关键字实参时，务必准确地指定函数定义中的形参名。</em></p>
+<h4 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h4><p>编写函数时，可给每个形参指定默认值。在调用函数中给形参提供了实参时， Python将使用指定的实参值；否则，将使用形参的默认值。因此，给形参指定默认值后，可在函数调用中省略相应的实参。使用默认值可简化函数调用，还可清楚地指出函数的典型用法。<br>例如，如果你发现调用describe_pet()时，描述的大都是小狗，就可将形参animal_type的默认值设置为’dog’。这样，调用describe_pet()来描述小狗时，就可不提供这种信息：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">describe_pet</span>(<span class="hljs-params">pet_name, animal_type=<span class="hljs-string">&#x27;dog&#x27;</span></span>):<br>    <span class="hljs-string">&quot;&quot;&quot;显示宠物的信息&quot;&quot;&quot;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nI have a &quot;</span> + animal_type + <span class="hljs-string">&quot;.&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My &quot;</span> + animal_type + <span class="hljs-string">&quot;&#x27;s name is &quot;</span> + pet_name.title() + <span class="hljs-string">&quot;.&quot;</span>)<br>    describe_pet(pet_name=<span class="hljs-string">&#x27;willie&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>请注意，在这个函数的定义中，修改了形参的排列顺序。由于给 <code>animal_type</code>指定了默认值，无需通过实参来指定动物类型，因此在函数调用中只包含一个实参——宠物的名字。然而， Python依然将这个实参视为位置实参，因此如果函数调用中只包含宠物的名字，这个实参将关联到函数定义中的第一个形参。这就是需要将 <code>pet_name</code>放在形参列表开头的原因所在。<br>使用默认值时，在形参列表中必须先列出没有默认值的形参，再列出有默认值的实参。<br>这让Python依然能够正确地解读位置实参。</p>
+<h4 id="等效的函数调用"><a href="#等效的函数调用" class="headerlink" title="等效的函数调用"></a>等效的函数调用</h4><p>鉴于可混合使用位置实参、关键字实参和默认值，通常有多种等效的函数调用方式。<br>请看下面的 <code>函数describe_pets()</code>的定义，其中给一个形参提供了默认值：</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">def describe<span class="hljs-constructor">_pet(<span class="hljs-params">pet_name</span>, <span class="hljs-params">animal_type</span>=&#x27;<span class="hljs-params">dog</span>&#x27;)</span>:<br></code></pre></td></tr></table></figure>
+
+<p>基于这种定义，在任何情况下都必须给pet_name提供实参；指定该实参时可以使用位置方式，也可以使用关键字方式。如果要描述的动物不是小狗，还必须在函数调用中给animal_type提供实参；同样，指定该实参时可以使用位置方式，也可以使用关键字方式。</p>
+<p>下面对这个函数的所有调用都可行：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 一条名为Willie的小狗</span><br>describe_pet(<span class="hljs-string">&#x27;willie&#x27;</span>)<br>describe_pet(<span class="hljs-attribute">pet_name</span>=<span class="hljs-string">&#x27;willie&#x27;</span>)<br><span class="hljs-comment"># 一只名为Harry的仓鼠</span><br>describe_pet(<span class="hljs-string">&#x27;harry&#x27;</span>, <span class="hljs-string">&#x27;hamster&#x27;</span>)<br>describe_pet(<span class="hljs-attribute">pet_name</span>=<span class="hljs-string">&#x27;harry&#x27;</span>, <span class="hljs-attribute">animal_type</span>=<span class="hljs-string">&#x27;hamster&#x27;</span>)<br>describe_pet(<span class="hljs-attribute">animal_type</span>=<span class="hljs-string">&#x27;hamster&#x27;</span>, <span class="hljs-attribute">pet_name</span>=<span class="hljs-string">&#x27;harry&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>使用哪种调用方式无关紧要，只要函数调用能生成你希望的输出就行。使用对你来说最<br>容易理解的调用方式即可。</p>
+<h4 id="避免实参错误"><a href="#避免实参错误" class="headerlink" title="避免实参错误"></a>避免实参错误</h4><p>等你开始使用函数后，如果遇到实参不匹配错误，不要大惊小怪。你提供的实参多于或少于函数完成其工作所需的信息时，将出现实参不匹配错误。<br>如果调用函数describe_pet()时没有指定任何实参，结果将如下————</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vim">Traceback (most recent <span class="hljs-keyword">call</span> <span class="hljs-keyword">last</span>):<br>  File <span class="hljs-string">&quot;pets.py&quot;</span>, <span class="hljs-built_in">line</span> <span class="hljs-number">6</span>, in <span class="hljs-symbol">&lt;module&gt;</span><br>    describe_pet()<br>TypeError: describe_pet() missing <span class="hljs-number">2</span> required positional arguments: <span class="hljs-string">&#x27;animal_type&#x27;</span> <span class="hljs-built_in">and</span> <span class="hljs-string">&#x27;pet_name</span><br></code></pre></td></tr></table></figure>
+
+<p>traceback指出了问题出在什么地方，让我们能够回过头去找出函数调用中的错误。如果这个函数存储在一个独立的文件中，我们也许无需打开这个文件并查看函数的代码，就能重新正确地编写函数调用。<br>Python读取函数的代码，并指出我们需要为哪些形参提供实参，这提供了极大的帮助。这也是应该给变量和函数指定描述性名称的另一个原因；如果你这样做了，那么无论对于你，还是可能使用你编写的代码的其他任何人来说， Python提供的错误消息都将更有帮助。<br>如果提供的实参太多，将出现类似的traceback，帮助你确保函数调用和函数定义匹配。</p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>函数并非总是直接显示输出，相反，它可以处理一些数据，并返回一个或一组值。函数返回的值被称为返回值。在函数中，可使用return语句将值返回到调用函数的代码行。返回值让你能够将程序的大部分繁重工作移到函数中去完成，从而简化主程序</p>
+<h4 id="返回简单值"><a href="#返回简单值" class="headerlink" title="返回简单值"></a>返回简单值</h4><p>示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_formatted_name</span>(<span class="hljs-params">first_name, last_name</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span><br>    full_name = first_name + <span class="hljs-string">&#x27; &#x27;</span> + last_name<br>    <span class="hljs-keyword">return</span> full_name.title()<br><br>musician = get_formatted_name(<span class="hljs-string">&#x27;jimi&#x27;</span>, <span class="hljs-string">&#x27;hendrix&#x27;</span>)<br><span class="hljs-built_in">print</span>(musician)<br></code></pre></td></tr></table></figure>
+
+<p>调用返回值的函数时，需要提供一个变量，用于存储返回的值。<br>我们原本只需编写下面的代码就可输出整洁的姓名，相比于此，前面做的工作好像太多了：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&quot;Jimi Hendrix&quot;</span>)</span></span><br></code></pre></td></tr></table></figure>
+
+<p>但在需要分别存储大量名和姓的大型程序中，像get_formatted_name()这样的函数非常有用。</p>
+<h4 id="让实参变成可选的"><a href="#让实参变成可选的" class="headerlink" title="让实参变成可选的"></a>让实参变成可选的</h4><p>有时候，需要让实参变成可选的，这样使用函数的人就只需在必要时才提供额外的信息。可使用默认值来让实参变成可选的。<br>例如，假设我们要扩展函数get_formatted_name()，使其还处理中间名。为此，可将其修改成类似于下面这样：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_formatted_name</span>(<span class="hljs-params">first_name, middle_name, last_name</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span><br>    full_name = first_name + <span class="hljs-string">&#x27; &#x27;</span> + middle_name + <span class="hljs-string">&#x27; &#x27;</span> + last_name<br>    <span class="hljs-keyword">return</span> full_name.title()<br><br>musician = get_formatted_name(<span class="hljs-string">&#x27;john&#x27;</span>, <span class="hljs-string">&#x27;lee&#x27;</span>, <span class="hljs-string">&#x27;hooker&#x27;</span>)<br><span class="hljs-built_in">print</span>(musician)<br></code></pre></td></tr></table></figure>
+
+<p>只要同时提供名、中间名和姓，这个函数就能正确地运行。然而，并非所有的人都有中间名，但如果你调用这个函数时只提供了名和姓，它将不能正确地运行。为让中间名变成可选的，可给实参middle_name指定一个默认值——空字符串，并在用户没有提供中间名时不使用这个实参。 为让get_formatted_name()在没有提供中间名时依然可行，<br>可给实参middle_name指定一个默认值——空字符串，并将其移到形参列表的末尾:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_formatted_name</span>(<span class="hljs-params">first_name, last_name, middle_name=<span class="hljs-string">&#x27;&#x27;</span></span>):<br>    <span class="hljs-string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span><br>    <span class="hljs-keyword">if</span> middle_name:<br>        full_name = first_name + <span class="hljs-string">&#x27; &#x27;</span> + middle_name + <span class="hljs-string">&#x27; &#x27;</span> + last_name<br>    <span class="hljs-keyword">else</span>:<br>        full_name = first_name + <span class="hljs-string">&#x27; &#x27;</span> + last_name<br>    <span class="hljs-keyword">return</span> full_name.title()<br></code></pre></td></tr></table></figure>
+
+<p>Python将非空字符串解读为True，因此如果函数，调用中提供了中间名，<code>if middle_name</code>将为True。</p>
+<h4 id="返回字典"><a href="#返回字典" class="headerlink" title="返回字典"></a>返回字典</h4><p>函数可返回任何类型的值，包括列表和字典等较复杂的数据结构。例如，下面的函数接受姓名的组成部分，并返回一个表示人的字典。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># person.py</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">build_person</span>(<span class="hljs-params">first_name, last_name</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;返回一个字典，其中包含有关一个人的信息&quot;&quot;&quot;</span><br>    person = &#123;<span class="hljs-string">&#x27;first&#x27;</span>: first_name, <span class="hljs-string">&#x27;last&#x27;</span>: last_name&#125;<br>    <span class="hljs-keyword">return</span> person<br><br>musician = build_person(<span class="hljs-string">&#x27;jimi&#x27;</span>, <span class="hljs-string">&#x27;hendrix&#x27;</span>)<br><span class="hljs-built_in">print</span>(musician)<br></code></pre></td></tr></table></figure>
+
+<p>这个函数接受简单的文本信息，将其放在一个更合适的数据结构中，让你不仅能打印这些信息，还能以其他方式处理它们。当前，字符串’jimi’和’hendrix’被标记为名和姓。你可以轻松地扩展这个函数，使其接受可选值，如中间名、年龄、职业或你要存储的其他任何信息。</p>
+<h4 id="结合使用函数和while循环"><a href="#结合使用函数和while循环" class="headerlink" title="结合使用函数和while循环"></a>结合使用函数和while循环</h4><h1 id="第二部分-实战演练"><a href="#第二部分-实战演练" class="headerlink" title="第二部分 实战演练"></a>第二部分 实战演练</h1><h2 id="批量发送邮件-方案已废弃-新实现见Python-smtp发送邮件"><a href="#批量发送邮件-方案已废弃-新实现见Python-smtp发送邮件" class="headerlink" title="批量发送邮件 (方案已废弃 新实现见Python smtp发送邮件)"></a>批量发送邮件 (方案已废弃 新实现见Python smtp发送邮件)</h2><p>步骤：</p>
+<ol>
+<li>批量读取文件内容；</li>
+<li>通过账号密码登录邮箱；</li>
+<li>设置邮件收件人等信息；</li>
+<li>配置邮件正文和附件并发送。</li>
+</ol>
+<h3 id="批量读取文件内容"><a href="#批量读取文件内容" class="headerlink" title="批量读取文件内容"></a>批量读取文件内容</h3><p>在 Windows 系统的路径中，我们使用反斜线 <code>\</code> 分隔各个文件夹和文件名。同时，在路径的最前面，是盘符的字母和一个英文冒号，表示文件或文件夹具体是在哪个盘的路径下。变量 sender 存储发件人邮箱，字典 receiverDict 的键是收件人名字，对应的值为收件人的邮箱。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs perl"><span class="hljs-comment"># 发件人、收件人</span><br>sender = <span class="hljs-string">&quot;aLing@qq.com&quot;</span><br>receiverDict = &#123;<span class="hljs-string">&quot;xixi&quot;</span>:<span class="hljs-string">&quot;adc@yequ.com&quot;</span>, <span class="hljs-string">&quot;kiki&quot;</span>:<span class="hljs-string">&quot;def@yequ.com&quot;</span>, <span class="hljs-string">&quot;feifei&quot;</span>:<span class="hljs-string">&quot;hij@yequ.com&quot;</span>, <span class="hljs-string">&quot;bobo&quot;</span>:<span class="hljs-string">&quot;klm@yequ.com&quot;</span>, <span class="hljs-string">&quot;cici&quot;</span>:<span class="hljs-string">&quot;opq@yequ.com&quot;</span>, <span class="hljs-string">&quot;huahua&quot;</span>:<span class="hljs-string">&quot;rst@yequ.com&quot;</span>, <span class="hljs-string">&quot;yeye&quot;</span>:<span class="hljs-string">&quot;uvw@yequ.com&quot;</span>, <span class="hljs-string">&quot;jingjing&quot;</span>:<span class="hljs-string">&quot;xyz@yequ.com&quot;</span>, <span class="hljs-string">&quot;tongtong&quot;</span>:<span class="hljs-string">&quot;yza@yequ.com&quot;</span>&#125;<br><br><span class="hljs-comment"># 将文件路径，赋值给变量path</span><br>path = r<span class="hljs-string">&quot;F:\Users\aLing&quot;</span><br><br><span class="hljs-comment"># 使用print()输出变量path</span><br><span class="hljs-keyword">print</span>(path)<br></code></pre></td></tr></table></figure>
+
+<p>使用 Windows 系统需要注意路径前要加一个 <code>r</code>，表示字符串不需要转义。</p>
+<p>可以使用字符串拼接的方式，获得图片的路径。收件人姓名该如何获取呢？在这里，可以通过 for 循环遍历字典 receiverDict，得到字典的键。<em>自然，这需要整理联系人与文件名时批量处理。</em></p>
+<h4 id="批量获得图片路径"><a href="#批量获得图片路径" class="headerlink" title="批量获得图片路径"></a>批量获得图片路径</h4><p>接着，通过字符串拼接的方式，就可以批量获得图片路径。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># for 循环遍历字典receiverDict，将键赋值给变量receiver</span><br><span class="hljs-keyword">for</span> receiver <span class="hljs-keyword">in</span> receiverDict:<br>    # 将字符串path + <span class="hljs-string">&quot;/&quot;</span>+ receiver + <span class="hljs-string">&quot;.jpg&quot;</span>拼接，赋值给变量filePath<br>    filePath = path + <span class="hljs-string">&quot;/&quot;</span>+ receiver + <span class="hljs-string">&quot;.jpg&quot;</span><br>    # 使用<span class="hljs-built_in">print</span>()输出filePath<br>    <span class="hljs-built_in">print</span>(filePath)<br></code></pre></td></tr></table></figure>
+
+<p>可以使用 with…as 语句配合 open() 函数的方式，打开图片</p>
+<blockquote>
+<p>open() 函数用于打开一个文件，并返回文件对象。通常，open() 函数常用形式是接收两个参数：文件路径和打开方式。rb 表示以只读的方式读取二进制文件，即 Read Binary 的缩写。open() 函数还可以对文件进行写入。</p>
+</blockquote>
+<p>open() 函数在读取文件时，有时候会发生异常。为了能在发生异常时，自动释放打开的文件资源，我们可以搭配使用 <code>with...as...</code>语句。使用 <code>with...as...</code>语句，首先执行 with 后面的 open() 函数，返回值会赋给 as 后面的变量。</p>
+<p>当我们要打开一张图片就需要这几个部分：<br><img src="/../img/mk-2023-01-30-17-16-11.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><em>常见文件后缀名Filename Extension</em><br><img src="/../img/mk-2023-01-30-17-03-31.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="批量读取图片。"><a href="#批量读取图片。" class="headerlink" title="批量读取图片。"></a>批量读取图片。</h4><p>在这里，我们可以调用 read() 函数，read() 函数可以逐个字节（或者逐个字符）读取文件中的内容。由于是以二进制格式打开图片，所以读取的图片内容是二进制格式。<br><img src="/../img/mk-2023-01-30-17-19-30.png" srcset="/img/loading.gif" lazyload><br>这样，所有图片就以二进制格式保存下来。</p>
+<h3 id="通过账号密码登录邮箱"><a href="#通过账号密码登录邮箱" class="headerlink" title="通过账号密码登录邮箱"></a>通过账号密码登录邮箱</h3><p>为了登录邮箱，我们先导入 smtplib 模块，smtplib 模块负责登录和发送邮箱的操作。</p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elm"><span class="hljs-keyword">import</span> smtplib<br></code></pre></td></tr></table></figure>
+
+<p>邮箱服务器的功能：当发件人发出邮件时，会根据邮件地址发送给邮件服务器。之后，收件人登录自己的邮箱时，会从邮件服务器获取邮件，就能够查看到刚才发件人发出的邮件了。每个服务器有多个端口，只有通过端口号，程序才能访问到该服务器。</p>
+<p>其他邮箱一般使用帐号和密码。而在代码中，需要用到帐号和授权码。授权码就是用于登录第三方客户端专用的密码，以QQ邮箱为案例，学习如何获取QQ邮箱中的授权码。</p>
+<h4 id="QQ邮箱设置"><a href="#QQ邮箱设置" class="headerlink" title="QQ邮箱设置"></a>QQ邮箱设置</h4><ol>
+<li>在浏览器中打开网址mail.qq.com，输入自己的帐号和密码，登录邮箱并找到「设置」<br>2.点击「设置」，找到「账户」。</li>
+<li>滑动页面找到「SMTP服务」，选择第二项，点击「开启」。<br>4.「短信验证」点击「开启」后会弹出验证密保，需要用自己的手机号发送指定内容，发送完成后，点击「我已发送」。</li>
+<li>完成验证后，将会获得一个「授权码」（授权码不要告诉其他人），复制并保存授权码， 这样我们就拿到了授权码。</li>
+</ol>
+<p>在代码中需要先连接邮箱服务器，再登录邮箱。</p>
+<ol>
+<li>smtplib.SMTP_SSL(服务器地址, 端口号) —— 负责连接邮箱服务器。</li>
+<li>login(帐号, 授权码) —— 负责登录邮箱。</li>
+</ol>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs clean"># 使用<span class="hljs-keyword">import</span>导入smtplib模块<br><span class="hljs-keyword">import</span> smtplib<br><br># 邮箱帐号设置，<span class="hljs-string">&quot;aLing@qq.com&quot;</span>赋值给mailUser<br>mailUser = <span class="hljs-string">&quot;aLing@qq.com&quot;</span><br># 邮箱授权码设置，<span class="hljs-string">&quot;abcnawckdujkdace&quot;</span>赋值给mailPass <br>mailPass = <span class="hljs-string">&quot;abcnawckdujkdace&quot;</span><br><br># 使用 smtplib.SMTP_SSL() 实例化对象<br># 传入服务器和端口号参数，赋值给smtpObj<br>smtpObj = smtplib.SMTP_SSL(<span class="hljs-string">&quot;smtp.qq.com&quot;</span>, <span class="hljs-number">465</span>)<br># 使用login()函数传入邮箱账户和授权码，登录邮箱<br>smtpObj.login(mailUser, mailPass)<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../img/mk-2023-01-31-12-05-20.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="设置邮件收件人等信息"><a href="#设置邮件收件人等信息" class="headerlink" title="设置邮件收件人等信息"></a>设置邮件收件人等信息</h3><p>编辑收件人等信息需要用到 email 模块，该模块中封装了很多方法。负责编辑收件人、发件人、主题等信息。<br>需要从 <code>email.header</code>中导入 Header 类，用于编辑发件人；从 <code>email.mime.multipart</code>中导入 <code>MIMEMultipart</code>类，用于整合邮件信息。</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">from</span> email.<span class="hljs-keyword">header</span> <span class="hljs-keyword">import</span> <span class="hljs-keyword">Header</span><br><span class="hljs-keyword">from</span> email.mime.multipart <span class="hljs-keyword">import</span> MIMEMultipart<br></code></pre></td></tr></table></figure>
+
+<ol>
+<li>Header 负责编辑邮件内容。<br><code>message[&quot;From&quot;] = Header(&quot;阿玲&lt;aLing@qq.com&gt;&quot;)</code>表示先实例化一个 Header 对象，传入发件人信息；然后将发件人信息，赋值给 message[“From”]。<br>其他内容的编辑方式类似，实例化一个 Header 对象，将收件人信息写入 message 中的[“To”]字段中。将主题信息写入 message 中的[“Subject”]字段中。</li>
+<li>MIMEMultipart 负责整合邮件内容。<br><code>message = MIMEMultipart()</code> —— 表示实例化一个 MIMEMultipart 对象，赋值给 message ，便于后面将邮件信息写入变量中。</li>
+</ol>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs sas"># for 循环遍历字典receiverDict，将键赋值给变量receiver<br>for receiver <span class="hljs-keyword">in</span> receiverDict:<br>    # 实例化 MIMEMultipart 对象，赋值给<span class="hljs-keyword">message</span><br>    <span class="hljs-keyword">message</span> = MIMEMultipart()<br>    # 将发件人信息写入 <span class="hljs-keyword">message</span>[<span class="hljs-string">&quot;From&quot;</span>]<br>    <span class="hljs-keyword">message</span>[<span class="hljs-string">&quot;From&quot;</span>] = Header(f<span class="hljs-string">&quot;阿玲&lt;&#123;sender&#125;&gt;&quot;</span>)<br>    # 将收件人信息写入 <span class="hljs-keyword">message</span>[<span class="hljs-string">&quot;To&quot;</span>]<br>    <span class="hljs-keyword">message</span>[<span class="hljs-string">&quot;To&quot;</span>] = Header(f<span class="hljs-string">&quot;&#123;receiver&#125;&lt;&#123;receiverDict[receiver]&#125;&gt;&quot;</span>)<br>    # 将主题写入 <span class="hljs-keyword">message</span>[<span class="hljs-string">&quot;Subject&quot;</span>]<br>    <span class="hljs-keyword">message</span>[<span class="hljs-string">&quot;Subject&quot;</span>] = Header(f<span class="hljs-string">&quot;&#123;receiver&#125;-年会邀请函&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h4 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h4><p>发送邮件使用 sendmail()，传入三个参数：</p>
+<ol>
+<li>发件人邮箱 sender；</li>
+<li>收件人邮箱 receiverDict[receiver]；</li>
+<li>邮件内容 message.as_string()，使用 as_string() 方法将message设置为文本格式。<br><img src="/../img/mk-2023-01-31-12-23-44.png" srcset="/img/loading.gif" lazyload></li>
+</ol>
+<h3 id="配置邮件正文和附件并发送"><a href="#配置邮件正文和附件并发送" class="headerlink" title="配置邮件正文和附件并发送"></a>配置邮件正文和附件并发送</h3><p>邮件正文需要使用 email.mime.text 下的 MIMEText 类。邮件正文需要创建 MIMEText 实例，传入三个参数：</p>
+<ol>
+<li>正文：”Dear xx，邀请你参加年会。”；（可根据实际情况编辑内容。）</li>
+<li>文本类型：”plain”；</li>
+<li>编码：”utf-8”。<br><img src="/../img/mk-2023-01-31-12-26-44.png" srcset="/img/loading.gif" lazyload></li>
+</ol>
+<h4 id="图片附件的处理"><a href="#图片附件的处理" class="headerlink" title="图片附件的处理"></a>图片附件的处理</h4><p>文件内容读取后，我们需要将图片文件编辑为邮件中需要的格式。从 email.mime.image 中导入 MIMEImage 类，用于图片附件的处理。</p>
+<p>先创建 MIMEImage 实例，传递图片内容参数，再调用 add_header() 设置名称。</p>
+<ol>
+<li>参数：”Content-Disposition”</li>
+<li>参数：”attachment”</li>
+<li>参数：filename&#x3D;”邀请函.jpg”（文件名可根据实际情况编辑）。<br><img src="/../img/mk-2023-01-31-12-31-48.png" srcset="/img/loading.gif" lazyload></li>
+</ol>
+<p>正文和图片需要使用 message 调用 attach() 方法，传入相应的参数。<br><img src="/../img/mk-2023-01-31-12-45-07.png" srcset="/img/loading.gif" lazyload></p>
+<p>全部代码实现示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 导入所需模块</span><br><span class="hljs-keyword">import</span> smtplib<br><span class="hljs-keyword">from</span> email.header <span class="hljs-keyword">import</span> Header<br><span class="hljs-keyword">from</span> email.mime.multipart <span class="hljs-keyword">import</span> MIMEMultipart<br><span class="hljs-keyword">from</span> email.mime.text <span class="hljs-keyword">import</span> MIMEText<br><span class="hljs-keyword">from</span> email.mime.image <span class="hljs-keyword">import</span> MIMEImage<br><br><span class="hljs-comment"># 邮箱帐号和授权码，连接和登录邮箱</span><br>mailUser = <span class="hljs-string">&quot;aLing@qq.com&quot;</span><br>mailPass = <span class="hljs-string">&quot;abcnawckdujkdace&quot;</span><br>smtpObj = smtplib.SMTP_SSL(<span class="hljs-string">&quot;smtp.qq.com&quot;</span>, <span class="hljs-number">465</span>)<br>smtpObj.login(mailUser, mailPass)<br><br><span class="hljs-comment"># 发件人、收件人</span><br>sender = <span class="hljs-string">&quot;aLing@qq.com&quot;</span><br>receiverDict = &#123;<span class="hljs-string">&quot;xixi&quot;</span>:<span class="hljs-string">&quot;adc@yequ.com&quot;</span>, <span class="hljs-string">&quot;kiki&quot;</span>:<span class="hljs-string">&quot;def@yequ.com&quot;</span>,<span class="hljs-string">&quot;tongtong&quot;</span>:<span class="hljs-string">&quot;yza@yequ.com&quot;</span>&#125;<br><br><span class="hljs-comment"># 文件路径</span><br>path = <span class="hljs-string">&quot;/Users/aLing&quot;</span><br><br><span class="hljs-keyword">for</span> receiver <span class="hljs-keyword">in</span> receiverDict:<br>    <span class="hljs-comment"># 编辑并整合发件人、收件人、主题信息</span><br>    message = MIMEMultipart()<br>    message[<span class="hljs-string">&quot;From&quot;</span>] = Header(<span class="hljs-string">f&quot;阿玲&lt;<span class="hljs-subst">&#123;sender&#125;</span>&gt;&quot;</span>)<br>    message[<span class="hljs-string">&quot;To&quot;</span>] = Header(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;receiver&#125;</span>&lt;<span class="hljs-subst">&#123;receiverDict[receiver]&#125;</span>&gt;&quot;</span>)<br>    message[<span class="hljs-string">&quot;Subject&quot;</span>] = Header(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;receiver&#125;</span>-年会邀请函&quot;</span>)<br>  <br>    <span class="hljs-comment"># 编辑邮件正文</span><br>    mailContent = MIMEText(<span class="hljs-string">f&quot;Dear <span class="hljs-subst">&#123;receiver&#125;</span> 邀请你参加年会&quot;</span>, <span class="hljs-string">&quot;plain&quot;</span>, <span class="hljs-string">&quot;utf-8&quot;</span>)<br><br>    <span class="hljs-comment"># 读取图片文件</span><br>    filePath = path + <span class="hljs-string">&quot;/&quot;</span> + receiver + <span class="hljs-string">&quot;.jpg&quot;</span><br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filePath, <span class="hljs-string">&quot;rb&quot;</span>) <span class="hljs-keyword">as</span> imageFile:<br>        fileContent = imageFile.read()<br>  <br>    <span class="hljs-comment"># 编辑附件信息</span><br>    att = MIMEImage(fileContent)<br>    att.add_header(<span class="hljs-string">&quot;Content-Disposition&quot;</span>, <span class="hljs-string">&quot;attachment&quot;</span>, filename=<span class="hljs-string">&quot;邀请函.jpg&quot;</span>)<br>  <br>    <span class="hljs-comment"># 整合正文和图片</span><br>    message.attach(mailContent)<br>    message.attach(att)<br>  <br>    <span class="hljs-comment"># 发送邮件</span><br>    smtpObj.sendmail(sender, receiverDict[receiver], message.as_string())<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;发送成功&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="Python-smtp发送邮件"><a href="#Python-smtp发送邮件" class="headerlink" title="Python smtp发送邮件"></a>Python smtp发送邮件</h2><p>详见 <a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/library/email.examples.html">https://docs.python.org/zh-cn/3/library/email.examples.html</a></p>
+<h3 id="SMTP"><a href="#SMTP" class="headerlink" title="SMTP"></a>SMTP</h3><p>SMTP（Simple Mail Transfer Protocol）即简单邮件传输协议,它是一组用于由源地址到目的地址传送邮件的规则，由它来控制信件的中转方式。python的smtplib提供了一种很方便的途径发送电子邮件。它对smtp协议进行了简单的封装。<br>Python创建 SMTP 对象语法如下：</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">import smtplib<br>smtpObj = smtplib.<span class="hljs-constructor">SMTP( [<span class="hljs-params">host</span> [, <span class="hljs-params">port</span> [, <span class="hljs-params">local_hostname</span>]]] )</span><br></code></pre></td></tr></table></figure>
+
+<p>参数说明：</p>
+<ul>
+<li>host: SMTP 服务器主机。 你可以指定主机的ip地址或者域名如:runoob.com，这个是可选参数。</li>
+<li>port: 如果你提供了 host 参数, 你需要指定 SMTP 服务使用的端口号，一般情况下SMTP端口号为25。</li>
+<li>local_hostname: 如果SMTP在你的本机上，你只需要指定服务器地址为 localhost 即可。</li>
+</ul>
+<p>Python SMTP对象使用sendmail方法发送邮件，语法如下：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">SMTP<span class="hljs-selector-class">.sendmail</span>(from_addr, to_addrs, msg<span class="hljs-selector-attr">[, mail_options, rcpt_options]</span><br></code></pre></td></tr></table></figure>
+
+<p>参数说明：</p>
+<ul>
+<li>from_addr: 邮件发送者地址。</li>
+<li>to_addrs: 字符串列表，邮件发送地址。</li>
+<li>msg: 发送消息<br>这里要注意一下第三个参数，msg是字符串，表示邮件。我们知道邮件一般由标题，发信人，收件人，邮件内容，附件等构成，发送邮件的时候，要注意msg的格式。这个格式就是smtp协议中定义的格式。</li>
+</ul>
+<h3 id="使用QQ邮箱SMTP的简单实现："><a href="#使用QQ邮箱SMTP的简单实现：" class="headerlink" title="使用QQ邮箱SMTP的简单实现："></a>使用QQ邮箱SMTP的简单实现：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> smtplib<br><span class="hljs-keyword">from</span> email.mime.text <span class="hljs-keyword">import</span> MIMEText<br><span class="hljs-keyword">from</span> email.utils <span class="hljs-keyword">import</span> formataddr<br> <br>my_sender=<span class="hljs-string">&#x27;xxx&#x27;</span>    <span class="hljs-comment"># 发件人邮箱账号</span><br>my_pass = <span class="hljs-string">&#x27;xxx&#x27;</span>    <span class="hljs-comment"># 发件人邮箱密码</span><br>my_user=<span class="hljs-string">&#x27;xxx&#x27;</span>      <span class="hljs-comment"># 收件人邮箱账号</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">mail</span>():<br>    ret=<span class="hljs-literal">True</span><br>    <span class="hljs-keyword">try</span>:<br>        msg=MIMEText (<span class="hljs-string">&quot;This is a Python smtp test, please do not reply.&quot;</span>,<span class="hljs-string">&#x27;plain&#x27;</span>,<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>        msg[<span class="hljs-string">&#x27;From&#x27;</span>]=formataddr([<span class="hljs-string">&quot;xxx&quot;</span>,my_sender])  <span class="hljs-comment"># 括号里的对应发件人邮箱昵称、发件人邮箱账号</span><br>        msg[<span class="hljs-string">&#x27;To&#x27;</span>]=formataddr([<span class="hljs-string">&quot;receiver&quot;</span>,my_user])              <span class="hljs-comment"># 括号里的对应收件人邮箱昵称、收件人邮箱账号</span><br>        msg[<span class="hljs-string">&#x27;Subject&#x27;</span>]=<span class="hljs-string">&quot;Python smtp test&quot;</span>                <span class="hljs-comment"># 邮件的主题</span><br> <br><br> <br>        server=smtplib.SMTP_SSL(<span class="hljs-string">&quot;smtp.qq.com&quot;</span>, <span class="hljs-number">465</span>)  <span class="hljs-comment"># 发件人邮箱中的SMTP服务器，端口是465</span><br>        server.login(my_sender, my_pass)  <span class="hljs-comment"># 括号中对应的是发件人邮箱账号、邮箱密码</span><br>        server.sendmail(my_sender,[my_user,],msg.as_string())  <span class="hljs-comment"># 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件</span><br>        server.quit()  <span class="hljs-comment"># 关闭连接</span><br>    <span class="hljs-keyword">except</span> Exception:  <span class="hljs-comment"># 如果 try 中的语句没有执行，则会执行下面的 ret=False</span><br>        ret=<span class="hljs-literal">False</span><br>    <span class="hljs-keyword">return</span> ret<br> <br>ret=mail()<br><span class="hljs-keyword">if</span> ret:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;邮件发送成功&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;邮件发送失败&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="发送HTML格式的邮件"><a href="#发送HTML格式的邮件" class="headerlink" title="发送HTML格式的邮件"></a>发送HTML格式的邮件</h3><p>Python发送HTML格式的邮件与发送纯文本消息的邮件不同之处就是将MIMEText中_subtype设置为html。具体代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> smtplib<br><span class="hljs-keyword">from</span> email.mime.text <span class="hljs-keyword">import</span> MIMEText<br><span class="hljs-keyword">from</span> email.header <span class="hljs-keyword">import</span> Header<br> <br>sender = <span class="hljs-string">&#x27;from@runoob.com&#x27;</span><br>receivers = [<span class="hljs-string">&#x27;429240967@qq.com&#x27;</span>]  <span class="hljs-comment"># 接收邮件，可设置为你的QQ邮箱或者其他邮箱</span><br> <br>mail_msg = <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">&lt;p&gt;Python 邮件发送测试...&lt;/p&gt;</span><br><span class="hljs-string">&lt;p&gt;&lt;a href=&quot;http://www.runoob.com&quot;&gt;这是一个链接&lt;/a&gt;&lt;/p&gt;</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br>message = MIMEText(mail_msg, <span class="hljs-string">&#x27;html&#x27;</span>, <span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>message[<span class="hljs-string">&#x27;From&#x27;</span>] = Header(<span class="hljs-string">&quot;菜鸟教程&quot;</span>, <span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>message[<span class="hljs-string">&#x27;To&#x27;</span>] =  Header(<span class="hljs-string">&quot;测试&quot;</span>, <span class="hljs-string">&#x27;utf-8&#x27;</span>)<br> <br>subject = <span class="hljs-string">&#x27;Python SMTP 邮件测试&#x27;</span><br>message[<span class="hljs-string">&#x27;Subject&#x27;</span>] = Header(subject, <span class="hljs-string">&#x27;utf-8&#x27;</span>)<br> <br> <br><span class="hljs-keyword">try</span>:<br>    smtpObj = smtplib.SMTP(<span class="hljs-string">&#x27;localhost&#x27;</span>)<br>    smtpObj.sendmail(sender, receivers, message.as_string())<br>    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;邮件发送成功&quot;</span>)<br><span class="hljs-keyword">except</span> smtplib.SMTPException:<br>    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;Error: 无法发送邮件&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="发送带附件的邮件"><a href="#发送带附件的邮件" class="headerlink" title="发送带附件的邮件"></a>发送带附件的邮件</h3><p>发送带附件的邮件，首先要创建MIMEMultipart()实例，然后构造附件，如果有多个附件，可依次构造，最后利用smtplib.smtp发送。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> smtplib<br><span class="hljs-keyword">from</span> email.mime.text <span class="hljs-keyword">import</span> MIMEText<br><span class="hljs-keyword">from</span> email.mime.multipart <span class="hljs-keyword">import</span> MIMEMultipart<br><span class="hljs-keyword">from</span> email.header <span class="hljs-keyword">import</span> Header<br> <br>sender = <span class="hljs-string">&#x27;from@runoob.com&#x27;</span><br>receivers = [<span class="hljs-string">&#x27;429240967@qq.com&#x27;</span>]  <span class="hljs-comment"># 接收邮件，可设置为你的QQ邮箱或者其他邮箱</span><br> <br><span class="hljs-comment">#创建一个带附件的实例</span><br>message = MIMEMultipart()<br>message[<span class="hljs-string">&#x27;From&#x27;</span>] = Header(<span class="hljs-string">&quot;菜鸟教程&quot;</span>, <span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>message[<span class="hljs-string">&#x27;To&#x27;</span>] =  Header(<span class="hljs-string">&quot;测试&quot;</span>, <span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>subject = <span class="hljs-string">&#x27;Python SMTP 邮件测试&#x27;</span><br>message[<span class="hljs-string">&#x27;Subject&#x27;</span>] = Header(subject, <span class="hljs-string">&#x27;utf-8&#x27;</span>)<br> <br><span class="hljs-comment">#邮件正文内容</span><br>message.attach(MIMEText(<span class="hljs-string">&#x27;这是菜鸟教程Python 邮件发送测试……&#x27;</span>, <span class="hljs-string">&#x27;plain&#x27;</span>, <span class="hljs-string">&#x27;utf-8&#x27;</span>))<br> <br><span class="hljs-comment"># 构造附件1，传送当前目录下的 test.txt 文件</span><br>att1 = MIMEText(<span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;rb&#x27;</span>).read(), <span class="hljs-string">&#x27;base64&#x27;</span>, <span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>att1[<span class="hljs-string">&quot;Content-Type&quot;</span>] = <span class="hljs-string">&#x27;application/octet-stream&#x27;</span><br><span class="hljs-comment"># 这里的filename可以任意写，写什么名字，邮件中显示什么名字</span><br>att1[<span class="hljs-string">&quot;Content-Disposition&quot;</span>] = <span class="hljs-string">&#x27;attachment; filename=&quot;test.txt&quot;&#x27;</span><br>message.attach(att1)<br> <br><span class="hljs-comment"># 构造附件2，传送当前目录下的 runoob.txt 文件</span><br>att2 = MIMEText(<span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;runoob.txt&#x27;</span>, <span class="hljs-string">&#x27;rb&#x27;</span>).read(), <span class="hljs-string">&#x27;base64&#x27;</span>, <span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>att2[<span class="hljs-string">&quot;Content-Type&quot;</span>] = <span class="hljs-string">&#x27;application/octet-stream&#x27;</span><br>att2[<span class="hljs-string">&quot;Content-Disposition&quot;</span>] = <span class="hljs-string">&#x27;attachment; filename=&quot;runoob.txt&quot;&#x27;</span><br>message.attach(att2)<br> <br><span class="hljs-keyword">try</span>:<br>    smtpObj = smtplib.SMTP(<span class="hljs-string">&#x27;localhost&#x27;</span>)<br>    smtpObj.sendmail(sender, receivers, message.as_string())<br>    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;邮件发送成功&quot;</span>)<br><span class="hljs-keyword">except</span> smtplib.SMTPException:<br>    <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;Error: 无法发送邮件&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>更多内容详见 <a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-smtp.html">https://www.runoob.com/python3/python3-smtp.html</a></p>
+<h2 id="Simpel-AI-samples"><a href="#Simpel-AI-samples" class="headerlink" title="Simpel AI samples"></a>Simpel AI samples</h2><h3 id="Introduction-to-Artificial-Intelligence"><a href="#Introduction-to-Artificial-Intelligence" class="headerlink" title="Introduction to Artificial Intelligence"></a>Introduction to Artificial Intelligence</h3><h4 id="人工智能之父"><a href="#人工智能之父" class="headerlink" title="人工智能之父"></a>人工智能之父</h4><p>“让机器像人类一样思考”最早是由英国数学家艾伦·图灵于1950年发表的《计算机与智能》中提出。因此，图灵被称为计算机科学与人工智能之父。(图灵被印刷在50面额的英镑中)判断一个机器是否具有智能，可以使用图灵测试。<br><img src="/../img/2023-02-20-00-22-30.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="图灵测试——模仿游戏"><a href="#图灵测试——模仿游戏" class="headerlink" title="图灵测试——模仿游戏"></a>图灵测试——模仿游戏</h4><p>图灵提出，要测试一个机器是否具有智能，只需要看它是否能成为一个“人类模仿大师”。测试具有聊天功能的机器人是否“智能”，我们可以让它模仿人类的说话习惯，然后与不同的测试人员聊天。<br>判断结果：若在规定的时间内，大部分测试人员没有意识到与他聊天的是机器人，那我们就认为该机器人是“人类聊天模仿大师”，即它是具有智能的。</p>
+<p>图灵的想法引起多位学者的重视，开启了探讨人工智能的热潮。基于设定好的条件规则，能够进行自动判断的程序问世，从而搭建了问题处理系统。专家系统就是其中之一，它被认为是最早期的“人工智能”。</p>
+<h4 id="专家系统-Expert-system"><a href="#专家系统-Expert-system" class="headerlink" title="专家系统 Expert system"></a>专家系统 Expert system</h4><p>定义：将某个领域专家水平的知识作为数据存储起来形成“知识库”，并把其经验设定为规则条件，就构成了一个能够自动解决该领域问题的程序。该程序称为专家系统。<br>简单来说，早期的“人工智能”程序由大量的字典等内容组成数据储备，并用固定数量的条件规则作为逻辑。机器在遇到问题时，通过规则从数据中查找答案。<strong>因为所有的规则都由人工录入，所以机器并没有真的“思考”。</strong><br>为此，美国哲学家约翰·希尔勒提出了“中文房间”的实验。</p>
+<h4 id="中文房间"><a href="#中文房间" class="headerlink" title="中文房间"></a>中文房间</h4><p>对于一个英语母语者来说，若为他提供<em>足够的翻译书籍工具与查阅这些资料的时间</em>，他就能够正常的通过文字与中文使用者交流。但实际上我们认为他并没有学会中文，因为他无法处理数据以外的内容。</p>
+<h4 id="图灵的遗憾"><a href="#图灵的遗憾" class="headerlink" title="图灵的遗憾"></a>图灵的遗憾</h4><p>人们认识到，要想实现真正的人工智能，除了读取固有的数据以外，还需要让电脑对未知的数据进行预测。但限于当时计算机硬件的发展，直到图灵去世都未有一台机器通过图灵测试。<br>时间回到现在，随着计算机硬件大幅度升级，电脑的存储区域呈爆炸性增长。人们提出了以统计学等数学方法为基础的新“人工智能” —— 机器学习。</p>
+<h4 id="机器学习-Machine-Learning"><a href="#机器学习-Machine-Learning" class="headerlink" title="机器学习 Machine Learning"></a>机器学习 Machine Learning</h4><p>定义：机器学习是一门多领域交叉学科。主要通过概率论、统计学等数学方法，让机器从已知数据中模拟或实现人类的学习行为，找出规律并自动生成规则，然后对未知的数据进行预测。这就是机器学习的过程。<br>机器学习是实现人工智能的一种方法，是使计算机具有智能的根本途径。相较于直接使用数据储备，机器学习的目的是<strong>从已有的数据中挖掘规则，从而实现对未知的数据进行“预测”</strong>。<br>机器学习中存在的算法：线性回归、K近邻、朴素贝叶斯、决策树、逻辑回归、聚类算法、支持向量机、EM算法。</p>
+<h3 id="自然语言处理"><a href="#自然语言处理" class="headerlink" title="自然语言处理"></a>自然语言处理</h3><p>要实现从评价中提取高频关键词，并判别其正负面性，其实是通过人工智能领域中的一个分支：自然语言处理。</p>
+<h4 id="自然语言处理-Natural-Language-Processing（NLP）"><a href="#自然语言处理-Natural-Language-Processing（NLP）" class="headerlink" title="自然语言处理 Natural Language Processing（NLP）"></a>自然语言处理 Natural Language Processing（NLP）</h4><p>自然语言，即人们日常使用的语言，也就是每天包围着我们的文本信息和语音信息。自然语言处理（Natural Language Processing，简称NLP）研究的是如何通过机器学习等技术，让计算机学会处理自然（人类）语言，以完成有意义的任务。它是一门交叉学科，涉及计算机科学、语言学、数学等多个领域的专业知识。<br><img src="/../img/2023-02-20-00-33-52.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="相关案例"><a href="#相关案例" class="headerlink" title="相关案例"></a>相关案例</h4><ol>
+<li><p>邮件过滤：<br>系统会根据电子邮件的内容识别电子邮件是否属于三个类别（重要、社交或广告）之一，或者判断一封邮件是否是垃圾邮件。<br>此时就是通过NLP来对这些邮件进行一系列的分类。</p>
+</li>
+<li><p>搜索引擎，如百度、谷歌等。<br>在我们输入2-3个字后，搜索引擎会显示可能的搜索词。或者如果输入了错别字，搜索引擎会自动进行更正。这就是通过NLP技术来实现的搜索自动完成和自动更正功能，帮助我们更有效地找到准确的结果。</p>
+</li>
+<li><p>机器翻译，比如Google、有道翻译。<br>目前所追求的翻译，不再仅仅是通过计算机直接将一种语言转换为另一种语言，而是需要像人类一样能够理解世界知识和上下文。要让电脑像人类一样理解自然语言，必然离不开NLP技术。</p>
+</li>
+<li><p>语音助理，比如Siri、智能音箱等。<br>现在的语音助理，与人类之间的交流不再是简单的你问我答，不少语音助手甚至能和人类进行深度交谈。同样在这背后离不开NLP技术，使得语音助理能够将人类语言转换为机器语言，然后执行相应的操作。<br><img src="/../img/2023-02-20-00-37-14.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ol>
+<h4 id="自然语言处理的意义和难点"><a href="#自然语言处理的意义和难点" class="headerlink" title="自然语言处理的意义和难点"></a>自然语言处理的意义和难点</h4><p>在面对自然语言时，除了单纯地阅读和倾听外，往往会进行更多复杂的操作和处理。但人工处理的代价过于高昂，因此会期望训练计算机来代替人类，这就是自然语言处理的意义。<br>然而，自然语言并没有想象中那么容易处理。与人工语言（编程语言或数学语言等）相比，自然语言有着<strong>多变、非结构化</strong>等各种特殊和复杂的特点。<br>例如：编程语言中的关键词数量是固定的，而自然语言中能使用的词汇量是无限的，甚至还在不断创造新词；编程语言具有结构性，如类和对象，但显然自然语言不具有这样的结构。<br>在自然语言中，不同的语境、句法和语义也会传达出不同的信息。比如，“<em>我瞒着妈妈和姐姐出去玩了</em>”这句话，如果没有指明「和」这个字的词性，就可以被理解为两种意思。</p>
+<ul>
+<li><code>我瞒着</code> <code>妈妈和姐姐</code> <code>出去玩了</code></li>
+<li><code>我瞒着妈妈</code> <code>和姐姐出去玩了</code></li>
+</ul>
+<p>广义上来讲任何处理自然语言的计算机操作都可以被理解为NLP。它可以实现一些简单的功能，比如短语之间的翻译。同时，NLP也致力于完成一些具有挑战性的任务，比如完全 <em><strong>“理解”</strong></em> 人类话语。</p>
+<h4 id="分词"><a href="#分词" class="headerlink" title="分词"></a>分词</h4><p>一篇文本是由无数句话组成，而一句话又是由一个个词语组成，因此可以将<strong>词语</strong>看作是自然语言的基本单位。那么在进行NLP时，就需要先将句子中的词语分开。<br>对于英文，只需要按照空格和标点符号就可以将词语分开。但在中文文本里，所有的字都连在一起，计算机并不知道一个字应该与其前后的字连成词语，还是应该自己形成一个词语。因此，需要借助额外的工具将中文文本中的词语分隔开。这项技术被称为中文的<strong>分词</strong>。<br>分词完成后，就可以根据这些词语找到属于这个文本的特点，也就是常说的<strong>特征（feature）</strong>。对于文本而言，词语出现的频率就可以作为一项特征。那么，词频这个特征就能帮我们提取出关键词。在进行NLP时，构造<strong>词袋模型（Bag-of-Words Model）</strong>是一种常用的用于统计词频的技术。</p>
+<h4 id="词袋模型-Bag-of-Words-Model"><a href="#词袋模型-Bag-of-Words-Model" class="headerlink" title="词袋模型 Bag-of-Words Model"></a>词袋模型 Bag-of-Words Model</h4><p>定义：词袋模型是一个描述文本的模型，用于统计每个词在文本中出现的次数。该模型只记录每个词语出现的次数，而忽略语法细节和词语之间的顺序。<br>例如，对于这条评价：<code>满意物流，也满意屏幕大小</code>在构建词袋模型前，需要先进行分词。这条评价按照一定方法分隔后，就变成了：<code>满意 / 物流 / 也 / 满意 / 屏幕 / 大小</code><br>分隔后，词袋模型会统计每个词在文本中出现的次数：<code>满意:2，物流:1，也:1，屏幕:1，大小:1</code><br><img src="/../img/2023-02-20-00-53-25.png" srcset="/img/loading.gif" lazyload><br>可以看到，通过词袋模型生成的结果，词的顺序和语法都被忽略了，变成了一些词语间的组合，但又在一定程度上保留了主题信息。<strong>将复杂的词句结构降维成体现主题的词语计数，以便计算机进行后续的处理</strong>，这就是词袋模型的基本思想。</p>
+<hr>
+
+
+	<div class="row">
+    <embed src="/pdf/Python编程：从入门到实践.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0/" class="category-chain-item">大学学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>
+      
+        <a href="/tags/%E5%A4%A7%E5%AD%A6/">#大学</a>
+      
+        <a href="/tags/Python/">#Python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>【Python】自学整理</div>
+      <div>http://yiliu1412.github.io/2023/01/11/pythonLearn/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>逸流Mercurio</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年1月11日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年2月20日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

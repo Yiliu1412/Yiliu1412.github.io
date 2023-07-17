@@ -1,0 +1,782 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Gokou_Ruri.png">
+  <link rel="icon" href="/img/Gokou_Ruri.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="逸流Mercurio">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="C++程序设计——思想与办法Tips:标注书页均为《C++程序设计思想与方法（慕课版第3版）》  上来就是第8章 这是为什么呢  第8章 数据封装——结构体记录是一组无序的、异质的数据，在C++语言中被称为结构体。 8.1记录的概念 P186记录的组成部分通常被称作字段，或者被称为成员。 8.2记录的使用 P187在C++中记录需要进行如下两个步骤:  定义一个新的结构体类型。这指明了其变量是由哪">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【程序设计与思想Cpp】课本知识点整理">
+<meta property="og:url" content="http://yiliu1412.github.io/2023/01/11/cppLearn/index.html">
+<meta property="og:site_name" content="逸流的博客">
+<meta property="og:description" content="C++程序设计——思想与办法Tips:标注书页均为《C++程序设计思想与方法（慕课版第3版）》  上来就是第8章 这是为什么呢  第8章 数据封装——结构体记录是一组无序的、异质的数据，在C++语言中被称为结构体。 8.1记录的概念 P186记录的组成部分通常被称作字段，或者被称为成员。 8.2记录的使用 P187在C++中记录需要进行如下两个步骤:  定义一个新的结构体类型。这指明了其变量是由哪">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yiliu1412.github.io/img/%E5%8F%8B%E5%88%A9%E5%A5%88%E7%BB%AA.png">
+<meta property="article:published_time" content="2023-01-11T15:53:43.000Z">
+<meta property="article:modified_time" content="2023-05-07T05:49:47.937Z">
+<meta property="article:author" content="逸流Mercurio">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="大学">
+<meta property="article:tag" content="C++">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yiliu1412.github.io/img/%E5%8F%8B%E5%88%A9%E5%A5%88%E7%BB%AA.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>【程序设计与思想Cpp】课本知识点整理 - 逸流的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"yiliu1412.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":50,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>逸流的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/%E5%8F%8B%E5%88%A9%E5%A5%88%E7%BB%AA.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="【程序设计与思想Cpp】课本知识点整理"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-01-11 23:53" pubdate>
+          2023年1月11日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【程序设计与思想Cpp】课本知识点整理</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2023年5月7日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="C-程序设计——思想与办法"><a href="#C-程序设计——思想与办法" class="headerlink" title="C++程序设计——思想与办法"></a>C++程序设计——思想与办法</h1><p>Tips:<code>标注书页均为《C++程序设计思想与方法（慕课版第3版）》</code></p>
+<hr>
+<p>上来就是第8章 <del>这是为什么呢</del></p>
+<hr>
+<h1 id="第8章-数据封装——结构体"><a href="#第8章-数据封装——结构体" class="headerlink" title="第8章 数据封装——结构体"></a>第8章 数据封装——结构体</h1><p><strong>记录</strong>是一组无序的、异质的数据，在C++语言中被称为<strong>结构体</strong>。</p>
+<h2 id="8-1记录的概念-P186"><a href="#8-1记录的概念-P186" class="headerlink" title="8.1记录的概念 P186"></a>8.1记录的概念 P186</h2><p>记录的组成部分通常被称作字段，或者被称为成员。</p>
+<h2 id="8-2记录的使用-P187"><a href="#8-2记录的使用-P187" class="headerlink" title="8.2记录的使用 P187"></a>8.2记录的使用 P187</h2><p>在C++中记录需要进行如下两个步骤:</p>
+<ol>
+<li>定义一个新的结构体类型。这指明了其变量是由哪些字段组成的</li>
+<li>定义结构体类型的变量。完成了结构体的定义后，可以定义该类型的变量，编译器会参照相应的结构体类型定义分配相应的空间。</li>
+</ol>
+<p><strong>这两步是必不可少的。</strong></p>
+<h3 id="结构体类型的定义"><a href="#结构体类型的定义" class="headerlink" title="结构体类型的定义"></a>结构体类型的定义</h3><p>格式如下。</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs gauss"><span class="hljs-keyword">struct</span> 结构体类型名&#123;<br>    字段声明；<br>&#125;；<br></code></pre></td></tr></table></figure>
+
+<p>在定义结构体类型时，字段名可以与程序中的变量名相同。在不同的结构体中也可以有相同的字段名。<br>结构体成员的类型可以是任意类型。可以是整数、实型，也可以是数组，甚至是<strong>其他结构体类型</strong>。</p>
+<h3 id="结构体类型的变量的定义"><a href="#结构体类型的变量的定义" class="headerlink" title="结构体类型的变量的定义"></a>结构体类型的变量的定义</h3><ul>
+<li>例如，已经有了studentT这个类型，就可以通过下列代码定义该类型的变量、数组或指针。<code>studentT student1, studentArray[10], *sp</code><br><code>studentArray</code>是具有10个 <code>studentT</code>类型的值的数组。<br><code>sp</code>是一个指向 <code>studentT</code>类型的指针,它可以指向 <code>student1</code>，可以指向studentArray中的某个元素。</li>
+<li>结构体类型变量也可以在定义结构体类型的同时定义，格式如下。</li>
+</ul>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs gauss"><span class="hljs-keyword">struct</span> 结构体类型名&#123;<br>    字段声明；<br>&#125;   结构体变量；<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>定义结构体类型变量时也可以为它赋初值。c++用一对花括号将这一组值括起来，表示成一个整体，值与值之间用逗号分开。例如：<br><code>studentT student = &#123; &quot;00001&quot;,&quot;Elysia&quot;,100,90,80 &#125;</code></li>
+</ul>
+<h3 id="结构体类型的变量的使用"><a href="#结构体类型的变量的使用" class="headerlink" title="结构体类型的变量的使用"></a>结构体类型的变量的使用</h3><p>要表示结构体类型的变量中的某一变量，需要写下整个结构体类型的变量名称，后面跟运算符 <code>.</code>及该字段的名称。结构体中的字段可以单独使用，它相当于普通变量。若结构体类型的变量成员还是一个结构体，则可使用 <code>.</code>一级一级分开，逐级访问。</p>
+<ul>
+<li>结构体类型的变量输入通常是通过输入它的每一个成员来实现。</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">cin &gt;&gt; student1<span class="hljs-selector-class">.no</span> &gt;&gt; student1<span class="hljs-selector-class">.name</span> <br>    &gt;&gt; student1<span class="hljs-selector-class">.score</span><span class="hljs-selector-class">.chinese</span> <br>    &gt;&gt; student1<span class="hljs-selector-class">.score</span>.english<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>也可以通过对每一个字段赋值来实现结构体的赋值，如 <code>student1.score.english = 145</code></li>
+<li>当两个结构体变量属于不同结构体类型时，就可以互相赋值，这说明结构体是左值。<br><em>注：数组不是左值。</em></li>
+<li>指针也可以通过指针间接访问。指向结构体的指针可以指向同一个类型的结构体变量，也可以指向一个通过动态内存申请到的一块用于储存同类型的结构体的空间。</li>
+</ul>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs haxe">studentT student1, *sp = &amp;student1;<br>sp = <span class="hljs-keyword">new</span> <span class="hljs-type">studentT</span>;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>要引用sp指向的结构体对象的某个字段，可以表示为 <code>(*sp).chinese</code>。<strong>注意，<code>()</code>是必要的，因为点运算符的优先级比 <code>*</code>高。如果不加括号，编译器会理解为 <code>sp.chinese</code>为一个指针，然后指向该指针指向的内容。</strong><br>但是这种方法过于笨拙，使用者在每一次选取的时候都会使用括号，故而C++提出了另外一个更加简明的运算符 <code>-&gt;</code>，用法如 <code>指针变量名-&gt;字段名</code>表示指针变量指向的结构体的制定字段。</li>
+</ul>
+<p><em>注：数组通常表示一组变量，而结构体通常表示的是一个变量。</em></p>
+<h2 id="8-3结构体作为函数的参数"><a href="#8-3结构体作为函数的参数" class="headerlink" title="8.3结构体作为函数的参数"></a>8.3结构体作为函数的参数</h2><p>结构体的传递和普通内置传递一样都是值传递，由于结构体的特点，这种做法一般既浪费时间也浪费空间，因此常使用<strong>引用传递</strong>。<br>使用引用传递时，由于形式参数和实际参数共享了同一块空间，为了避免对实际参数的修改，可以使用 <code>const</code>的引用传递。</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-comment">//文件名：8-1.cpp</span><br><span class="hljs-comment">//对平面上点的操作的函数及应用</span><br><span class="hljs-keyword">struct</span> pointT&#123;<br>    double x,y;<br>&#125;;<br>void set<span class="hljs-constructor">Point(<span class="hljs-params">double</span> <span class="hljs-params">x</span>, <span class="hljs-params">double</span> <span class="hljs-params">y</span>, <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p</span>)</span>；<br>double get<span class="hljs-constructor">X(<span class="hljs-params">const</span> <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p</span>)</span>；<br>double get<span class="hljs-constructor">Y(<span class="hljs-params">const</span> <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p</span>)</span>；<br>void show<span class="hljs-constructor">Point(<span class="hljs-params">const</span> <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p</span>)</span>；<br>double distance<span class="hljs-constructor">Point(<span class="hljs-params">const</span> <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p1</span>, <span class="hljs-params">const</span> <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p2</span>)</span>；<br><br><span class="hljs-built_in">int</span> main<span class="hljs-literal">()</span><br>&#123;<br>    pointT p1, p2;<br><br>    set<span class="hljs-constructor">Point(1,1,<span class="hljs-params">p1</span>)</span>;<br>    set<span class="hljs-constructor">Point(2,2,<span class="hljs-params">p2</span>)</span>;<br><br>    cout &lt;&lt; get<span class="hljs-constructor">X(<span class="hljs-params">p1</span>)</span> &lt;&lt; <span class="hljs-string">&quot;  &quot;</span> &lt;&lt; get<span class="hljs-constructor">Y(<span class="hljs-params">p2</span>)</span> &lt;&lt; endl; <br>    show<span class="hljs-constructor">Point(<span class="hljs-params">p1</span>)</span>;<br>    cout &lt;&lt; <span class="hljs-string">&quot; -&gt; &quot;</span> ;<br>    show<span class="hljs-constructor">Point(<span class="hljs-params">p2</span>)</span>;<br>    cout &lt;&lt; <span class="hljs-string">&quot; = &quot;</span> &lt;&lt; distance<span class="hljs-constructor">Point(<span class="hljs-params">p1</span>, <span class="hljs-params">p2</span>)</span> &lt;&lt; endl;<br>    return <span class="hljs-number">0</span>;<br>&#125;<br><br>void set<span class="hljs-constructor">Point(<span class="hljs-params">double</span> <span class="hljs-params">x</span>, <span class="hljs-params">double</span> <span class="hljs-params">y</span>, <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p</span>)</span><br>&#123;   <br>    p.x = x;<br>    p.y = y;<br>&#125;<br><br>double get<span class="hljs-constructor">X(<span class="hljs-params">const</span> <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p</span>)</span><br>&#123;    return (p.x);   &#125;<br><br>double get<span class="hljs-constructor">Y(<span class="hljs-params">const</span> <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p</span>)</span><br>&#123;    return (p.y);   &#125;<br><br>void show<span class="hljs-constructor">Point(<span class="hljs-params">const</span> <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p</span>)</span><br>&#123;    cout &lt;&lt; <span class="hljs-string">&quot;(&quot;</span> &lt;&lt; p.x &lt;&lt; <span class="hljs-string">&quot; , &quot;</span> &lt;&lt; p.y &lt;&lt; <span class="hljs-string">&quot;)&quot;</span>;   &#125;<br><br>double distance<span class="hljs-constructor">Point(<span class="hljs-params">const</span> <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p1</span>, <span class="hljs-params">const</span> <span class="hljs-params">pointT</span> &amp;<span class="hljs-params">p2</span>)</span><br>&#123;    return sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)<span class="hljs-operator"> * </span>(p1.y-p2.y));   &#125;<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="8-4链表-P192"><a href="#8-4链表-P192" class="headerlink" title="8.4链表 P192"></a>8.4链表 P192</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>链表是一种可以动态的进行内存分配的结构。<br>变量head中存储着第一个元素结点的地址，head可以找到第一个结点，第一个可以找到第二个……一直到最后一个结点。最后一个结点的第二部分存放一个空指针。</p>
+<h3 id="形式"><a href="#形式" class="headerlink" title="形式"></a>形式</h3><p>形式多样。除了单链表外，还有双链表、循环链表等。数据结构中做进一步学习。</p>
+<h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><h4 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h4><p>在一个单链表中，每个数据元素被存储在一个结点中。存储一个单链表只需要存储第一个结点的地址，因此<strong>只需要定义一个指向结点的指针</strong>。<br>每个结点由两部分组成：数据元素本身和指向下一结点的指针。</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">struct linkNode&#123;<br>    datatype data; <span class="hljs-regexp">//</span>任意一种数据类型<br>    lnkeNode *<span class="hljs-keyword">next</span>; <span class="hljs-regexp">//</span>指向自身类型的一个指针<br>&#125;;    <span class="hljs-regexp">//</span>注意在定义结构体时最后要有分号（；）<br></code></pre></td></tr></table></figure>
+
+<p>定义 <code>linkNode *head</code>，<code>head</code>就表示了这个单链表。</p>
+<h4 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h4><h5 id="创建一个单链表"><a href="#创建一个单链表" class="headerlink" title="创建一个单链表"></a>创建一个单链表</h5><p>包括以下步骤：定义一个单链表创建一个空的单链表，依次从键盘读入数据，链入单链表的表尾。</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span>文件名：<span class="hljs-number">8</span>-<span class="hljs-number">2</span>.cpp<br><span class="hljs-regexp">//</span>单链表的建立与访问<br><span class="hljs-comment">#include &lt;iostream&gt;</span><br>using namespace std;<br> <br>struct  linkRec &#123;<br>    int  data;  <br>    linkRec *<span class="hljs-keyword">next</span>;<br>&#125;;<br> <br>int main()<br>&#123; <br>    int x;                     <span class="hljs-regexp">//</span>存放输入的值<br>    linkRec *head, *p, *rear;	<span class="hljs-regexp">//</span>head为表的头指针，rear指向创建链表时的表尾结点,<br>						<span class="hljs-regexp">//</span>p是创建和读链表时指向被操作结点的指针<br>  <br>    head = rear = new linkRec;	<span class="hljs-regexp">//</span>创建空链表，头结点也是最后一个结点<br> <br>    <span class="hljs-regexp">//</span>创建链表的其他结点<br>    <span class="hljs-keyword">while</span> (true) &#123;<br>        cin &gt;&gt; x;<br>        <span class="hljs-keyword">if</span> (x == <span class="hljs-number">0</span>) <span class="hljs-keyword">break</span>;<br>        p = new linkRec;	<span class="hljs-regexp">//</span>申请一个结点<br>        p-&gt;data = x;	<span class="hljs-regexp">//</span>将x的值存入新结点<br>        rear-&gt;<span class="hljs-keyword">next</span> = p;	<span class="hljs-regexp">//</span>将p链到表尾<br>        rear = p;	<span class="hljs-regexp">//</span>p作为新的表尾<br>    &#125;<br> <br>    rear-&gt;<span class="hljs-keyword">next</span> = NULL;	<span class="hljs-regexp">//</span>设置rear为表尾，其后没有结点了<br> <br>    <span class="hljs-regexp">//</span>读链表<br>    cout &lt;&lt; <span class="hljs-string">&quot;链表的内容为：\n&quot;</span>;<br>    p = head-&gt;<span class="hljs-keyword">next</span>;            <span class="hljs-regexp">//</span>p指向第一个结点<br>    <span class="hljs-keyword">while</span> (p != NULL) &#123;<br>        cout &lt;&lt; p-&gt;data &lt;&lt; <span class="hljs-string">&#x27;\t&#x27;</span>;<br>        p = p-&gt;<span class="hljs-keyword">next</span>;	<span class="hljs-regexp">//</span>使p指向下一个结点<br>    &#125;<br>    cout &lt;&lt; endl;<br> <br>    return <span class="hljs-number">0</span>;<br>&#125;<br><br><br></code></pre></td></tr></table></figure>
+
+<h4 id="单链表的插入"><a href="#单链表的插入" class="headerlink" title="单链表的插入"></a>单链表的插入</h4><figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xl">tmp = new ListNode; <span class="hljs-comment">//创建一个新结点</span><br><span class="hljs-function"><span class="hljs-title">tmp</span> -&gt;</span> <span class="hljs-keyword">data</span> = x; <span class="hljs-comment">//把x放入新结点的数据成员中</span><br><span class="hljs-function"><span class="hljs-title">tmp</span> -&gt;</span> <span class="hljs-function"><span class="hljs-title">next</span> = p -&gt;</span> next; <span class="hljs-comment">//把新结点和p的下一结点相连</span><br><span class="hljs-function"><span class="hljs-title">p</span> -&gt;</span> next = tmp; <span class="hljs-comment">//把p和新结点连接起来</span><br><br><span class="hljs-comment">// 注意第三、四句不可以互换，这样会导致p后面的节点丢失</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="单链表的删除"><a href="#单链表的删除" class="headerlink" title="单链表的删除"></a>单链表的删除</h4><p>可以直接 <code>p-&gt;next = p -&gt;next -&gt;nxet</code>，来删除，但这会导致内存泄露，没有回收被删除节结点的空间。<br>完整的删除应该有两个工作：从链表中删去该结点，回收结点的空间，如下例。</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">delPtr = p -&gt; <span class="hljs-keyword">next</span>; <span class="hljs-regexp">//</span>保存被删除结点的地址<br>p-&gt; <span class="hljs-keyword">next</span> = delPtr -&gt; <span class="hljs-keyword">next</span> ; <span class="hljs-regexp">//</span>将此结点从链中删去<br><span class="hljs-keyword">delete</span> delPtr ; <span class="hljs-regexp">//</span>回收被删除结点的空间<br></code></pre></td></tr></table></figure>
+
+<h2 id="8-5编程规范及常见错误"><a href="#8-5编程规范及常见错误" class="headerlink" title="8.5编程规范及常见错误"></a>8.5编程规范及常见错误</h2><ul>
+<li>结构体是C++的一个类。定义时最好指定名字，便于程序的其他地方也可以定义该类型的变量</li>
+<li>结构体类型定义时在最后的 <code>&#125;</code>后要加一个分号</li>
+<li>结构体类型一旦被定义，就可以将其当做变量使用</li>
+<li>结构体变量可以作为函数的参数，传递方式为值传递。但是结构体采取值传递既浪费时间又浪费空间，故而一般采用引用传递。为了防止引用传递修改了实际参数，可以用 <code>const</code>限定形式参数。</li>
+</ul>
+<h1 id="第10章-创建新的类型"><a href="#第10章-创建新的类型" class="headerlink" title="第10章 创建新的类型"></a>第10章 创建新的类型</h1><h2 id="10-1面向对象程序设计"><a href="#10-1面向对象程序设计" class="headerlink" title="10.1面向对象程序设计"></a>10.1面向对象程序设计</h2><pre><code class="hljs">略
+</code></pre>
+<h2 id="10-2类的定义-P224"><a href="#10-2类的定义-P224" class="headerlink" title="10.2类的定义 P224"></a>10.2类的定义 P224</h2><p>定义一个类就是定义一组属性和一组对属性进行操作的函数。属性称为类型的<strong>数据成员</strong>，而函数称为类的<strong>成员函数</strong>。类定义的一般形式如下：</p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs haxe"><br><span class="hljs-class"><span class="hljs-keyword">class</span> 类名</span>&#123;<br><br><span class="hljs-keyword">private</span>：<br><br>    私有数据成员和成员函数；<br><br><span class="hljs-keyword">public</span>：<br><br>    公有数据成员和成员函数；<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>私有成员只能被自己类中的成员函数访问，不能被全局函数或其他类的成员函数访问。这些成员被封装在类的内部，不为外界所知。公有成员能通过 <code>变量名.成员名</code>被程序中其他类的成员函数访问，它是类的对外接口。</p>
+<p>利用private可以封装类型的实现细节。封装是将低层次的元素组合起来形成新的、高层次实体的技术。函数就是封装的一种形式。函数所执行的细节封装在函数本身这个更大的实体中。被封装的元素隐藏了他们的实现细节。类也是封装的一种形式，通常将数据的存储和处理的细节隐藏起来。结构体和类都可以用来定义新的类型，格式也完全相同，唯一区别在于：<strong>结构体中，如果没有指明访问特性，则成员是公有的；在类的定义中，默认情况下，成员是私有的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><br>代码清单<span class="hljs-number">10</span><span class="hljs-number">-7</span>　用<span class="hljs-keyword">class</span>定义的DoubleArray类型<br><br><span class="hljs-comment">// 文件名：DoubleArray.h</span><br><br><span class="hljs-comment">// DoubleArray类的定义</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">DoubleArray</span>&#123;<br><br><span class="hljs-keyword">private</span>:<br><br>    <span class="hljs-type">int</span> low;  <br><br>    <span class="hljs-type">int</span> high;<br><br>    <span class="hljs-type">double</span> *storage;<br><br><br><span class="hljs-keyword">public</span>:<br><br>    <span class="hljs-comment">//根据low和high为数组分配空间。分配成功，返回值为true，否则返回值为false</span><br><br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">initialize</span><span class="hljs-params">(<span class="hljs-type">int</span> lh, <span class="hljs-type">int</span> rh)</span></span>;<br><br><br>    <span class="hljs-comment">//设置数组元素的值</span><br><br>    <span class="hljs-comment">//返回值为true表示操作正常，返回值为false表示下标越界</span><br><br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-type">int</span> index, <span class="hljs-type">double</span> value)</span></span>;<br><br><br>    <span class="hljs-comment">//取数组元素的值</span><br><br>    <span class="hljs-comment">//返回值为true表示操作正常，返回值为false表示下标越界</span><br><br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">fatch</span><span class="hljs-params">(<span class="hljs-type">int</span> index, <span class="hljs-type">double</span> &amp;value)</span></span>;<br><br><br>    <span class="hljs-comment">//回收数组空间</span><br><br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">cleanup</span><span class="hljs-params">()</span></span>;<br><br>&#125;;<br><br></code></pre></td></tr></table></figure>
+
+<p>完善类的定义还必须包括所有成员函数的实现。成员函数的实现通常有两种实现表示方法。</p>
+<ol>
+<li>在类的定义时只给出函数原型，而函数的定义时写在一个实现文件（.cpp）中；</li>
+<li>将成员函数的定义直接写在类定义中。<strong>直接定义在类中的函数默认为内联函数</strong>。因此，直接定义在类中的函数都是比较简单的函数。当然，内联函数也可以直接写在实现文件中，用保留字 <code>inline</code>说明。</li>
+</ol>
+<p><em>良好的程序设计习惯是将类定义和成员函数的实现分开，这样可以更好的达到实现隐藏的目的。</em></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><br>代码清单<span class="hljs-number">10</span><span class="hljs-number">-8</span>　将成员函数定义为内联函数<br><br><span class="hljs-comment">//文件名：10-8.h</span><br><br><span class="hljs-comment">//将成员函数定义为内联函数</span><br><br><span class="hljs-meta">#<span class="hljs-keyword">ifndef</span>¬_DoubleArray</span><br><br>#define_DoubleArray<br><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">DoubleArray</span>&#123;<br><br><span class="hljs-keyword">private</span>:<br><br>    <span class="hljs-type">int</span> low;  <br><br>    <span class="hljs-type">int</span> high;<br><br>    <span class="hljs-type">double</span> *storage;<br><br><br><span class="hljs-keyword">public</span>:<br><br>    <span class="hljs-comment">//根据low和high为数组分配空间。分配成功，返回值为true，否则返回值为false</span><br><br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">initialize</span><span class="hljs-params">(<span class="hljs-type">int</span> lh, <span class="hljs-type">int</span> rh)</span></span><br><span class="hljs-function"></span><br><span class="hljs-function">    </span>&#123;<br><br>       low = lh;<br><br>       high = rh;<br><br>       storage = <span class="hljs-keyword">new</span> <span class="hljs-type">double</span> [high - low + <span class="hljs-number">1</span>];<br><br>       <span class="hljs-keyword">if</span> (storage == <span class="hljs-literal">NULL</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br><br>    &#125;<br><br>    <span class="hljs-comment">//设置数组元素的值</span><br><br>    <span class="hljs-comment">//返回值为true表示操作正常，返回值为false表示下标越界</span><br><br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-type">int</span> index, <span class="hljs-type">double</span> value)</span></span><br><span class="hljs-function"></span><br><span class="hljs-function">    </span>&#123;<br><br>        <span class="hljs-keyword">if</span> (index &lt; low || index &gt; high) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br><br>        storage[index - low] = value;<br><br><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br><br>    &#125;<br><br><br>    <span class="hljs-comment">//取数组元素的值</span><br><br>    <span class="hljs-comment">//返回值为true表示操作正常，返回值为false表示下标越界</span><br><br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">fatch</span><span class="hljs-params">(<span class="hljs-type">int</span> index, <span class="hljs-type">double</span> &amp;value)</span></span><br><span class="hljs-function"></span><br><span class="hljs-function">    </span>&#123;<br><br>       <span class="hljs-keyword">if</span> (index &lt; low || index &gt; high) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br><br>       value = storage[index - low] ;<br><br><br>       <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br><br>    &#125;<br><br><br>    <span class="hljs-comment">//回收数组空间</span><br><br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">cleanup</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span><br><span class="hljs-function">    </span>&#123;  <span class="hljs-keyword">if</span> (storage) <span class="hljs-keyword">delete</span> [] storage;   &#125;<br><br>&#125;;<br><br><span class="hljs-meta">#<span class="hljs-keyword">endif</span></span><br><br></code></pre></td></tr></table></figure>
+
+<p>有些类内部的函数不需要用户调用，这类函数被称为<strong>工具函数</strong>。工具函数通常设计为 <code>private</code>的。</p>
+<h2 id="10-3对象的使用-P228"><a href="#10-3对象的使用-P228" class="headerlink" title="10.3对象的使用 P228"></a>10.3对象的使用 P228</h2><h3 id="对象的定义"><a href="#对象的定义" class="headerlink" title="对象的定义"></a>对象的定义</h3><p>一旦定义了一个类，就可以定义这种类型的变量了。在面向对象的程序设计中，这类变量称为<strong>对象</strong>。对象有两种定义方法：</p>
+<h4 id="1-在程序中直接定义类型为某个类的对象"><a href="#1-在程序中直接定义类型为某个类的对象" class="headerlink" title="1. 在程序中直接定义类型为某个类的对象"></a>1. 在程序中直接定义类型为某个类的对象</h4><p>格式如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs"><br>储存类别 类名 对象列表<br><br></code></pre></td></tr></table></figure>
+
+<p>例如定义一个静态的 <code>Rational</code>类的对象 <code>r1</code>,可写成：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><br><span class="hljs-keyword">static</span> Rational r1<br><br></code></pre></td></tr></table></figure>
+
+<h4 id="2-动态对象"><a href="#2-动态对象" class="headerlink" title="2. 动态对象"></a>2. 动态对象</h4><p>要定义一个动态对象必须要有指向对象的指针，然后 <code>new</code>申请一块储存对象的空间，通过 <code>delete</code>释放动态对象占用的空间。例如：</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><br>Rational *rp<span class="hljs-comment">;</span><br><br><span class="hljs-attribute">rp</span> <span class="hljs-operator">=</span> nwe Rational<span class="hljs-comment">;</span><br><br>delete [] rp<span class="hljs-comment">;</span><br><br></code></pre></td></tr></table></figure>
+
+<h3 id="对象的操作"><a href="#对象的操作" class="headerlink" title="对象的操作"></a>对象的操作</h3><p>结构体中默认所有的成员都是公有的，因此都可以用 <code>结构体变量名.成员名</code>来访问，但是在类的对象中，全局函数或其他类的成员函数只能访问公有成员而不能访问私有成员，因此只有公有的成员才能用点运算符 <code>对象名.数据 成员名</code>来访问。</p>
+<p>与结构体类型的变量一样，除了能用对象名访问对象外，还可以用指向对象的指针访问对象。此事可以用 <code>-&gt;</code>运算符；同类对象也可以相互赋值，当把一个对象赋值给另一个对象时，所有的数据成员都会逐位复制。</p>
+<h3 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a>this指针</h3><p>一个对象包括数据成员和成员函数。成员函数操作的数据就是本对象的数据成员。由于所有该类对象中的成员函数的代码是完全相同的，C++采取了一个优化手段：无论创建了多少这种类型的对象，成员函数在内存中只有一个副本。所有对象共享这一个副本。</p>
+<p>定义一个对象时，系统只知道为数据层成员分配空间，而C++为成员函数设置了一个隐藏的真相本类型的指针形式参数 <code>this</code>，它指向当前调用成员函数的对象。成员函数中对对象成员的访问是通过this指针实现的。 当通过对象调用成员函数时，编译器会把相应对象的地址传给形参 <code>this</code>。</p>
+<p><em>通常，编译器会自动加上 <code>this</code>，但是如果在成员函数中要把对象作为整体来访问时，必须显式地使用 <code>this</code>指针，即 <code>*this</code>。这种情况在函数中返回一个调用函数的对象的引用时时常出现，11.3节中将给出用法。</em></p>
+<h2 id="10-4对象的构造与析构-P231"><a href="#10-4对象的构造与析构-P231" class="headerlink" title="10.4对象的构造与析构 P231"></a>10.4对象的构造与析构 P231</h2>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0/" class="category-chain-item">大学学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>
+      
+        <a href="/tags/%E5%A4%A7%E5%AD%A6/">#大学</a>
+      
+        <a href="/tags/C/">#C++</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>【程序设计与思想Cpp】课本知识点整理</div>
+      <div>http://yiliu1412.github.io/2023/01/11/cppLearn/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>逸流Mercurio</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年1月11日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年5月7日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
