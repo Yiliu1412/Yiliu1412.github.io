@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>《网络是怎样连接的》书摘</title>
+    <title>《网络是怎样连接的》学习笔记</title>
     <link href="/2023/07/17/web-learning/"/>
     <url>/2023/07/17/web-learning/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h2 id="网络是怎样连接的"><a href="#网络是怎样连接的" class="headerlink" title="网络是怎样连接的"></a>网络是怎样连接的</h2><h1 id="浏览器生成消息——探索浏览器内部"><a href="#浏览器生成消息——探索浏览器内部" class="headerlink" title="浏览器生成消息——探索浏览器内部"></a>浏览器生成消息——探索浏览器内部</h1><blockquote><p><a href="http://www.nikkeibp.co.jp/">http://www.nikkeibp.co.jp/</a> 中的www只是Web服务器上的一种命名。而且，World Wide Web也不是一个协议的名字，而是Web的提出者最早开发的浏览器兼HTML编辑器的名字。<br>浏览器等网络应用程序实际上并不具备网络控制功能，而是委托操作系统来控制网络。</p></blockquote><h2 id="生成HTTP请求消息"><a href="#生成HTTP请求消息" class="headerlink" title="生成HTTP请求消息"></a>生成HTTP请求消息</h2><h3 id="探索之旅从输入网址开始"><a href="#探索之旅从输入网址开始" class="headerlink" title="探索之旅从输入网址开始"></a>探索之旅从输入网址开始</h3><p>介绍浏览器的工作方式之前， 让我们先来介绍一下网址。 网址，准确来说应该叫URL (<em>Uniform Resource Locator，统一资源定位符</em>)。如果我说它就是以 <code>http://</code> 开头的那一串东西， 恐怕大家一下子就明白了， 但实际上除了<code>http:</code>， 网址还可以以其他一些文字开头， 例如<code>ftp:</code> <code>file:</code> <code>mailto:</code>等。</p><p>浏览器是一个具备多种客户端功能的综合性客户端软件，因此它需要一些东西来判断应该使用其中哪种功能来访问相应的数据，而各种不同的URL就是用来干这个的。</p><blockquote><p>FTP： File Transfer Protocol，文件传送协议。这是一种在上传、下载文件<br>时使用的协议。使用 FTP 协议来传送文件的程序也被叫作 FTP。<br>HTTP： Hypertext Transfer Protocol，超文本传送协议。</p></blockquote><p>在访问 Web 服务器和 FTP 服务器时， URL 中会包含服务器的域名 E 和要访问的文件的路径名等， 而发邮件的 URL 则包含收件人的邮件地址。 此外， 根据需要， URL 中还会包含用户名、 密码、服务器端口号等信息。 URL 开头的文字， 即<code>ftp:</code> <code>file:</code> <code>mailto:</code>这部分文字都表示浏览器应当使用的访问方法。理解为访问时使用的<strong>协议类型</strong>。</p><p><img src="/../img/mk-2023-07-17-23-45-48.png"></p><h3 id="浏览器先要解析URL"><a href="#浏览器先要解析URL" class="headerlink" title="浏览器先要解析URL"></a>浏览器先要解析URL</h3><p><strong>浏览器要做的第一步工作就是对 URL 进行解析</strong>， 从而生成发送给 Web 服务器的请求消息。 </p><p><img src="/../_posts/img/mk-2023-07-17-23-49-32.png"></p><p>根据 HTTP 的规格， URL 包含上图 （ a） 中的这几种元素。 当对 URL进行解析时， 首先需要按照上图 （ a） 的格式将其中的各个元素拆分出来，例如上图（ b） 中的 URL 会拆分成上图 （ c） 的样子。 然后， 通过拆分出来的这些元素， 我们就能够明白 URL 代表的含义。</p><h3 id="省略文件名的情况"><a href="#省略文件名的情况" class="headerlink" title="省略文件名的情况"></a>省略文件名的情况</h3><p><code>http://www.lab.glasscom.com/dir1/file1.html</code>是一个典型的<code>http:</code>开头的URL，但有时候我们也会见到一些不太一样的 URL， 例如<code>http://www.lab.glasscom.com/dir/</code>这个 URL 是以<code>/</code>来结尾的。 &#96;&#x2F;dir&#x2F;&#96;&#96; 后面本来应该有的文件名被<br>省略了。 根据 URL 的规则， 文件名可以像前面这样省略。</p><p>我们会在服务器上事先设置好文件名省略时要访问的默认文件名。 这个设置根据服务器不同而不同， 大多数情况下是 <code>index.html</code> 或者 <code>default.htm</code> 之类的<br>文件名。 因此， 像前面这样省略文件名时， 服务器就会访问 <code>/dir/index.html</code><br>或者 <code>/dir/default.htm</code>。</p><p>还有一些 URL 是像<code>http://www.lab.glasscom.com/</code>这样只有 Web 服务器的域名的， 这也是一种省略了文件名的形式。 这个 URL 也是以<code>/</code> 结尾的， 也就是说它表示访问一个名叫<code>/</code>的目录 A。 而且， 由于省略了文件名， 所以结果就是访问 <code>/index.html</code>或者<code>/default.htm</code>这样的文件了。</p><blockquote><p><code>/</code>目录表示目录层级中最顶层的“根目录”。</p></blockquote><p>连目录名都省略时，就代表访问根目录下事先设置的默认文件。最早的时候这个文件被叫作“主页”（ home page），意思就是当省略文件名时访问的那个默认的页面。随着 Web 的普及，这个词的意义似乎并没有被正确理解，现在不光是默认页面，似乎随便什么网页都可以被叫作主页了（笑）。</p><h3 id="HTTP的基本思路"><a href="#HTTP的基本思路" class="headerlink" title="HTTP的基本思路"></a>HTTP的基本思路</h3><p>解析完 URL 之后， 我们就知道应该要访问的目标在哪里了。 接下来，浏览器会使用 HTTP 协议来访问 Web 服务器。</p><p><img src="/../_posts/img/mk-2023-07-18-00-05-20.png"></p><p>HTTP 协议定义了客户端和服务器之间交互的消息内容和步骤， 其基本思路非常简单。  </p><p>首先， 客户端会向服务器发送请求消息（ 图 1.4）。 请求消息中包含的内容是“对什么” 和“进行怎样的操作” 两个部分。 其中相当于“对什么” 的部分称为 URI(<em>Uniform Resource Identifier，统一资源标识符</em>)。 一般来说， URI 的内容是一个存放网页数据的文件名或者是一个 CGI 程序的文件名， 例如&#96;&#96; &#x2F;dir1&#x2F;file1.html”<br>“&#x2F;dir1&#x2F;program1.cgi&#96; 等。</p><blockquote><p>实际上，这个文件在 Web 服务器上未必是真实存在的，因为 Web 服务器可以通过重写规则对虚拟的 URI 进行映射。</p></blockquote><p>不过，URI 不仅限于此， 也可以直接使用<code>http:</code>开头的 URL 来作为 URI。 换句话说就是，<strong>这里的各种访问目标统称为 URI</strong>。</p><p>相当于接下来“进行怎样的操作” 的部分称为<em>方法</em>（<em>也叫 HTTP 谓词，或者 HTTP 动词</em>）。<em>方法</em>表示需要让Web 服务器完成怎样的工作， 其中典型的例子包括读取 URI 表示的数据、将客户端输入的数据发送给 URI 表示的程序等。 表 1.1 列举了主要的<em>方法</em>。</p><p><img src="/../_posts/img/mk-2023-07-18-00-10-59.png"></p><p>除了图 1.4 中的内容之外， HTTP 消息中还有一些用来表示附加信息的头字段。 客户端向 Web 服务器发送数据时， 会先发送头字段， 然后再发送数据。</p><p><strong>收到请求消息之后， Web 服务器会对其中的内容进行解析</strong>， 通过 URI和方法来判断“对什么”“进行怎样的操作”， 并根据这些要求来完成自己的工作， 然后将结果存放在响应消息中。 在响应消息的开头有一个状态码，它用来表示操作的执行结果是成功还是发生了错误。 </p>]]></content>
     
     
     <categories>
@@ -101,9 +101,9 @@
     
     <tags>
       
-      <tag>笔记整理</tag>
-      
       <tag>Markdown</tag>
+      
+      <tag>笔记整理</tag>
       
     </tags>
     
@@ -240,11 +240,11 @@
     
     <tags>
       
+      <tag>笔记整理</tag>
+      
       <tag>高中</tag>
       
       <tag>化学</tag>
-      
-      <tag>笔记整理</tag>
       
     </tags>
     
@@ -269,9 +269,9 @@
     
     <tags>
       
-      <tag>高中</tag>
-      
       <tag>笔记整理</tag>
+      
+      <tag>高中</tag>
       
       <tag>地理</tag>
       
@@ -298,9 +298,9 @@
     
     <tags>
       
-      <tag>高中</tag>
-      
       <tag>笔记整理</tag>
+      
+      <tag>高中</tag>
       
       <tag>地理</tag>
       
