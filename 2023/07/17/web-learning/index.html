@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yiliu1412.github.io/img/%E5%95%A5%E5%95%8A.png">
 <meta property="article:published_time" content="2023-07-17T13:30:39.000Z">
-<meta property="article:modified_time" content="2023-07-18T13:16:43.678Z">
+<meta property="article:modified_time" content="2023-07-18T13:51:17.938Z">
 <meta property="article:author" content="逸流Mercurio">
 <meta property="article:tag" content="笔记整理">
 <meta property="article:tag" content="大学">
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.2k 字
+          2.7k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          5 分钟
+          6 分钟
         
       </span>
     
@@ -318,9 +318,19 @@
 <p>不过，URI 不仅限于此， 也可以直接使用<code>http:</code>开头的 URL 来作为 URI。 换句话说就是，<strong>这里的各种访问目标统称为 URI</strong>。</p>
 <p>相当于接下来“进行怎样的操作” 的部分称为<em>方法</em>（<em>也叫 HTTP 谓词，或者 HTTP 动词</em>）。<em>方法</em>表示需要让Web 服务器完成怎样的工作， 其中典型的例子包括读取 URI 表示的数据、将客户端输入的数据发送给 URI 表示的程序等。 表 1.1 列举了主要的<em>方法</em>。</p>
 <p><img src="/../_posts/img/mk-2023-07-18-00-10-59.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>实际上， PUT、 DELETE 等方法现在常用于 RESTful API 的设计中，在手机 App 和后端服务器交互时就会经常用到。</p>
+</blockquote>
 <p>除了图 1.4 中的内容之外， HTTP 消息中还有一些用来表示附加信息的头字段。 客户端向 Web 服务器发送数据时， 会先发送头字段， 然后再发送数据。</p>
-<p><strong>收到请求消息之后， Web 服务器会对其中的内容进行解析</strong>， 通过 URI和方法来判断“对什么”“进行怎样的操作”， 并根据这些要求来完成自己的工作， 然后将结果存放在响应消息中。 在响应消息的开头有一个状态码，它用来表示操作的执行结果是成功还是发生了错误。 </p>
-
+<p><strong>收到请求消息之后， Web 服务器会对其中的内容进行解析</strong>， 通过 URI和方法来判断“对什么”“进行怎样的操作”， 并根据这些要求来完成自己的工作， 然后将结果存放在响应消息中。 在响应消息的开头有一个状态码，它用来表示操作的执行结果是成功还是发生了错误。<strong>应消息会被发送回客户端， 客户端收到之后， 浏览器会从消息中读出所需的数据并显示在屏幕上。 到这里， HTTP 的整个工作就完成了。</strong></p>
+<h4 id="两个属于-HTTP-的典型用法"><a href="#两个属于-HTTP-的典型用法" class="headerlink" title="两个属于 HTTP 的典型用法"></a>两个属于 HTTP 的典型用法</h4><ul>
+<li><p>GET 方法<br>首先， 在请求消息中写上 GET 方法，然后在 URI 中写上存放网页数据的文件名。 当 Web 服务器收到消息后， 会打开文件并读取出里面的数据， 然后将读出的数据存放到<br>响应消息中， 并返回给客户端。 最后， 客户端浏览器会收到这些数据并显示在屏幕上。</p>
+</li>
+<li><p>POST 方法</p>
+</li>
+</ul>
+<p>使用 POST 方法时， URI 会指向 Web 服务器中运行的一个应用程序的文件名， 典型的例子包括“index.cgi”“index.php” 等。 然后， 在请求消息中， 除了方法和 URI 之外， 还要加上传递给应用程序和脚本的数据。 这里的数据也就是用户在输入框里填写的信息。当服务器收到消息后， Web 服务器会将请求消息中的数据发送给 URI 指定的应用程序。 最后， Web 服务器从应用程序接收输出的结果， 会将它存放到响应消息中并返回给客户端。</p>
+<h3 id="生成HTTP请求消息-1"><a href="#生成HTTP请求消息-1" class="headerlink" title="生成HTTP请求消息"></a>生成HTTP请求消息</h3>
                 
               </div>
             
