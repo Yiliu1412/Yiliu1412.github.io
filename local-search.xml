@@ -4,13 +4,58 @@
   
   
   <entry>
-    <title>Fundamentals of Electrical Engineering</title>
+    <title>自动控制原理</title>
+    <link href="/2024/09/22/ControlEngineering/"/>
+    <url>/2024/09/22/ControlEngineering/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>大学学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>大学</tag>
+      
+      <tag>笔记整理</tag>
+      
+      <tag>电气工程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>电气工程基础</title>
     <link href="/2024/09/22/FundamentalsofElectricalEngineering/"/>
     <url>/2024/09/22/FundamentalsofElectricalEngineering/</url>
     
     <content type="html"><![CDATA[]]></content>
     
     
+    <categories>
+      
+      <category>大学学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>大学</tag>
+      
+      <tag>笔记整理</tag>
+      
+      <tag>电气工程</tag>
+      
+    </tags>
     
   </entry>
   
@@ -20,19 +65,6 @@
     <title>highvoltagetech</title>
     <link href="/2024/09/22/HighVoltagetech/"/>
     <url>/2024/09/22/HighVoltagetech/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>controlengineering</title>
-    <link href="/2024/09/22/ControlEngineering/"/>
-    <url>/2024/09/22/ControlEngineering/</url>
     
     <content type="html"><![CDATA[]]></content>
     
@@ -59,9 +91,13 @@
     
     <tags>
       
+      <tag>大学</tag>
+      
       <tag>笔记整理</tag>
       
-      <tag>大学</tag>
+      <tag>电机</tag>
+      
+      <tag>电气工程</tag>
       
     </tags>
     
@@ -86,9 +122,9 @@
     
     <tags>
       
-      <tag>笔记整理</tag>
-      
       <tag>大学</tag>
+      
+      <tag>笔记整理</tag>
       
       <tag>LaTex</tag>
       
@@ -115,9 +151,9 @@
     
     <tags>
       
-      <tag>笔记整理</tag>
-      
       <tag>大学</tag>
+      
+      <tag>笔记整理</tag>
       
       <tag>Web</tag>
       
@@ -198,9 +234,9 @@
     
     <tags>
       
-      <tag>编程</tag>
-      
       <tag>大学</tag>
+      
+      <tag>编程</tag>
       
       <tag>Python</tag>
       
@@ -227,9 +263,9 @@
     
     <tags>
       
-      <tag>编程</tag>
-      
       <tag>大学</tag>
+      
+      <tag>编程</tag>
       
       <tag>C++</tag>
       
@@ -256,9 +292,9 @@
     
     <tags>
       
-      <tag>笔记整理</tag>
-      
       <tag>大学</tag>
+      
+      <tag>笔记整理</tag>
       
     </tags>
     
@@ -283,11 +319,11 @@
     
     <tags>
       
+      <tag>笔记整理</tag>
+      
       <tag>高中</tag>
       
       <tag>化学</tag>
-      
-      <tag>笔记整理</tag>
       
     </tags>
     
@@ -312,9 +348,9 @@
     
     <tags>
       
-      <tag>高中</tag>
-      
       <tag>笔记整理</tag>
+      
+      <tag>高中</tag>
       
       <tag>地理</tag>
       
@@ -341,9 +377,9 @@
     
     <tags>
       
-      <tag>高中</tag>
-      
       <tag>笔记整理</tag>
+      
+      <tag>高中</tag>
       
       <tag>地理</tag>
       
