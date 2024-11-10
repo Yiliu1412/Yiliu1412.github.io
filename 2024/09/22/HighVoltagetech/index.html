@@ -16,21 +16,28 @@
   <meta name="author" content="逸流Mercurio">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="highvoltagetech">
+    <meta name="description" content="高电压技术 High Voltage Technology 第一篇 电介质的电气强度 第一章 气体放电的基本物理过程 第二章 气体介质的电气强度 第三章 液体和固体介质的电气特性   第二篇 电气设备绝缘试验 第四章 电气设备绝缘预防性试验 第五章 绝缘的高电压试验   第三篇 电力系统过电压与绝缘配合 第六章 输电线路和绕组中的波过程 第七章 雷电放电及防雷保护装置 第八章 电力系统防雷保护 第">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高电压技术">
 <meta property="og:url" content="http://yiliu1412.github.io/2024/09/22/HighVoltagetech/index.html">
 <meta property="og:site_name" content="逸流的博客">
+<meta property="og:description" content="高电压技术 High Voltage Technology 第一篇 电介质的电气强度 第一章 气体放电的基本物理过程 第二章 气体介质的电气强度 第三章 液体和固体介质的电气特性   第二篇 电气设备绝缘试验 第四章 电气设备绝缘预防性试验 第五章 绝缘的高电压试验   第三篇 电力系统过电压与绝缘配合 第六章 输电线路和绕组中的波过程 第七章 雷电放电及防雷保护装置 第八章 电力系统防雷保护 第">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yiliu1412.github.io/img/outerwilds.jpg">
 <meta property="article:published_time" content="2024-09-22T07:15:02.000Z">
-<meta property="article:modified_time" content="2024-09-22T07:15:02.071Z">
+<meta property="article:modified_time" content="2024-11-10T08:57:32.122Z">
 <meta property="article:author" content="逸流Mercurio">
+<meta property="article:tag" content="大学">
+<meta property="article:tag" content="笔记整理">
+<meta property="article:tag" content="高电压技术">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yiliu1412.github.io/img/outerwilds.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>highvoltagetech - 逸流的博客</title>
+  <title>高电压技术 - 逸流的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -81,7 +88,119 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -190,13 +309,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/%E6%B5%B7%E7%81%AF%E8%8A%82.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/outerwilds.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="highvoltagetech"></span>
+            <span id="subtitle" data-typed-text="高电压技术"></span>
           
         </div>
 
@@ -219,7 +338,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          1.2k 字
         
       </span>
     
@@ -230,7 +349,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -268,12 +387,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">highvoltagetech</h1>
+            <h1 style="display: none">高电压技术</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年9月22日 下午
+                    本文最后更新于：2024年11月10日 下午
                   
                 
               </p>
@@ -281,7 +400,80 @@
             
               <div class="markdown-body">
                 
-                
+                <h1 id="高电压技术-High-Voltage-Technology"><a href="#高电压技术-High-Voltage-Technology" class="headerlink" title="高电压技术 High Voltage Technology"></a>高电压技术 High Voltage Technology</h1><ul>
+<li>第一篇 电介质的电气强度<ul>
+<li>第一章 气体放电的基本物理过程</li>
+<li>第二章 气体介质的电气强度</li>
+<li>第三章 液体和固体介质的电气特性</li>
+</ul>
+</li>
+<li>第二篇 电气设备绝缘试验<ul>
+<li>第四章 电气设备绝缘预防性试验</li>
+<li>第五章 绝缘的高电压试验</li>
+</ul>
+</li>
+<li>第三篇 电力系统过电压与绝缘配合<ul>
+<li>第六章 输电线路和绕组中的波过程</li>
+<li>第七章 雷电放电及防雷保护装置</li>
+<li>第八章 电力系统防雷保护</li>
+<li>第九章 内部过电压</li>
+</ul>
+</li>
+</ul>
+<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><ol>
+<li>电力系统的构成：由<strong>发电厂、送变电线路、供配电所和用电</strong>等环节组成的电能生产与消费系统。<br><img src="/img/2024-11-10-15-34-04.png" srcset="/img/loading.gif" lazyload alt="2024-11-10-15-34-04">  </li>
+<li>电力系统的所有问题基本上都是围绕这个特点展开的。——<strong>稳定性</strong>问题</li>
+<li>电力设备的运行可靠性是保证电力系统安全运行的关键，<strong>现代电力设备的可靠性在很大程度上取决于其绝缘的可靠性</strong>。</li>
+<li>线路事故跳闸原因汇总：<strong>倒杆塔、雷击、覆冰、输电线路舞动、污闪</strong></li>
+<li>电力变压器故障类型：<strong>热故障、电故障、机械故障、绝缘性能故障</strong></li>
+<li><strong>换流变压器</strong>是接在换流桥与交流系统之间的电力变压器。<strong>阀侧绕组</strong>是指<strong>整流变压器</strong>的副边绕组，需要同时承受交、直流电压</li>
+<li>研究高电压技术，目的是为了解决电力系统中<strong>过电压与绝缘</strong>这一对矛盾。<br> <img src="/img/2024-11-10-16-19-55.png" srcset="/img/loading.gif" lazyload alt="2024-11-10-16-19-55">  </li>
+<li>输出电压分类：<ul>
+<li>交流输出电压：高压、超高压和特高压<ul>
+<li>高压（HV）：通常指 35～220kV电压</li>
+<li>超高压（EHV）：通常指330kV及以上、1000kV以下的电压。</li>
+<li>特高压（UHV）：1000kV交流及以上、</li>
+</ul>
+</li>
+<li>直流输出电压：高压和特高压<ul>
+<li>高压（HVDC）：±600kV及以下</li>
+<li>特高压（UHVDC）：±600kV以上</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>特高压电网的优点：<ul>
+<li>提高输送容量</li>
+<li>缩短电气距离，提高稳定极限</li>
+<li>降低线路损耗</li>
+<li>减少工程投资</li>
+<li>提高单位走廊输电能力，节省走廊面积</li>
+<li>改善电网结构，降低短路电流</li>
+<li>加强联网能力</li>
+</ul>
+</li>
+</ol>
+<h1 id="第一篇-电介质的电气强度"><a href="#第一篇-电介质的电气强度" class="headerlink" title="第一篇 电介质的电气强度"></a>第一篇 电介质的电气强度</h1><p><img src="/img/2024-11-10-16-52-20.png" srcset="/img/loading.gif" lazyload alt="2024-11-10-16-52-20">  </p>
+<h2 id="关键点"><a href="#关键点" class="headerlink" title="关键点"></a>关键点</h2><p><img src="/img/2024-11-10-16-53-30.png" srcset="/img/loading.gif" lazyload alt="2024-11-10-16-53-30">  </p>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
+<li>电介质（<em>dielectric</em>）在电气设备中作为<strong>绝缘材料</strong>使用</li>
+<li>电介质的分类<ol>
+<li>按<strong>物质形态</strong>分：气体、液体、固体，其中<strong>气体</strong>最常见。<br> 重要：气体介质同其它介质相比，具有<strong>在击穿后完全的绝缘自恢复特性</strong>，故应用十分广泛。</li>
+<li>按在电气设备中所处位置分：<br> 外绝缘：一般由<strong>气体介质（空气）</strong>和<strong>固体介质（绝缘子）</strong>联合构成。<br> 内绝缘：一般由<strong>固体介质</strong>和<strong>液体介质</strong>联合构成</li>
+</ol>
+</li>
+<li>高电压技术主要研究内容之一就是<strong>电介质在电场作用</strong>下出现的各种电气现象及其机理。<br><strong>弱电场</strong>：极化、电导、介质损耗等。<br><strong>强电场</strong>：电场强度等于或大于放电起始场强或击穿场强，如：<strong>放电、闪络、击穿</strong>等。<ul>
+<li>击穿：在电场的作用下电介质由绝缘状态突变为良导电状态的过程。</li>
+<li>放电：特指气体绝缘的击穿过程。</li>
+<li>闪络：击穿发生在气体与液体、气体与固体交界面上的放电现象。</li>
+</ul>
+</li>
+<li>电气设备中<strong>常用</strong>的气体介质：<strong>空气、压缩的高电气强度气体（如SF6等）</strong>在纯净的、中性状态下是具有极佳的绝缘特性。或者说，若气体中不存在带电粒子，气体是不导电的。只有气体中出现了<strong>带电粒子（电子、正离子、负离子）</strong>后，才可能在电场作用下因气体压力、电源功率、电极形状等因素的影响发展成各种形式的气体放电现象。</li>
+</ol>
+<h3 id="一-带电粒子的产生、运动和消失"><a href="#一-带电粒子的产生、运动和消失" class="headerlink" title="一 带电粒子的产生、运动和消失"></a>一 带电粒子的产生、运动和消失</h3><ol>
+<li>带电粒子的产生：原子的<strong>激励</strong>和<strong>电离</strong><br><img src="/img/2024-11-10-16-55-31.png" srcset="/img/loading.gif" lazyload alt="2024-11-10-16-55-31"></li>
+</ol>
+
                 
               </div>
             
@@ -289,6 +481,38 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0/" class="category-chain-item">大学学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%A4%A7%E5%AD%A6/">#大学</a>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/">#笔记整理</a>
+      
+        <a href="/tags/%E9%AB%98%E7%94%B5%E5%8E%8B%E6%8A%80%E6%9C%AF/">#高电压技术</a>
+      
+    </div>
   
 </div>
 
@@ -298,7 +522,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>highvoltagetech</div>
+      <div>高电压技术</div>
       <div>http://yiliu1412.github.io/2024/09/22/HighVoltagetech/</div>
     </div>
     <div class="license-meta">
@@ -317,7 +541,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年9月22日</div>
+          <div>2024年11月10日</div>
         </div>
       
       

@@ -62,13 +62,29 @@
   
   
   <entry>
-    <title>highvoltagetech</title>
+    <title>高电压技术</title>
     <link href="/2024/09/22/HighVoltagetech/"/>
     <url>/2024/09/22/HighVoltagetech/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="高电压技术-High-Voltage-Technology"><a href="#高电压技术-High-Voltage-Technology" class="headerlink" title="高电压技术 High Voltage Technology"></a>高电压技术 High Voltage Technology</h1><ul><li>第一篇 电介质的电气强度<ul><li>第一章 气体放电的基本物理过程</li><li>第二章 气体介质的电气强度</li><li>第三章 液体和固体介质的电气特性</li></ul></li><li>第二篇 电气设备绝缘试验<ul><li>第四章 电气设备绝缘预防性试验</li><li>第五章 绝缘的高电压试验</li></ul></li><li>第三篇 电力系统过电压与绝缘配合<ul><li>第六章 输电线路和绕组中的波过程</li><li>第七章 雷电放电及防雷保护装置</li><li>第八章 电力系统防雷保护</li><li>第九章 内部过电压</li></ul></li></ul><h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><ol><li>电力系统的构成：由<strong>发电厂、送变电线路、供配电所和用电</strong>等环节组成的电能生产与消费系统。<br><img src="/img/2024-11-10-15-34-04.png" alt="2024-11-10-15-34-04">  </li><li>电力系统的所有问题基本上都是围绕这个特点展开的。——<strong>稳定性</strong>问题</li><li>电力设备的运行可靠性是保证电力系统安全运行的关键，<strong>现代电力设备的可靠性在很大程度上取决于其绝缘的可靠性</strong>。</li><li>线路事故跳闸原因汇总：<strong>倒杆塔、雷击、覆冰、输电线路舞动、污闪</strong></li><li>电力变压器故障类型：<strong>热故障、电故障、机械故障、绝缘性能故障</strong></li><li><strong>换流变压器</strong>是接在换流桥与交流系统之间的电力变压器。<strong>阀侧绕组</strong>是指<strong>整流变压器</strong>的副边绕组，需要同时承受交、直流电压</li><li>研究高电压技术，目的是为了解决电力系统中<strong>过电压与绝缘</strong>这一对矛盾。<br> <img src="/img/2024-11-10-16-19-55.png" alt="2024-11-10-16-19-55">  </li><li>输出电压分类：<ul><li>交流输出电压：高压、超高压和特高压<ul><li>高压（HV）：通常指 35～220kV电压</li><li>超高压（EHV）：通常指330kV及以上、1000kV以下的电压。</li><li>特高压（UHV）：1000kV交流及以上、</li></ul></li><li>直流输出电压：高压和特高压<ul><li>高压（HVDC）：±600kV及以下</li><li>特高压（UHVDC）：±600kV以上</li></ul></li></ul></li><li>特高压电网的优点：<ul><li>提高输送容量</li><li>缩短电气距离，提高稳定极限</li><li>降低线路损耗</li><li>减少工程投资</li><li>提高单位走廊输电能力，节省走廊面积</li><li>改善电网结构，降低短路电流</li><li>加强联网能力</li></ul></li></ol><h1 id="第一篇-电介质的电气强度"><a href="#第一篇-电介质的电气强度" class="headerlink" title="第一篇 电介质的电气强度"></a>第一篇 电介质的电气强度</h1><p><img src="/img/2024-11-10-16-52-20.png" alt="2024-11-10-16-52-20">  </p><h2 id="关键点"><a href="#关键点" class="headerlink" title="关键点"></a>关键点</h2><p><img src="/img/2024-11-10-16-53-30.png" alt="2024-11-10-16-53-30">  </p><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol><li>电介质（<em>dielectric</em>）在电气设备中作为<strong>绝缘材料</strong>使用</li><li>电介质的分类<ol><li>按<strong>物质形态</strong>分：气体、液体、固体，其中<strong>气体</strong>最常见。<br> 重要：气体介质同其它介质相比，具有<strong>在击穿后完全的绝缘自恢复特性</strong>，故应用十分广泛。</li><li>按在电气设备中所处位置分：<br> 外绝缘：一般由<strong>气体介质（空气）</strong>和<strong>固体介质（绝缘子）</strong>联合构成。<br> 内绝缘：一般由<strong>固体介质</strong>和<strong>液体介质</strong>联合构成</li></ol></li><li>高电压技术主要研究内容之一就是<strong>电介质在电场作用</strong>下出现的各种电气现象及其机理。<br><strong>弱电场</strong>：极化、电导、介质损耗等。<br><strong>强电场</strong>：电场强度等于或大于放电起始场强或击穿场强，如：<strong>放电、闪络、击穿</strong>等。<ul><li>击穿：在电场的作用下电介质由绝缘状态突变为良导电状态的过程。</li><li>放电：特指气体绝缘的击穿过程。</li><li>闪络：击穿发生在气体与液体、气体与固体交界面上的放电现象。</li></ul></li><li>电气设备中<strong>常用</strong>的气体介质：<strong>空气、压缩的高电气强度气体（如SF6等）</strong>在纯净的、中性状态下是具有极佳的绝缘特性。或者说，若气体中不存在带电粒子，气体是不导电的。只有气体中出现了<strong>带电粒子（电子、正离子、负离子）</strong>后，才可能在电场作用下因气体压力、电源功率、电极形状等因素的影响发展成各种形式的气体放电现象。</li></ol><h3 id="一-带电粒子的产生、运动和消失"><a href="#一-带电粒子的产生、运动和消失" class="headerlink" title="一 带电粒子的产生、运动和消失"></a>一 带电粒子的产生、运动和消失</h3><ol><li>带电粒子的产生：原子的<strong>激励</strong>和<strong>电离</strong><br><img src="/img/2024-11-10-16-55-31.png" alt="2024-11-10-16-55-31"></li></ol>]]></content>
     
     
+    <categories>
+      
+      <category>大学学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>大学</tag>
+      
+      <tag>笔记整理</tag>
+      
+      <tag>高电压技术</tag>
+      
+    </tags>
     
   </entry>
   
@@ -95,9 +111,9 @@
       
       <tag>笔记整理</tag>
       
-      <tag>电机</tag>
-      
       <tag>电气工程</tag>
+      
+      <tag>电机</tag>
       
     </tags>
     
