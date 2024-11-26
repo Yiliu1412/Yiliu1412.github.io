@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yiliu1412.github.io/img/R-C.jpg">
 <meta property="article:published_time" content="2024-09-22T07:16:59.000Z">
-<meta property="article:modified_time" content="2024-11-13T17:19:39.928Z">
+<meta property="article:modified_time" content="2024-11-26T16:28:28.898Z">
 <meta property="article:author" content="逸流Mercurio">
 <meta property="article:tag" content="大学">
 <meta property="article:tag" content="笔记整理">
@@ -338,7 +338,7 @@ mjx-container[display="true"] + br {
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          15k 字
+          16k 字
         
       </span>
     
@@ -349,7 +349,7 @@ mjx-container[display="true"] + br {
         
         
         
-          33 分钟
+          34 分钟
         
       </span>
     
@@ -392,7 +392,7 @@ mjx-container[display="true"] + br {
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年11月14日 凌晨
+                    本文最后更新于：2024年11月27日 凌晨
                   
                 
               </p>
@@ -1248,6 +1248,29 @@ mjx-container[display="true"] + br {
 <li>母线电抗器：一般装设在母线分段的地方</li>
 </ul>
 <p>例题：检修<br><img src="/img/2024-11-14-01-10-24.png" srcset="/img/loading.gif" lazyload alt="2024-11-14-01-10-24"><br><img src="/img/2024-11-14-01-12-39.png" srcset="/img/loading.gif" lazyload alt="2024-11-14-01-12-39">  </p>
+<hr>
+<h1 id="第八章-电力网络稳态行为特性计算"><a href="#第八章-电力网络稳态行为特性计算" class="headerlink" title="第八章 电力网络稳态行为特性计算"></a>第八章 电力网络稳态行为特性计算</h1><h2 id="一、概述：网络计算目的"><a href="#一、概述：网络计算目的" class="headerlink" title="一、概述：网络计算目的"></a>一、概述：网络计算目的</h2><p>潮流：电力网络中流动的功率</p>
+<p>潮流计算</p>
+<ul>
+<li>定义：根据给定的运行条件求取给定运行条件下的节点电压和功率分布</li>
+<li>原始数据：网络参数；电压要求；电源/负荷</li>
+<li>结果：各节点电压、相角；各支路潮流</li>
+<li>电路理论：节点电流平衡方程 </li>
+<li>非线性方程组的列写和求解</li>
+</ul>
+<p>潮流计算的作用</p>
+<ul>
+<li>电力网规划设计</li>
+<li>电力系统运行（稳态、短路、稳定 等）</li>
+<li>继电保护、自动装置整定计算</li>
+</ul>
+<p>电力系统分析计算中最基本的一种：规划、扩建、运行方式安排</p>
+<h2 id="二、电压降落、功率损耗及电能损耗"><a href="#二、电压降落、功率损耗及电能损耗" class="headerlink" title="二、电压降落、功率损耗及电能损耗"></a>二、电压降落、功率损耗及电能损耗</h2><h3 id="1-电压降落"><a href="#1-电压降落" class="headerlink" title="1. 电压降落"></a>1. 电压降落</h3><p>电压是电能质量的指标之一。当功率在电力网络中的某个元件上流过时，将产生电压降落，直接影响用户端的电压质量。因此，电压降落的计算为分析电力网运行状态所必须。</p>
+<p>电压降落：该支路首末两端电压的相量差</p>
+<p>$$<br>\Delta \dot{U}<em>\varphi = \dot{U}</em>{\varphi1} -\dot{U}<em>{\varphi2} = \dot{I}(R+jX)\<br>\dot{I} = \left(\dfrac{\dot{S</em>{\varphi1}}}{\dot{U}<em>{\varphi1}}\right)^* = \left(\dfrac{\dot{S</em>{\varphi2}}}{\dot{U}_{\varphi2}}\right)^*<br>$$</p>
+<p><img src="/img/2024-11-27-00-20-51.png" srcset="/img/loading.gif" lazyload alt="2024-11-27-00-20-51">  </p>
+<p>电压降落的计算方法：<br>已知末（受）端电压和功率：$\dot{U}<em>{\varphi2},\dot{S</em>{\varphi2}}<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="29.412ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 13000 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">已</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">知</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">始</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="italic" transform="scale(1,-1)" font-size="884px" font-family="serif" font-style="italic">（</text></g><g data-mml-node="mi" transform="translate(4000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">送</text></g><g data-mml-node="mi" transform="translate(5000,0)"><text data-variant="italic" transform="scale(1,-1)" font-size="884px" font-family="serif" font-style="italic">）</text></g><g data-mml-node="mi" transform="translate(6000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">端</text></g><g data-mml-node="mi" transform="translate(7000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">电</text></g><g data-mml-node="mi" transform="translate(8000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">压</text></g><g data-mml-node="mi" transform="translate(9000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">和</text></g><g data-mml-node="mi" transform="translate(10000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">功</text></g><g data-mml-node="mi" transform="translate(11000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">率</text></g><g data-mml-node="mi" transform="translate(12000,0)"><text data-variant="italic" transform="scale(1,-1)" font-size="884px" font-family="serif" font-style="italic">：</text></g></g></g></svg></mjx-container>\dot{U}<em>{\varphi1},\dot{S</em>{\varphi1}}$</p>
+<p><img src="/img/2024-11-27-00-26-29.png" srcset="/img/loading.gif" lazyload alt="2024-11-27-00-26-29">  </p>
 
                 
               </div>
@@ -1316,7 +1339,7 @@ mjx-container[display="true"] + br {
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年11月14日</div>
+          <div>2024年11月27日</div>
         </div>
       
       
