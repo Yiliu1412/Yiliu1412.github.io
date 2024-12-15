@@ -16,17 +16,19 @@
   <meta name="author" content="逸流Mercurio">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="自动控制原理 Fundamentals of Control Engineering 授课教师：翁正新教授教材：工程控制基础（第2版） 清华大学出版社   课程大纲绪论课时目标：理解自动控制的基本概念，了解自动控制的历史与现状、及其与人类文明进步的关系。了解自动控制系统的基本组成和分类，掌握常见控制系统原理框图的绘制。1.1 初识自动控制1.2 自动控制发展简史1.3 身边的自动控制系统1.4 自">
+<meta property="og:type" content="article">
 <meta property="og:title" content="自动控制原理">
 <meta property="og:url" content="http://yiliu1412.github.io/2024/09/22/ControlEngineering/index.html">
 <meta property="og:site_name" content="逸流的博客">
+<meta property="og:description" content="自动控制原理 Fundamentals of Control Engineering 授课教师：翁正新教授教材：工程控制基础（第2版） 清华大学出版社   课程大纲绪论课时目标：理解自动控制的基本概念，了解自动控制的历史与现状、及其与人类文明进步的关系。了解自动控制系统的基本组成和分类，掌握常见控制系统原理框图的绘制。1.1 初识自动控制1.2 自动控制发展简史1.3 身边的自动控制系统1.4 自">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yiliu1412.github.io/img/outerwilds.jpg">
 <meta property="article:published_time" content="2024-09-22T07:16:59.000Z">
-<meta property="article:modified_time" content="2024-09-22T07:21:09.548Z">
+<meta property="article:modified_time" content="2024-12-15T08:25:08.805Z">
 <meta property="article:author" content="逸流Mercurio">
-<meta property="article:tag" content="大学">
 <meta property="article:tag" content="笔记整理">
+<meta property="article:tag" content="大学">
 <meta property="article:tag" content="电气工程">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://yiliu1412.github.io/img/outerwilds.jpg">
@@ -336,7 +338,7 @@ mjx-container[display="true"] + br {
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          2.5k 字
         
       </span>
     
@@ -347,7 +349,7 @@ mjx-container[display="true"] + br {
         
         
         
-          1 分钟
+          6 分钟
         
       </span>
     
@@ -390,7 +392,7 @@ mjx-container[display="true"] + br {
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年9月22日 下午
+                    本文最后更新于：2024年12月15日 下午
                   
                 
               </p>
@@ -398,7 +400,67 @@ mjx-container[display="true"] + br {
             
               <div class="markdown-body">
                 
-                
+                <h1 id="自动控制原理-Fundamentals-of-Control-Engineering"><a href="#自动控制原理-Fundamentals-of-Control-Engineering" class="headerlink" title="自动控制原理 Fundamentals of Control Engineering"></a>自动控制原理 Fundamentals of Control Engineering</h1><blockquote>
+<p>授课教师：翁正新教授<br>教材：工程控制基础（第2版） 清华大学出版社</p>
+</blockquote>
+<blockquote>
+<p>课程大纲<br>绪论<br>课时目标：理解自动控制的基本概念，了解自动控制的历史与现状、及其与人类文明进步的关系。了解自动控制系统的基本组成和分类，掌握常见控制系统原理框图的绘制。<br>1.1 初识自动控制<br>1.2 自动控制发展简史<br>1.3 身边的自动控制系统<br>1.4 自动控制系统的分类<br>控制系统的数学模型<br>课时目标：初步掌握建立电学系统、机械系统数学模型（微分方程、传递函数）的基本原理和方法。了解方块图化简的基本法则，能够通过方块图化简求取系统闭环传递函数。掌握利用Mason增益公式求取系统闭环传递函数的方法。<br>2.1 数学模型简介<br>2.2 时域数学模型——微分方程<br>2.3 复域数学模型——传递函数<br>2.4 方块图<br>2.5 信号流图及Mason增益公式<br>自动控制系统的时域分析<br>课时目标：理解稳定性的基本概念，掌握Routh稳定判据及其应用。掌握控制系统稳态误差的求取方法。熟练掌握二阶系统动态响应指标的计算。了解高阶系统动态响应指标的求取方法。<br>3.1 典型测试信号<br>3.2 稳定性的基本概念<br>3.3 Routh稳定性判据<br>3.4 Routh稳定性判据的应用实例<br>3.5 控制系统的稳态特性<br>3.6 稳态误差计算<br>3.7 控制系统的动态响应指标<br>3.8 二阶系统的动态响应<br>3.9 高阶系统的动态响应<br>根轨迹法<br>课时目标：了解根轨迹的定义，以及幅值条件和相角条件。掌握根轨迹的绘制方法。以及基于根轨迹的稳定性分析。了解开环零极点的变化对根轨迹的影响。<br>4.1 根轨迹的基本概念<br>4.2 绘制根轨迹的基本原则<br>4.3 根轨迹的绘制及稳定性分析<br>4.4 开环零极点的变化对根轨迹的影响<br>线性系统的频域分析<br>课时目标：了解控制系统频率特性的基本概念（定义、表示方式），以及极坐标图、对数频率特性图的绘制方法。掌握频域的稳定性分析方法—Nyquist稳定性判据。掌握基于频率特性的性能分析方法。熟练掌握基于对数频率特性图的传递函数求取方法。<br>5.1 频率特性<br>5.2 极坐标图<br>5.3 对数频率特性图<br>5.4 对数频率特性的绘制方法<br>5.5 奈氏稳定性判据<br>5.6 Bode图上的奈氏判据<br>5.7 基于频率特性的性能分析<br>5.8 闭环频率特性<br>5.9 频率特性测试和传递函数求取<br>线性控制系统的设计<br>课时目标：了解经典控制理论系统校正的一般方法以及串联校正、反馈校正、前馈校正的基本概念。熟练掌握基于Bode图的相位超前校正、相位滞后校正、相位超前—滞后校正方法。了解PID控制以及PID参数整定方法。<br>6.1 控制系统的校正方法<br>6.2 相位超前校正<br>6.3 相位滞后校正<br>6.4 相位超前-滞后校正<br>6.5 PID控制<br>6.6 PID参数整定</p>
+</blockquote>
+<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="1-1-初识自动控制"><a href="#1-1-初识自动控制" class="headerlink" title="1.1 初识自动控制"></a>1.1 初识自动控制</h2><ul>
+<li>系统: 由一些元部件按一定要求连接并具有某一特定功能的整体</li>
+<li>自动控制: 在没有人<strong>直接干预</strong>的情况下，通过控制装置使被控对象或过程自动按照预定的规<br>律运行，使之具有一定的状态和性能</li>
+<li>自动控制系统: 在控制过程中不需要人的直接参与，由控制器实现控制的系统</li>
+<li>经典控制理论: 以传递函数为基础，研究单输入-单输出控制系统的分析与设计</li>
+<li>现代控制理论: 以状态空间法为基础，研究多输入－多输出、时变、非线性等控制系统的分析和设计</li>
+<li>智能控制理论: 以人工智能理论为基础，研究具有模糊性、不确定性、不完全性、偶然性的系统</li>
+</ul>
+<h3 id="开环控制系统"><a href="#开环控制系统" class="headerlink" title="开环控制系统"></a>开环控制系统</h3><p>系统的被控制量（输出量）对系统的控制量（输入量）没有影响，即被控制量只能受控于控制量，而对控制量无反作用。</p>
+<p><img src="/img/2024-12-13-16-51-53.png" srcset="/img/loading.gif" lazyload alt="2024-12-13-16-51-53">  </p>
+<p>优点：结构简单，成本低廉，工作稳定，不存在振荡问题。</p>
+<p>缺点：不能自动修正系统内部的参数变化以及外部未知干扰对系统输出的影响</p>
+<p>适用场合：系统的控制精度要求不高；外界未知扰动对系统的影响不大；扰动的影响可以预计并加以补偿</p>
+<h3 id="闭环控制系统"><a href="#闭环控制系统" class="headerlink" title="闭环控制系统"></a>闭环控制系统</h3><p>输出量通过适当的测量装置将测量信号的全部或一部分返回输入端，使之与输入量进行比较</p>
+<p><img src="/img/2024-12-13-16-54-46.png" srcset="/img/loading.gif" lazyload alt="2024-12-13-16-54-46">  </p>
+<p>优点：有效抑制系统元件参数的变化以及外部未知干扰对系统的影响<br>缺点：可能出现动态不稳定、 振荡甚至飞跑现象；可能会引入不希望的传感器噪声</p>
+<h2 id="1-2-自动控制发展简史"><a href="#1-2-自动控制发展简史" class="headerlink" title="1.2 自动控制发展简史"></a>1.2 自动控制发展简史</h2><p>系统和控制理论发展的早期先驱包括J.C.Maxwell（麦克斯韦）;H.Black（布莱克）;H.Nyquist（奈奎斯特）;H.W.Bode（伯德）</p>
+<h2 id="1-3-身边的自动控制系统"><a href="#1-3-身边的自动控制系统" class="headerlink" title="1.3 身边的自动控制系统"></a>1.3 身边的自动控制系统</h2><p>例子略 熟悉课本即可</p>
+<h3 id="典型控制系统的组成"><a href="#典型控制系统的组成" class="headerlink" title="典型控制系统的组成"></a>典型控制系统的组成</h3><p><img src="/img/2024-12-15-15-57-30.png" srcset="/img/loading.gif" lazyload alt="2024-12-15-15-57-30">  </p>
+<ul>
+<li>输入信号： 输入到系统中控制输出量变化的信号称为输入信号，又称给定量。</li>
+<li>输入变换装置： 将输入信号变换成比较装置要求的物理量的装置。</li>
+<li>反馈装置： 用来测量被控量并按特定的函数关系反馈到系统输入端的器件称为反馈装置或检测装置。</li>
+<li>主反馈信号： 反馈装置的输出为主反馈信号。根据极性，把反馈信号与输入信号同极性的反馈叫正反馈，<br>反极性的反馈叫负反馈。</li>
+<li>比较装置： 将输入变换装置的输出与反馈信号进行比较，确定两者之间的偏差量。</li>
+<li>执行装置： 根据控制信号直接对控制对象进行操纵的元件。</li>
+<li>校正装置： 为改善系统性能而引入的装置。 串联校正装置是串接在系统前向通道中的校正装置。而在系统局部反馈回路内接入的反馈装置称为反馈校正装置。</li>
+<li>被控对象： 要进行控制的设备或过程。</li>
+<li>输出信号： 被控对象的输出，也称被控量。</li>
+<li>扰动信号： 除输入信号外，影响系统输出的其它输入统称为扰动信号。</li>
+</ul>
+<h2 id="1-4-自动控制系统的分类"><a href="#1-4-自动控制系统的分类" class="headerlink" title="1.4 自动控制系统的分类"></a>1.4 自动控制系统的分类</h2><ol>
+<li>按信号传递路径分类<ol>
+<li>开环控制系统：系统的输出端与输入端不存在反馈回路，输出量对系统的控制作用不发生影响的系统。</li>
+<li>闭环控制系统（反馈控制系统）：输出信号通过测量元件反馈到系统的输入端，与输入信号进行比较产生误差信号，并通过相应的控制作用减小系统误差。</li>
+</ol>
+</li>
+<li>按输入量的变化规律分类<ol>
+<li>恒值控制系统（或称自动调节系统）：系统的输入量是一个常值，要求输出量相应地保持恒定。<img src="/img/2024-12-15-16-19-21.png" srcset="/img/loading.gif" lazyload alt="2024-12-15-16-19-21">  </li>
+<li>随动系统（或称伺服系统）输入量是预先未知的随时间任意变化的函数，要求输出量以尽可能小的误差跟随输入量的变化而变化。<img src="/img/2024-12-15-16-19-29.png" srcset="/img/loading.gif" lazyload alt="2024-12-15-16-19-29">  </li>
+<li>程序控制系统输入量是按预定规律随时间变化的函数，要求输出量迅速、准确地加以复现。<img src="/img/2024-12-15-16-19-52.png" srcset="/img/loading.gif" lazyload alt="2024-12-15-16-19-52"></li>
+</ol>
+</li>
+<li>按系统传输信号的性质分类<ol>
+<li>连续系统：系统各部分的信号都是时间的连续函数。</li>
+<li>离散系统：系统中至少有一处信号是脉冲信号或数字信号。</li>
+</ol>
+</li>
+<li>按系统的输入输出特性分类<ol>
+<li>线性系统：由线性元件构成，其运动规律可用线性微分方程来描述。</li>
+<li>非线性系统：构成系统的元件中有一个或一个以上是非线性的。</li>
+</ol>
+</li>
+</ol>
+
                 
               </div>
             
@@ -431,9 +493,9 @@ mjx-container[display="true"] + br {
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%A4%A7%E5%AD%A6/">#大学</a>
-      
         <a href="/tags/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/">#笔记整理</a>
+      
+        <a href="/tags/%E5%A4%A7%E5%AD%A6/">#大学</a>
       
         <a href="/tags/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/">#电气工程</a>
       
@@ -466,7 +528,7 @@ mjx-container[display="true"] + br {
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年9月22日</div>
+          <div>2024年12月15日</div>
         </div>
       
       
