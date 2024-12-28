@@ -25,10 +25,10 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yiliu1412.github.io/img/QQ20241205-131830.png">
 <meta property="article:published_time" content="2024-09-24T06:16:59.000Z">
-<meta property="article:modified_time" content="2024-12-27T14:49:16.702Z">
+<meta property="article:modified_time" content="2024-12-28T16:24:49.765Z">
 <meta property="article:author" content="逸流Mercurio">
-<meta property="article:tag" content="笔记整理">
 <meta property="article:tag" content="大学">
+<meta property="article:tag" content="笔记整理">
 <meta property="article:tag" content="电气工程">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://yiliu1412.github.io/img/QQ20241205-131830.png">
@@ -338,7 +338,7 @@ mjx-container[display="true"] + br {
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6.1k 字
+          8.6k 字
         
       </span>
     
@@ -349,7 +349,7 @@ mjx-container[display="true"] + br {
         
         
         
-          13 分钟
+          18 分钟
         
       </span>
     
@@ -392,7 +392,7 @@ mjx-container[display="true"] + br {
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年12月27日 晚上
+                    本文最后更新于：2024年12月29日 凌晨
                   
                 
               </p>
@@ -704,7 +704,136 @@ mjx-container[display="true"] + br {
 <li>最大耗散功率 PCM 是指在最高工作温度下允许的耗散功率。</li>
 <li>二次击穿曲线与安全工作区（Safe Operation Area，SOA） 二次击穿是 BJT 特有的现象。一次击穿是雪崩击穿。二次击穿是永久性损坏。</li>
 </ul>
-<h2 id="Power-MOSFET-amp-IGBT特性-（全控器件，电压驱动型）"><a href="#Power-MOSFET-amp-IGBT特性-（全控器件，电压驱动型）" class="headerlink" title="Power MOSFET & IGBT特性 （全控器件，电压驱动型）"></a>Power MOSFET &amp; IGBT特性 （全控器件，电压驱动型）</h2>
+<h2 id="Power-MOSFET-amp-IGBT特性-（全控器件，电压驱动型）"><a href="#Power-MOSFET-amp-IGBT特性-（全控器件，电压驱动型）" class="headerlink" title="Power MOSFET & IGBT特性 （全控器件，电压驱动型）"></a>Power MOSFET &amp; IGBT特性 （全控器件，电压驱动型）</h2><h3 id="POWER-MOSFET"><a href="#POWER-MOSFET" class="headerlink" title="POWER MOSFET"></a>POWER MOSFET</h3><p><img src="/img/2024-12-28-16-37-08.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-16-37-08">  </p>
+<h4 id="MOSFET原理"><a href="#MOSFET原理" class="headerlink" title="MOSFET原理"></a>MOSFET原理</h4><p>P型半导体作为底层；P型的一端有两个重掺杂N+型；两N+端引出，分别代表源极(Source)和漏极(Drain)；剩余的表面涂上一层SiO2绝缘；在其上端中间放置一层薄的金属层并引出，称为栅极(门极Gate)；栅极不直接与半导体相连；</p>
+<p><img src="/img/2024-12-28-16-40-55.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-16-40-55">  </p>
+<p>直接连接半导体的两端S、D外接直流电源；无论源极负漏极正还是源极正漏极负，中间隔了P层，始终有反向偏置的PN结使其无法导通，类似与三极管NPN结；</p>
+<p>在栅极G和源极S间再加一个偏置，让栅极电压大于源极电压；栅极正电压将吸引P区中的少子电子移至栅极附近；P区中少子电子在栅极附近集聚为源极和漏极导通创造了通路；在外接电源的作用下，电子从源极经该通道到漏极，即器件源-漏极导通；</p>
+<p>随着栅-门极偏置电压的升高，将吸引更多的少子电子集聚在栅极附近；相当于拓宽了源-漏极中间的通道；更多的电子从源极到漏极；这就是<strong>N沟道增强型MOSFET</strong>的基本原理；</p>
+<p><img src="/img/2024-12-28-16-41-35.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-16-41-35">  </p>
+<p>MOSFET–Metal Oxide Semiconductor Field Effect Transistor，金属氧化物半导体场效应晶体管 。</p>
+<ul>
+<li>结型：外加电场控制场效应晶体管栅-源之间 PN 结耗尽区的宽度来控制沟道电导</li>
+<li>绝缘栅型：栅-源之间是用硅氧化物介质将金属电极和半导体隔离，利用外加电场控制半导体中感应电荷量的变化控制沟道电导</li>
+<li>耗尽型：当栅极电压为零时漏源极之间就存在导电沟道。</li>
+<li>增强型：对于N(P)沟道器件，栅极电压大于（小于）零时才存在导电沟道。</li>
+<li>沟道性质：按导电沟道性质可分为P沟道和N沟道，<strong>功率场效应晶体管主要是N沟道增强型。</strong></li>
+</ul>
+<p><img src="/img/2024-12-28-16-42-12.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-16-42-12">  </p>
+<p>场效应晶体管三个电极在一个平面上，沟道不能做的很短， 沟道电阻大。<br>导电沟道是由表面感应电荷形成的，沟道电流是表面电流，载流能力差。</p>
+<p><img src="/img/2024-12-28-16-43-10.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-16-43-10">  </p>
+<p>VMOSFET：精确控制沟道长度，使沟道电阻减少。采用低掺杂的 N– 漂移区（外延层），提高了漏-源击穿电压。沟道面积比平面结构大而短，提高了载流能力。在 VMOSFET 结构中，高击穿电压和低导通电阻很难兼得。</p>
+<p><img src="/img/2024-12-28-16-43-37.png" srcset="/img/loading.gif" lazyload alt="VMOSFET">  </p>
+<p>CoolMOS：超结全称为超级 PN 结，超结器件结构的核心在于漂移区中交替的 P/N 层结构。提高了漂移区的掺杂浓度，大大降低了导通电阻，同时不改变器件的击穿电压值。具有高开关速度。<br><img src="/img/2024-12-28-16-44-32.png" srcset="/img/loading.gif" lazyload alt="CoolMOS ">  </p>
+<h4 id="功率MOSFET的寄生参数"><a href="#功率MOSFET的寄生参数" class="headerlink" title="功率MOSFET的寄生参数"></a>功率MOSFET的寄生参数</h4><p>结电容与寄生二极管（体二极管）</p>
+<p><img src="/img/2024-12-28-16-45-18.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-16-45-18">  </p>
+<h4 id="功率MOSFET的静态特性"><a href="#功率MOSFET的静态特性" class="headerlink" title="功率MOSFET的静态特性"></a>功率MOSFET的静态特性</h4><p><img src="/img/2024-12-28-16-58-17.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-16-58-17">  </p>
+<p><img src="/img/2024-12-28-16-46-24.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-16-46-24">  </p>
+<h4 id="功率MOSFET的动态特性"><a href="#功率MOSFET的动态特性" class="headerlink" title="功率MOSFET的动态特性"></a>功率MOSFET的动态特性</h4><p><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.8ex;" xmlns="http://www.w3.org/2000/svg" width="4.817ex" height="2.216ex" role="img" focusable="false" viewBox="0 -626 2129 979.5"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="TeXAtom" transform="translate(394,-176.7) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mo" transform="translate(520,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(909,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(1394,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(1994,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></g></g></svg></mjx-container> ──开通延迟时间<br><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex;" xmlns="http://www.w3.org/2000/svg" width="1.726ex" height="1.773ex" role="img" focusable="false" viewBox="0 -626 762.9 783.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mi" transform="translate(394,-150) scale(0.707)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container> ──上升时间<br><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.8ex;" xmlns="http://www.w3.org/2000/svg" width="5.617ex" height="2.216ex" role="img" focusable="false" viewBox="0 -626 2482.6 979.5"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="TeXAtom" transform="translate(394,-176.7) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mo" transform="translate(520,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(909,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(1394,0)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mi" transform="translate(1944,0)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(2494,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></g></g></svg></mjx-container> ──关断延迟时间<br><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.667ex;" xmlns="http://www.w3.org/2000/svg" width="1.884ex" height="2.084ex" role="img" focusable="false" viewBox="0 -626 832.9 921"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mi" transform="translate(394,-150) scale(0.707)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g></g></g></g></svg></mjx-container> ──下降时间<br><img src="/img/2024-12-28-17-00-17.png" srcset="/img/loading.gif" lazyload alt="测试电路">  </p>
+<p><img src="/img/2024-12-28-16-46-51.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-16-46-51">  </p>
+<p><img src="/img/2024-12-28-17-01-44.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-17-01-44"><br><img src="/img/2024-12-28-17-01-53.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-17-01-53"><br><img src="/img/2024-12-28-17-02-02.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-17-02-02"><br><img src="/img/2024-12-28-17-02-10.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-17-02-10">  </p>
+<h4 id="功率MOSFET的主要参数"><a href="#功率MOSFET的主要参数" class="headerlink" title="功率MOSFET的主要参数"></a>功率MOSFET的主要参数</h4><p><img src="/img/2024-12-28-17-03-14.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-17-03-14"><br><del>这公式怎么变成古神低语了</del></p>
+<p><img src="/img/2024-12-28-22-13-10.png" srcset="/img/loading.gif" lazyload alt="MOSFET安全工作区">  </p>
+<h4 id="与BJT比较"><a href="#与BJT比较" class="headerlink" title="与BJT比较"></a>与BJT比较</h4><p>MOSFET 开关速度快，开关损耗小；<br>电压控制型器件，驱动功率更小；<br>无二次击穿问题。</p>
+<p><img src="/img/2024-12-28-22-15-37.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-22-15-37">  </p>
+<h4 id="例题-3"><a href="#例题-3" class="headerlink" title="例题"></a>例题</h4><ol>
+<li><p>MOSFET作为开关使用时在饱和区和截止区之间切换         ( 错 ) 截止和可变电阻区</p>
+</li>
+<li><p>以下哪个特点使得MOSFET易于并联（A ）<br>A. 正温度系数	    B.负温度系数<br>C. 单极型器件     D. 多子导电</p>
+</li>
+<li><p>以下哪项关于MOSFET的描述不正确（ D）。 电压型器件<br>A. 驱动功率低  		                   B. 具有较快开关速度<br>C.低功率等级，通常在10kw以内          D. 电流型器件</p>
+</li>
+</ol>
+<h3 id="IGBT-（全控器件-电压驱动型）"><a href="#IGBT-（全控器件-电压驱动型）" class="headerlink" title="IGBT （全控器件 电压驱动型）"></a>IGBT （全控器件 电压驱动型）</h3><h4 id="IGBT基本结构与工作原理"><a href="#IGBT基本结构与工作原理" class="headerlink" title="IGBT基本结构与工作原理"></a>IGBT基本结构与工作原理</h4><p>绝缘栅双极型晶体管 Insulated Gate Bipolar Transistor</p>
+<p><img src="/img/2024-12-28-22-25-25.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-22-25-25">  </p>
+<p>在重掺杂 P+衬底上生长一层 N– 漂移层，再在漂移层上制造出栅极和源极。在 P+和 N– 之间增加一层 N+缓冲层，降低 IGBT的导通压降。</p>
+<h4 id="IGBT的静态特性"><a href="#IGBT的静态特性" class="headerlink" title="IGBT的静态特性"></a>IGBT的静态特性</h4><p><img src="/img/2024-12-28-22-25-49.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-22-25-49">  </p>
+<ul>
+<li>线性放大区：以 BJT 特性为主，电压和电流都很大，损耗也大。</li>
+<li>饱和区：以 MOSFET 特性为主，uGE越高，饱和电流越大。</li>
+<li>反向阻断区：当 uCE&lt;0时，IGBT 为反向工作状态，只有很小的集电极漏电流流过，URM 是 IGBT 能够承受的最高反向阻断电压。</li>
+<li>在电力电子变换器中，IGBT 工作在开关状态，即工作在<strong>正向阻断区或饱和区</strong>。</li>
+</ul>
+<h4 id="IGBT的动态特性"><a href="#IGBT的动态特性" class="headerlink" title="IGBT的动态特性"></a>IGBT的动态特性</h4><p><img src="/img/2024-12-28-22-31-11.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-22-31-11"><br>tfv1为 IGBT 中 MOSFET 单独工作的电压下降过程，由于 MOSFET 的<strong>密勒效应</strong>，该过程中 uGE基本保持不变。<br>tfi2对应 IGBT 内部 PNP 晶体管的关断过程，由于 PNP 晶体管基区载流子高注入，存储电荷无法用外加反向抽流使其迅速消失，只能靠自然复合消失。 这就出现 IGBT 关断时特有的<strong>电流拖尾</strong>现象，使得下降时间加长，造成<strong>较大的关断损耗</strong>。</p>
+<h4 id="IGBT的主要参数"><a href="#IGBT的主要参数" class="headerlink" title="IGBT的主要参数"></a>IGBT的主要参数</h4><p>饱和压降 UCE(sat)<br>IGBT饱和导通压降，直接决定IGBT的导通损耗。一般为 2~3V。<br>最大开路电压 U(BR)CEO<br>在实际应用中，应根据电压应力的 1.5 倍选择 IGBT 的额定电压。<br>集电极最大电流 IC(max)<br>实际设计时，按照 IGBT电流应力的 1.5 倍来选择额定电流。<br>最大集电极功耗 PCM<br>在室温 25℃的情况下，IGBT 工作时允许产生的最大耗散功率。</p>
+<h2 id="宽禁带电力电子器件概述"><a href="#宽禁带电力电子器件概述" class="headerlink" title="宽禁带电力电子器件概述"></a>宽禁带电力电子器件概述</h2><p>略</p>
+<p>禁带宽度为将电子从价带激发到导带所需要的最小能量</p>
+<p><img src="/img/2024-12-28-22-45-28.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-22-45-28">  </p>
+<p>宽禁带电力电子器件正是以禁带宽度与Si器件区分，宽禁带器件适用于高频率、高效率、高功率密度场景</p>
+<h2 id="驱动电路与缓冲电路"><a href="#驱动电路与缓冲电路" class="headerlink" title="驱动电路与缓冲电路"></a>驱动电路与缓冲电路</h2><p>驱动电路的定义：主电路和控制电路之间的接口，完成驱动、隔离和保护功能</p>
+<p>驱动电路的功能</p>
+<ul>
+<li>将控制电路输出的PWM脉冲放大到足以驱动开关管—开关功率放大作用</li>
+<li>控制器件在接近理想的条件下开关，以减少开关损耗；</li>
+<li>驱动电路与系统效率和可靠性关系紧密；</li>
+<li>可以集成驱动级、器件级保护功能</li>
+<li>隔离功能</li>
+</ul>
+<p>优良驱动电路特性</p>
+<ul>
+<li>改善开关管的开关特性</li>
+<li>减小开关损耗</li>
+<li>提高整机效率和器件可靠性（即尽量快开、快关）</li>
+</ul>
+<p><img src="/img/2024-12-28-22-54-15.png" srcset="/img/loading.gif" lazyload alt="2024-12-28-22-54-15">  </p>
+<hr>
+<p><img src="/img/2024-12-29-00-23-24.png" srcset="/img/loading.gif" lazyload alt="2024-12-29-00-23-24">  </p>
+<p>缓冲电路又可以分为关断缓冲电路和开通缓冲电路：关断吸收电路（ 𝑑𝑣/𝑑𝑡 suppressing）用于吸收器件的关断过电压和换相过电压，抑制𝑑𝑣/𝑑𝑡 ，减小关断损耗。开通吸收电路（ 𝑑𝑖/𝑑𝑡 suppressing）用于抑制器件开通时的电流过冲和𝑑𝑖/𝑑𝑡 ，减小器件的开通损耗。</p>
+<p>〖 𝐿〗_i会造成关断过电压，以及造成通态损耗，故一般只用关断缓冲电路，并用简化的RC电路代替RCD.</p>
+<h2 id="功率器件总结"><a href="#功率器件总结" class="headerlink" title="功率器件总结"></a>功率器件总结</h2><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Diode</th>
+<th align="center">SCR</th>
+<th align="center">BJT</th>
+<th align="center">MOSFET</th>
+<th align="center">IGBT</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">可控性</td>
+<td align="center">不控</td>
+<td align="center">半控</td>
+<td align="center">全控</td>
+<td align="center">全控</td>
+<td align="center">全控</td>
+</tr>
+<tr>
+<td align="center">驱动类型</td>
+<td align="center">/</td>
+<td align="center">电流型</td>
+<td align="center">电流型</td>
+<td align="center">电压型</td>
+<td align="center">电压型</td>
+</tr>
+<tr>
+<td align="center">导电载流子</td>
+<td align="center">空穴、电子</td>
+<td align="center">空穴、电子</td>
+<td align="center">空穴、电子双极型</td>
+<td align="center">电子单极型</td>
+<td align="center">空穴、电子双极型</td>
+</tr>
+<tr>
+<td align="center">其他特点</td>
+<td align="center">负温度系数、反向恢复</td>
+<td align="center">开通关断条件</td>
+<td align="center">导通压降与关断速度的矛盾</td>
+<td align="center">导通电阻正温度系数</td>
+<td align="center">电流拖尾现象</td>
+</tr>
+<tr>
+<td align="center">适用场合</td>
+<td align="center">低频 - 高频小功率 大功率</td>
+<td align="center"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="18.665ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 8250 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mtable"><g data-mml-node="mtr"><g data-mml-node="mtd"></g><g data-mml-node="mtd"><g data-mml-node="mtext"><path data-c="A0" d=""></path><text data-variant="normal" transform="translate(250,0) scale(1,-1)" font-size="884px" font-family="serif">低</text><text data-variant="normal" transform="translate(1250,0) scale(1,-1)" font-size="884px" font-family="serif">频</text><path data-c="A0" d="" transform="translate(2250,0)"></path></g><g data-mml-node="mtext" transform="translate(2500,0)"><path data-c="A0" d=""></path></g></g><g data-mml-node="mtd" transform="translate(4750,0)"><g data-mml-node="mtext"><path data-c="A0" d=""></path><text data-variant="normal" transform="translate(250,0) scale(1,-1)" font-size="884px" font-family="serif">大</text><text data-variant="normal" transform="translate(1250,0) scale(1,-1)" font-size="884px" font-family="serif">功</text><text data-variant="normal" transform="translate(2250,0) scale(1,-1)" font-size="884px" font-family="serif">率</text><path data-c="A0" d="" transform="translate(3250,0)"></path></g></g></g></g></g></g></svg></mjx-container></td>
+<td align="center"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="18.665ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 8250 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mtable"><g data-mml-node="mtr"><g data-mml-node="mtd"></g><g data-mml-node="mtd"><g data-mml-node="mtext"><path data-c="A0" d=""></path><text data-variant="normal" transform="translate(250,0) scale(1,-1)" font-size="884px" font-family="serif">低</text><text data-variant="normal" transform="translate(1250,0) scale(1,-1)" font-size="884px" font-family="serif">频</text><path data-c="A0" d="" transform="translate(2250,0)"></path></g><g data-mml-node="mtext" transform="translate(2500,0)"><path data-c="A0" d=""></path></g></g><g data-mml-node="mtd" transform="translate(4750,0)"><g data-mml-node="mtext"><path data-c="A0" d=""></path><text data-variant="normal" transform="translate(250,0) scale(1,-1)" font-size="884px" font-family="serif">大</text><text data-variant="normal" transform="translate(1250,0) scale(1,-1)" font-size="884px" font-family="serif">功</text><text data-variant="normal" transform="translate(2250,0) scale(1,-1)" font-size="884px" font-family="serif">率</text><path data-c="A0" d="" transform="translate(3250,0)"></path></g></g></g></g></g></g></svg></mjx-container></td>
+<td align="center">高频 (50k以上)中小功率</td>
+<td align="center">中高频（20k-100k）中大功率</td>
+</tr>
+</tbody></table>
+<p><img src="/img/2024-12-27-23-02-51.png" srcset="/img/loading.gif" lazyload alt="2024-12-27-23-02-51">  </p>
+
                 
               </div>
             
@@ -737,9 +866,9 @@ mjx-container[display="true"] + br {
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/">#笔记整理</a>
-      
         <a href="/tags/%E5%A4%A7%E5%AD%A6/">#大学</a>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/">#笔记整理</a>
       
         <a href="/tags/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/">#电气工程</a>
       
@@ -772,7 +901,7 @@ mjx-container[display="true"] + br {
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年12月27日</div>
+          <div>2024年12月29日</div>
         </div>
       
       
