@@ -25,10 +25,10 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yiliu1412.github.io/img/elysia-zip.png">
 <meta property="article:published_time" content="2025-02-16T19:53:43.000Z">
-<meta property="article:modified_time" content="2025-02-18T09:21:17.223Z">
+<meta property="article:modified_time" content="2025-02-18T12:04:51.738Z">
 <meta property="article:author" content="逸流Mercurio">
-<meta property="article:tag" content="电气工程">
 <meta property="article:tag" content="大学">
+<meta property="article:tag" content="电气工程">
 <meta property="article:tag" content="电路">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://yiliu1412.github.io/img/elysia-zip.png">
@@ -280,7 +280,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2025年2月18日 下午
+                    本文最后更新于：2025年2月18日 晚上
                   
                 
               </p>
@@ -315,7 +315,7 @@
 <p>★电路理论和电磁场理论差异在哪?</p>
 </blockquote>
 <p>若电源的频率 $f$ 不高，电路元件及电路的各向最大尺寸 $l$ 远小于电源最高频率 $f$ 的波长 $\lambda$ 时，电磁场的变化传布整个电路所需的时间 $\tau &#x3D; \frac{l}{c}$、远小于一个周期 T ，在此短暂的时间里，电流、电荷和电磁场的分布都未来得及发生显著变化，电路参数的分布性对电路性能的影响并不明显，分布参数的影响可以集中起来表示。<br>电阻、电容、电感都集中到一点，能量损耗、电场储能、磁场储能过程也分别集中在电阻. 电容、电感等元件中进行。<br>通常称这些电阻、电容、电感元件为集中参数元件，由集中参数元件组成的电路为集中（总）参数电路。<br>集中参数电路中的电压、电流为时间的函数%4明 电路可用常微分方程来描述。<br>我们的课程将<strong>只讨论集中参数电路</strong>。</p>
-<p>信号频率继续升高，分布参数将上升到主导地位。信号频率到微波波段（称超高频或射频），$f &gt; 10^10 Hz$, $1mm≤X≤10cm$<br>在这种情况下，电路概念完全被破坏，只能用电磁场理论分析各<br>种现象。如天线，它的下端有电流，顶端电流为零。</p>
+<p>信号频率继续升高，分布参数将上升到主导地位。信号频率到微波波段（称超高频或射频），$f &gt; 10^{10} Hz$, $1mm≤X≤10cm$<br>在这种情况下，电路概念完全被破坏，只能用电磁场理论分析各<br>种现象。如天线，它的下端有电流，顶端电流为零。</p>
 <h2 id="电路变量"><a href="#电路变量" class="headerlink" title="电路变量"></a>电路变量</h2><h3 id="电路变量-1"><a href="#电路变量-1" class="headerlink" title="电路变量"></a>电路变量</h3><p>电路中能量交换情况，往往无法直接测量得到，如电阻器上消耗了多少电能，电容器、电感器中分别储存了多少电场能和磁场能，然而，可以用间接的方法测得电阻器、电容器、电感器两端的电压及流过它们的电流，再进行能量方面的计算。</p>
 <p>在电路理论中，为了定量地描述电路的状态或元件特性，一般<br>选用电流 $i$ 和电压 $u$ 作为基本变量</p>
 <p>电流：$i &#x3D; \frac{\mathrm{d}q}{\mathrm{d}t}$ 即单位时间内通过导体横截面的电量。电压：$ u &#x3D; \frac{\mathrm{d}w}{\mathrm{d}q}$ 即单位正电荷由一点转移到另一点获得或失去的能量。直流时 $I$ $U$ 为常数，交流时 $i$ $u$ 不为参数。一般直流变量用大写字母，交流变量用小写字母。</p>
@@ -362,9 +362,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/">#电气工程</a>
-      
         <a href="/tags/%E5%A4%A7%E5%AD%A6/">#大学</a>
+      
+        <a href="/tags/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/">#电气工程</a>
       
         <a href="/tags/%E7%94%B5%E8%B7%AF/">#电路</a>
       
@@ -485,6 +485,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -702,6 +708,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
