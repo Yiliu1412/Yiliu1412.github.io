@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yiliu1412.github.io/img/elysia-zip.png">
 <meta property="article:published_time" content="2025-02-16T19:53:43.000Z">
-<meta property="article:modified_time" content="2025-02-25T09:45:27.149Z">
+<meta property="article:modified_time" content="2025-03-02T09:51:54.153Z">
 <meta property="article:author" content="逸流Mercurio">
 <meta property="article:tag" content="大学">
 <meta property="article:tag" content="电气工程">
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          8.6k 字
+          9.3k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          18 分钟
+          20 分钟
         
       </span>
     
@@ -280,7 +280,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2025年2月25日 下午
+                    本文最后更新于：2025年3月2日 下午
                   
                 
               </p>
@@ -484,8 +484,32 @@
 <ol>
 <li>线性非时变电阻元件<br>定义:伏安特性曲线是与时间变化无关的过原点的直线。电阻元件的电阻值R（曲线的斜率）是常数，单位欧姆，符号$\Omega$ 电导$G$的国际单位是西门子，符号 $S$ 。n<br> $$u(t)&#x3D;Ri(t) \ i(t)&#x3D;Gu(t)$$<br> 线性非时变电阻元件电压-电流关系是线性函数关系<br> $$u&#x3D;f(i)\quad f(\alpha i_1+\beta i_2)&#x3D;\alpha f(i_1)+\beta f(i_2) \ i&#x3D;g(u)\quad g(\alpha u_1+\beta u_2)&#x3D;\alpha g(u_1)+\beta g(u_2)$$<br> <strong>齐次性</strong>和<strong>可加性</strong>称线性元件判据。<br> 凡线性元件、线性电路，与之相对应的电路变量间的关系，都是线性函数关系。凡线性元件、线性电路，与之相对应的电路变量间的关系，都是线性函数关系。<br> 伏安曲线对原点为对称，称具有双向性（实际意义:双向性电阻元件在使用时不必区别二端钮的极性，可随意接入电路）。开路和短路是线性非时变电阻元件的特殊情况。</li>
 <li>线性时变电阻元件<br> 伏安特性曲线是随时间变化的过原点的直线。若有正弦信号，对线性非时变电阻而言，输入和输出是同频率的正弦量，对线性时变电阻而言，其输出中包含有<strong>输入信号的频率（原频率）</strong>，还包含有<strong>新的频率（电阻元件时变频率与输入频率的和、差频率）</strong>，这种性质在通讯系统中称为“<strong>调制</strong>”。</li>
-<li>非线性电阻元件<br> 定义:凡不是线性的电阻元件就称为非线性电阻元件，或伏安特性曲线不是过原点的直线的电阻元件，称非线性电阻元件。<br> <img src="/img/2025-02-25-17-44-57.png" srcset="/img/loading.gif" lazyload alt="2025-02-25-17-44-57"><br> <img src="/img/2025-02-25-17-45-15.png" srcset="/img/loading.gif" lazyload alt="2025-02-25-17-45-15"></li>
+<li>非线性电阻元件<br> 定义:凡不是线性的电阻元件就称为非线性电阻元件，或伏安特性曲线不是过原点的直线的电阻元件，称非线性电阻元件。<br> <img src="/img/2025-02-25-17-44-57.png" srcset="/img/loading.gif" lazyload alt="2025-02-25-17-44-57"><br> <img src="/img/2025-02-25-17-45-15.png" srcset="/img/loading.gif" lazyload alt="2025-02-25-17-45-15"><br> <img src="/img/2025-03-01-22-18-57.png" srcset="/img/loading.gif" lazyload alt="2025-03-01-22-18-57"></li>
 </ol>
+<h3 id="功率和能量-1"><a href="#功率和能量-1" class="headerlink" title="功率和能量"></a>功率和能量</h3><p>当二端电路元件的电压和电流取一致的参考方向时，其所吸收(即外界输入)的功率为<br>$$p(t)&#x3D;u(t)i(t)$$</p>
+<p>所吸收的能量为<br>$$w(t)&#x3D;\int_{-\infty}^tp(\tau)\mathrm{d}\tau&#x3D;\int_{-\infty}^tu(\tau)i(\tau)\mathrm{d}\tau$$<br>在上式中，设 $w(-\infty)&#x3D;0$</p>
+<p>电路元件有有源和无源之分，在一致参考方向下：$p(t)\geq 0$ 吸收功率 、$p(t)\leq 0$ 发出功率、$w(t)\geq 0$ 无源、$w(t)\leq 0$ 有源。</p>
+<p>无源电阻元件的特征是它永不向外界放出<br>功率（隧道二极管和充气管尽管有负阻区，仍然是无源元件，因为当工作点在第1象限,静态电阻&gt;0<br><strong>只要特性曲线的一部分在第2和第4象限，就是有源电阻元件。如电压源、电流源。</strong><br>一个无源电阻元件要具有有源性，只有当其特性曲线有可能落在在第2和第4象限才行，或者说特性曲线具有负阻区有可能具<br>备这种性质。</p>
+<h3 id="独立电源"><a href="#独立电源" class="headerlink" title="独立电源"></a>独立电源</h3><ul>
+<li><p>电路元件可以分为两类，<strong>有源元件</strong>和<strong>无源元件</strong></p>
+</li>
+<li><p>有源元件是向电路输入信号或是向电路提供能量</p>
+</li>
+<li><p>把向电路输入的信号叫激励信号，简称激励。经过电路的传输、处理后输出的信号叫响应信号，简称响应。</p>
+</li>
+<li><p>作为输出量，可以是电路任一部分的电压或电流<br><img src="/img/2025-03-02-17-24-04.png" srcset="/img/loading.gif" lazyload alt="###"></p>
+</li>
+</ul>
+<ol>
+<li>独立电压源<br><img src="/img/2025-03-02-17-35-47.png" srcset="/img/loading.gif" lazyload alt="2025-03-02-17-35-47"><br><img src="/img/2025-03-02-17-35-53.png" srcset="/img/loading.gif" lazyload alt="2025-03-02-17-35-53"></li>
+</ol>
+<p>当电压源的电压他恒等于零 ，则电压源相当于短路，同样，要去掉电压源的作用，即<strong>电压源置零</strong>，只要用短路代替电压源。<br><img src="/img/2025-03-02-17-36-27.png" srcset="/img/loading.gif" lazyload alt="2025-03-02-17-36-27">  </p>
+<ol start="2">
+<li>独立电流源（简称电流源）<br><img src="/img/2025-03-02-17-43-10.png" srcset="/img/loading.gif" lazyload alt="2025-03-02-17-43-10"></li>
+</ol>
+<p>当电流源的电流会等于零，则电流源相当于开路，当要去掉电流源作用时，即<strong>电流源置零</strong>，可以用开路代替电流源支路。</p>
+<p><img src="/img/2025-03-02-17-45-38.png" srcset="/img/loading.gif" lazyload alt="2025-03-02-17-45-38">  </p>
+<p><img src="/img/2025-03-02-17-51-27.png" srcset="/img/loading.gif" lazyload alt="2025-03-02-17-51-27">  </p>
 
                 
               </div>
@@ -554,7 +578,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年2月25日</div>
+          <div>2025年3月2日</div>
         </div>
       
       
