@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yiliu1412.github.io/img/elysia-zip.png">
 <meta property="article:published_time" content="2025-02-16T19:53:43.000Z">
-<meta property="article:modified_time" content="2025-03-11T09:13:13.473Z">
+<meta property="article:modified_time" content="2025-03-17T08:28:49.011Z">
 <meta property="article:author" content="逸流Mercurio">
 <meta property="article:tag" content="电气工程">
 <meta property="article:tag" content="大学">
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          11k 字
+          13k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          23 分钟
+          27 分钟
         
       </span>
     
@@ -280,7 +280,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2025年3月11日 下午
+                    本文最后更新于：2025年3月17日 下午
                   
                 
               </p>
@@ -555,7 +555,35 @@
 <p>电源转换器：<br><img src="/img/2025-03-11-17-12-06.png" srcset="/img/loading.gif" lazyload alt="2025-03-11-17-12-06">  </p>
 <p>运算放大器是有源元件：<br><img src="/img/2025-03-11-17-12-30.png" srcset="/img/loading.gif" lazyload alt="2025-03-11-17-12-30">  </p>
 <p>电压跟随器：<br><img src="/img/2025-03-11-17-12-47.png" srcset="/img/loading.gif" lazyload alt="2025-03-11-17-12-47">  </p>
-<h3 id="理想变压器"><a href="#理想变压器" class="headerlink" title="理想变压器"></a>理想变压器</h3>
+<h3 id="理想变压器"><a href="#理想变压器" class="headerlink" title="理想变压器"></a>理想变压器</h3><p>理想变压器是实际变压器的理想化模型。一个实际变压器抽象为理想变压器的条件为：该变压器不消耗功率；它没有任何漏磁通，即两个绕组的耦合系数 k &#x3D; 1 ;每个绕组的自感都是无穷大。</p>
+<p><img src="/img/2025-03-17-14-30-26.png" srcset="/img/loading.gif" lazyload alt="2025-03-17-14-30-26">  </p>
+<p>理想变压器输出端接一个负载电阻凡 如下图</p>
+<p><img src="/img/2025-03-17-14-33-07.png" srcset="/img/loading.gif" lazyload alt="2025-03-17-14-33-07">  </p>
+<p>有$u_i &#x3D; n u_2 &#x3D; -nRi_2 &#x3D; -nR(-ni_1) &#x3D; (n^2R)i_!$</p>
+<p><strong>理想变压器的重要性质</strong>：理想变压器输出端接有电阻R时，其输入端看过去虽仍是电阻，但其输入电阻值是原电阻R乘以匝数比之平方。</p>
+<p>理想变压器吸收的功率<br>$$<br>p &#x3D; u_1i_1+u_2 i_2 &#x3D; (nu_2)(-\frac{1}{n}i_2)+u_2 i_2<br>$$<br>理想变压器是无损元件。它既不储存能量又不消耗能量，它能把输入端口流入的能量全部由输出端口传送出去。</p>
+<p>注意：</p>
+<ul>
+<li>变比 n 是理想变压器唯一的参数，它只改变电阻大小，不改变电阻的性质</li>
+<li>它伏安关系中无导数项，是个静态元件</li>
+<li><strong>同名端颠倒时，用（-n）替代其电压-电流关系式</strong></li>
+<li>它常在无线电技术中用来实现最大功率匹配</li>
+</ul>
+<h3 id="回转器"><a href="#回转器" class="headerlink" title="回转器"></a>回转器</h3><p>理想回转器在电路图中的符号如下图<br><img src="/img/2025-03-17-14-49-56.png" srcset="/img/loading.gif" lazyload alt="2025-03-17-14-49-56"><br>$$\left[\begin{array}{l}u_1 \ u_2\end{array}\right]&#x3D;\left[\begin{array}{cc}0 &amp; -\alpha \ \alpha &amp; 0\end{array}\right]\left[\begin{array}{l}i_1 \ i_2\end{array}\right]$$</p>
+<p>$$\left[\begin{array}{l}i_1 \ i_2\end{array}\right]&#x3D;\left[\begin{array}{cc}0 &amp; \frac{1}{\alpha} \ -\frac{1}{\alpha} &amp; 0\end{array}\right]\left[\begin{array}{l}u_1 \ u_2\end{array}\right]&#x3D;\left[\begin{array}{cc}0 &amp; g \ -g &amp; 0\end{array}\right]\left[\begin{array}{l}u_1 \ u_2\end{array}\right]$$</p>
+<p>$\alpha$ 称回转比（或回转器电阻），$g &#x3D; \frac{1}{\alpha}$ 称回转器电导</p>
+<p>回转器所吸收的能量<br>$$w(t)&#x3D;\int_{-\infty}^t p(\tau) \mathrm{d} \tau&#x3D;\int_{-\infty}^t\left(u_1 i_1+u_2 i_2\right) \mathrm{d} \tau&#x3D;\int_{-\infty}^t\left[\left(-\alpha i_2\right) i_1+\left(\alpha i_1\right) i_2\right] \mathrm{d} \tau&#x3D;0$$</p>
+<p>回转器是不耗能也不储能的器件。在回转器输出端口接一电阻，有</p>
+<p>$$u_1&#x3D;-\alpha i_2&#x3D;-\alpha\left(-\frac{u_2}{R}\right)&#x3D;-\alpha\left(-\frac{\alpha i_1}{R}\right)&#x3D;\frac{\alpha^2}{R} i_1&#x3D;\mathrm{R} i_1$$</p>
+<p>从回转器输入端看进去，电路的量有变化，电阻$\mathrm{R}&#x3D; \frac{\alpha^2}{R}$</p>
+<h3 id="负转换器"><a href="#负转换器" class="headerlink" title="负转换器"></a>负转换器</h3><p>略 P170</p>
+<h1 id="第二章-电路分析的基本方法"><a href="#第二章-电路分析的基本方法" class="headerlink" title="第二章 电路分析的基本方法"></a>第二章 电路分析的基本方法</h1><h2 id="电路的分类"><a href="#电路的分类" class="headerlink" title="电路的分类"></a>电路的分类</h2><p>按电路所含元件的性质（不包括电路中所含的独立电源）， 可对电路作如下分类 ：</p>
+<p><img src="/img/2025-03-17-16-09-08.png" srcset="/img/loading.gif" lazyload alt="2025-03-17-16-09-08">  </p>
+<p><img src="/img/2025-03-17-16-10-10.png" srcset="/img/loading.gif" lazyload alt="2025-03-17-16-10-10">  </p>
+<h3 id="一、支路电流法-目标：降低变量和方程数"><a href="#一、支路电流法-目标：降低变量和方程数" class="headerlink" title="一、支路电流法 目标：降低变量和方程数"></a>一、支路电流法 目标：降低变量和方程数</h3><p>以支路电流为求解对象，根据KCL列写独立节点方程，根据KVL列写独立回路方程，再用消元法、克莱姆法则、矩阵求逆等方法求解之。</p>
+<p><img src="/img/2025-03-17-16-11-38.png" srcset="/img/loading.gif" lazyload alt="2025-03-17-16-11-38"><br><img src="/img/2025-03-17-16-19-30.png" srcset="/img/loading.gif" lazyload alt="2025-03-17-16-19-30">  </p>
+<p>支路电流法的总结 ：<br>以支路电流为求解对象，根据KCL列写独立节点方程，根据KVL列写独立回路方程。<br>有 $n-1$ 个，即 4-1&#x3D;3 个独立节点方程。<br>有 $l&#x3D;b-n+1$个，即 6-3&#x3D;3 个独立回路方程。<br>有 $b&#x3D;6$ 个独立支路方程（以电流表示电压） $u_1 &#x3D; u_{s1}+R_1I_1$ $u_2 &#x3D; u_{s2} + RI_2$ 等<br>电路中共2b个未知量，即求解6个电流和6个电压变量。<br>将支路方程代入KVL方程中消去支路电压变量，变成b个方程。<br>求出支路电流。最后，求出各个支路电压。</p>
+
                 
               </div>
             
@@ -623,7 +651,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年3月11日</div>
+          <div>2025年3月17日</div>
         </div>
       
       
